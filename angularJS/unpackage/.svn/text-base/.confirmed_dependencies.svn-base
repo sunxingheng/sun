@@ -1,0 +1,11 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/angular.min.js",
+      "css/bootstrap.min.css"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}
