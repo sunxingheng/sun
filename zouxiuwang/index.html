@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>走秀首页</title>
+    <link  type="text/css" rel="stylesheet" href="css/public.css" >
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/Ajax.js"></script>
+</head>
+<body>
+<!--头部开始-->
+    <div id="head">
+        <div class="margin">
+            <!--头部-->
+            <div class="head_box clear">
+                <!--头部左边部分-->
+                <div class="head_left">
+                    <ul class="head_left_ul">
+                        <li id="login" class="login">
+                            <a class="yonghu" href="login/loginzhuce.html">
+                                登录/注册
+                            </a>
+                        </li>
+                        <li id="bag" class="bag">
+                            <a id="newbag" class="shoppingbag" href="#">
+                                购物袋
+                                <span id="num" class="num">0</span>
+                                件
+                            </a>
+                            <div id="mybag" class="mybag_show">
+                                <div class="mybag_nei">
+                                    <span>购物袋暂时没有商品</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="myshow" class="myshow">
+                            <a id="myshow_nei" class="hide" href="#">我的走秀</a>
+                            <div id="my_show" class="my_show_menu">
+                                <a href="#">我的订单</a>
+                                <a href="#">自助退货</a>
+                                <a href="#">我的收藏</a>
+                                <a href="#">帮助中心</a>
+                                <a href="#">全部吐槽</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--头部logo-->
+                <div class="logo">
+                    <a href="index.html"></a>
+                </div>
+                <!--头部右边搜索框-->
+                <div class="right">
+                    <form action="" method="get" target="_blank" class="search_box">
+                        <div class="search">
+                            <input class="int" type="text" placeholder="请搜索Stan smith试试">
+                        </div>
+                        <input class="sbt" type="submit" value="">
+                    </form>
+                </div>
+                <!--头部导航-->
+                <div id="head_nav">
+                    <ul class="inhead_nav">
+                        <li><a class="navhover" href="#">首页</a></li>
+                        <li><a href="#">新品</a></li>
+                        <li><a href="#">男士</a></li>
+                        <li><a href="#">女士</a></li>
+                        <li><a href="#">品牌</a></li>
+                        <li><a class="hot" href="#">发现</a></li>
+                        <li><a href="#">专题</a></li>
+                        <li><a href="#">手机走秀</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--头部隐藏的导航栏-->
+            <div id="head_hide_nav">
+                <ul class="inhead_nav">
+                    <li><a class="navhover" href="#">首页</a></li>
+                    <li><a href="#">新品</a></li>
+                    <li><a href="#">男士</a></li>
+                    <li><a href="#">女士</a></li>
+                    <li><a href="#">品牌</a></li>
+                    <li><a class="hot" href="#">发现</a></li>
+                    <li><a href="#">专题</a></li>
+                    <li><a href="#">手机走秀</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--导航栏-->
+    <div id="nav">
+        <div class="margin">
+            <ul class="nav clear">
+                <li>
+                    <a class="nav_title" href="#">包装</a>
+                    <div class="nav_show_menu">
+                        <div class="nav_show_menu_box clear">
+                            <div class="show_left">
+                                <a class="list_main" href="#">频道精选</a>
+                            </div>
+                            <div class="show_right"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">服装</a>
+                    <div class="nav_show_menu">
+                        <div class="nav_show_menu_box clear">
+                            <div class="show_left">
+                                <a class="list_main" href="#">频道精选</a>
+                            </div>
+                            <div class="show_right"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">鞋靴</a>
+                    <div class="nav_show_menu">
+                        <div class="nav_show_menu_box clear">
+                            <div class="show_left">
+                                <a class="list_main" href="#">频道精选</a>
+                            </div>
+                            <div class="show_right"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">腕表</a>
+
+                </li>
+                <li>
+                    <a class="nav_title" href="#">配饰</a>
+
+                </li>
+                <li>
+                    <a class="nav_title" href="#">妆品</a>
+
+                </li>
+                <li>
+                    <a class="nav_title" href="#">生活</a>
+
+                </li>
+                <li>
+                    <a class="nav_title" href="#">婴童</a>
+
+                </li>
+                <li>
+                    <a class="nav_title" href="#">豪车</a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+<!--隐藏导航栏-->
+    <div id="hide_nav">
+        <div class="margin">
+            <ul class="nav clear">
+                <li>
+                    <a class="nav_title" href="#">包装</a>
+                    <div class="nav_show_menu">
+                        <div class="nav_show_menu_box clear">
+                            <div class="show_left">
+                                <a class="list_main" href="#">频道精选</a>
+                            </div>
+                            <div class="show_right"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">服装</a>
+                    <div class="nav_show_menu">
+                        <div class="nav_show_menu_box clear">
+                            <div class="show_left">
+                                <a class="list_main" href="#">频道精选</a>
+                            </div>
+                            <div class="show_right"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">鞋靴</a>
+                    <div class="nav_show_menu">
+                        <div class="nav_show_menu_box clear">
+                            <div class="show_left">
+                                <a class="list_main" href="#">频道精选</a>
+                            </div>
+                            <div class="show_right"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">腕表</a>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">配饰</a>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">妆品</a>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">生活</a>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">婴童</a>
+                </li>
+                <li>
+                    <a class="nav_title" href="#">豪车</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!--banner-->
+    <div id="banner">
+        <div class="margin">
+            <div class="banner_box">
+                <div class="banner">
+                    <ul class="banner_ul">
+                        <li>
+                            <a href="#">
+                                <img src="img/banner1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/banner2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/banner3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/banner4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/banner5.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/banner1.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="circle">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--主体部分-->
+    <div id="main">
+        <div class="margin">
+            <!--点击活动-->
+            <div class="main_click">
+                <a class="share" href="#"></a>
+                <a class="new" href="#"></a>
+                <a class="gift" href="#"></a>
+                <a class="invite" href="#"></a>
+            </div>
+            <!--尖货推荐-->
+            <div class="main_recommend">
+                <div class="title">
+                    <img src="img/recommend.jpg" alt="">
+                </div>
+                <ul class="photo clear">
+                    <li><a href="#"><img src="img/recommend1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend4.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend5.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend6.jpg" alt=""></a></li>
+                </ul>
+                <ul class="photo clear">
+                    <li><a href="#"><img src="img/recommend7.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend8.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend9.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend10.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend11.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/recommend12.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <!--热荐专题-->
+            <div class="main_hot">
+                <div class="title">
+                    <img src="img/hot.jpg" alt="">
+                </div>
+                <ul class="hot_ul">
+                    <li>
+                        <a href="#">
+                            <img class="hot" src="img/hot1.jpg" alt="">
+                            <div class="hot_center">
+                                <img src="img/hot1.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="hot" src="img/hot2.jpg" alt="">
+                            <div class="hot_center">
+                                <img src="img/hot2.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="hot" src="img/hot3.jpg" alt="">
+                            <div class="hot_center">
+                                <img src="img/hot3.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="hot" src="img/hot4.jpg" alt="">
+                            <div class="hot_center">
+                                <img src="img/hot4.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="hot" src="img/hot5.jpg" alt="">
+                            <div class="hot_center">
+                                <img src="img/hot5.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="hot" src="img/hot6.jpg" alt="">
+                            <div class="hot_center">
+                                <img src="img/hot6.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="more">
+                    <a href="#"><img src="img/more1.jpg" alt=""></a>
+                </div>
+            </div>
+            <!--精选卖场-->
+            <div class="main_choice">
+                <div class="title">
+                    <img src="img/choice.jpg" alt="">
+                </div>
+                <ul class="choice_ul">
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice1.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice1.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice2.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice2.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice3.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice3.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice4.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice4.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice5.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice5.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice6.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice6.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice7.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice7.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice8.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice8.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice9.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice9.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice10.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice10.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice11.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice11.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="choice" src="img/choice12.jpg" alt="">
+                            <div class="choice_left">
+                                <img src="img/choice12.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="more">
+                    <a href="#"><img src="img/more2.jpg" alt=""></a>
+                </div>
+            </div>
+            <!--汽车banner-->
+            <div class='carbanner'>
+                <a href="#">
+                    <img src="img/carbanner.jpg" alt="">
+                </a>
+            </div>
+            <!--发现好货-->
+            <div class="main_find">
+                <div class="title">
+                    <img src="img/find.jpg" alt="">
+                </div>
+                <ul class="find_ul">
+                    <li>
+                        <a href="#">
+                            <img src="img/find1.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find2.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find3.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find4.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find5.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find6.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find7.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find8.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find9.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find10.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find11.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find12.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find13.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find14.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find15.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/find16.jpg" alt="">
+                            <div></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="more">
+                    <a href="#"><img src="img/more3.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--尾部-->
+    <div id="foot">
+        <div class="foot_head">
+            <div class="margin clear">
+                <div class="foot_head_left">
+                    <a class="waiter" href="#"></a>
+                    <p class="phone"></p>
+                    <a class="say" href="#"></a>
+                </div>
+                <dl class="foot_head_dl">
+                    <dt>新手入门</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员等级与升级</a></dd>
+                    <dd><a href="#">我的走秀</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">手机走秀</a></dd>
+                </dl>
+                <dl class="foot_head_dl">
+                    <dt>配送方式</dt>
+                    <dd><a href="#">海外配送说明</a></dd>
+                    <dd><a href="#">配送运费</a></dd>
+                    <dd><a href="#">配送查询</a></dd>
+                </dl>
+                <dl class="foot_head_dl">
+                    <dt>支付方式</dt>
+                    <dd><a href="#">在线支付</a></dd>
+                    <dd><a href="#">货到付款</a></dd>
+                    <dd><a href="#">银行汇款</a></dd>
+                </dl>
+                <dl class="foot_head_dl">
+                    <dt>售后服务</dt>
+                    <dd><a href="#">退换货自动申请</a></dd>
+                    <dd><a href="#">退换货政策</a></dd>
+                    <dd><a href="#">退换货流程</a></dd>
+                    <dd><a href="#">退款说明</a></dd>
+                    <dd><a href="#">CEO邮箱</a></dd>
+                </dl>
+                <dl class="code">
+                    <dt>走秀微信客服</dt>
+                    <dd></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="foot_nav">
+           <ul class="foot_nav_ul clear">
+               <li><a href="#">关于走秀</a>|</li>
+               <li><a href="#">About us</a>|</li>
+               <li><a href="#">媒体报道</a>|</li>
+               <li><a href="#">品牌招商</a>|</li>
+               <li><a href="#">加入走秀</a>|</li>
+               <li><a href="#">网站地图</a>|</li>
+               <li><a href="#">联系我们</a>|</li>
+               <li><a href="#">品牌大全</a>|</li>
+               <li><a href="#">邮政订阅</a>|</li>
+               <li><a href="#">品牌专题</a>|</li>
+               <li><a href="#">WAP站点</a></li>
+           </ul>
+        </div>
+        <div class="foot_promise">
+            <a class="promise_1" href="#"></a>
+            <a class="promise_2" href="#"></a>
+            <a class="promise_3" href="#"></a>
+        </div>
+        <p class="foot_text">
+            Copyright &copy; 2008-2016
+            <a href="#">Xiu.com</a>
+            深圳走秀网络科技有限公司 版权所有 .
+            <a href="#">粤ICP备07502993号</a>
+        </p>
+        <div class="friend">
+            <a href="#"><img src="img/friend1.jpg" alt=""></a>
+            <a href="#"><img src="img/friend2.jpg" alt=""></a>
+            <a href="#"><img src="img/friend3.jpg" alt=""></a>
+            <a href="#"><img src="img/friend4.jpg" alt=""></a>
+            <a href="#"><img src="img/friend5.jpg" alt=""></a>
+            <a href="#"><img src="img/friend6.jpg" alt=""></a>
+            <a href="#"><img src="img/friend7.jpg" alt=""></a>
+            <a href="#"><img src="img/friend8.jpg" alt=""></a>
+            <a href="#"><img src="img/friend9.jpg" alt=""></a>
+        </div>
+    </div>
+<!--右侧跟随导航-->
+    <div class="rightnav">
+        <p><img src="img/right.png" alt=""></p>
+        <a class="jianhuo" href="#"><img src="img/right.png" alt=""></a>
+        <a class="qiudong" href="#"><img src="img/right.png" alt=""></a>
+        <a class="tebie" href="#"><img src="img/right.png" alt=""></a>
+        <a class="pinzhi" href="#"><img src="img/right.png" alt=""></a>
+        <a class="up" href="#"><img src="img/right.png" alt=""></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body{background: #fff;color: #5b5b5b;}
+#head{width: 950px;margin: 0 auto;height: 64px;padding-top: 12px;border-bottom: 1px solid #000;}
+.logo{float: left;width: 194px;height: 59px;margin-left: 13px;}
+.head_right{width: 600px;text-align: right;color: #151515;}
+.connect{margin-bottom: 15px;height: 20px;}
+.connect a{float: right;padding: 0 10px;color: #5b5b5b;}
+#head a:hover{color: #f26521;}
+.connect span b{font:700 16px/18px "";color: #f26521;}
+.welcome{height: 20px;}
+.welcome a{color: #5b5b5b;}
+#shop_list{height: 40px;padding-top: 15px;width: 950px;margin: 0 auto;}
+.shop_ul{width: 950px;height: 33px;}
+.shop_ul li{float: left;width: 316px;height: 24px;text-align: center;font:600 14px/24px "宋体";background: #e2e2e2;color: #5b5b5b;}
+li.check{background: #82bf38;color: #fff;}
+.shop_ul li span{float: right;width: 27px;height: 32px;margin-top: -4px;background: url("../img/shop.gif") no-repeat 0 0;overflow: hidden;}
+.shop_ul li span.list1{background-position: 0 0;}
+.shop_ul li span.list2{background-position: -27px 0;}
+.goods{width: 950px;margin: 0 auto;}
+.ul_list{border: 1px solid #d6d3d3;}
+.ul_list li{float: left;text-align: center;height: 32px;color: #000;background: #e3e3e3;font: 12px/32px "";}
+.li1{width: 80px;}
+.li1 input{vertical-align: middle;}
+.li2{width: 358px;}
+.li3{width: 120px;}
+.li4{width: 130px;}
+.li5{width: 130px;}
+.li6{width: 129px;}
+.goods_list{width: 948px;border: 1px solid #d6d3d3;height: 110px;background: #fff4e8;}
+.goods_list li{float: left;padding: 10px;}
+.goods_li1{text-align: left;padding-left: 15px;height: 90px;width: 55px;}
+.goods_li1 input{vertical-align: middle;display: inline-block;}
+.imgage img{border: 1px solid #dfdfdf;}
+.miaoshu{width: 256px;}
+.miaoshu p{font:12px/25px "";color: #000;}
+.miaoshu span{font: 12px/25px "";color: #5b5b5b;}
+.price{width: 100px;text-align: center;font: 12px/90px "";color: #000;}
+.xiaoji{width: 110px;text-align: center;font: 600 12px/90px "";color: #ff6633;}
+.shuliang{width: 110px;text-align: center;height: 90px;}
+.shuliang .jia,.shuliang .jian{border: 1px solid #666;width: 10px;height: 10px;line-height: 8px;margin-bottom: -3px;cursor: pointer;display: inline-block;vertical-align: middle;}
+.shu{line-height: 15px;height: 15px;width: 30px;border: 1px solid #dfdfdf;text-align: center;margin: 0 10px;vertical-align: middle;}
+.shuliang a:hover{border: 1px solid #f7941c;}
+li.delete{text-align: center;width: 108px;padding-top: 38px;}
+.delete a{display: block;vertical-align: middle;line-height: 25px;color: #5b5b5b;cursor: pointer;}
+.delete a:hover{color: #f7941c;}
+.zongjie{height: 50px;line-height: 50px;border: 1px solid #d8d7d7;background: #fff;margin: 5px auto 0;width: 950px;}
+.quanxuan{float: left;height: 18px;line-height: 18px;padding: 16px 0 16px 9px;}
+.quanxuan input{display: inline;}
+.chuli{float: left;width: 310px;height: 50px;line-height: 50px;}
+.chuli a{display: inline-block;height: 50px;line-height: 50px;padding: 0 15px;margin-left: 15px;cursor: pointer;}
+.chuli a:hover{background: #ea7515;color: #fff;}
+.yixuan{float: left;width: 200px;text-align: center;margin-left: 30px;}
+.yixuan b{margin: 0 5px;color: #ea7515;}
+.zongji{float: left;width: 240px;color: #5b5b5b;}
+.qian{color: #ea7515;font: 20px/50px "";}
+.jiesuan{float: right;width: 108px;height: 50px; cursor: pointer;overflow: hidden;background:url("../img/jiesuan.jpg") no-repeat 0 -50px;}
+.foot{margin: 0 auto;width: 950px;}
+.foot img{float: left;}
+.blank{width: 950px;margin: 20px auto;display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

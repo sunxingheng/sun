@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>走秀详情页</title>
+    <link  type="text/css" rel="stylesheet" href="css/public.css" >
+    <link type="text/css" rel="stylesheet" href="css/detail.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/detail.js"></script>
+    <script type="text/javascript" src="js/detail2.js"></script>
+    <script type="text/javascript" src="../cart/js/cart.js"></script>
+    <script src="../cart/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../cart/js/jquery.fly.js" type="text/javascript"></script>
+    <script src="../cart/js/requestAnimationFrame.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/Ajax.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<div id="head">
+    <div class="margin">
+        <!--头部-->
+        <div class="head_box clear">
+            <!--头部左边部分-->
+            <div class="head_left">
+                <ul class="head_left_ul">
+                    <li id="login" class="login">
+                        <a  href="login/loginzhuce.html">
+                            登录/注册
+                        </a>
+                    </li>
+                    <li id="bag" class="bag">
+                        <a id="newbag" class="shoppingbag" href="#">
+                            购物袋
+                            <span id="num" class="num">0</span>
+                            件
+                        </a>
+                        <div id="mybag" class="mybag_show">
+                            <div class="mybag_nei">
+                                <span>购物袋暂时没有商品</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="myshow" class="myshow">
+                        <a id="myshow_nei" class="hide" href="#">我的走秀</a>
+                        <div id="my_show" class="my_show_menu">
+                            <a href="#">我的订单</a>
+                            <a href="#">自助退货</a>
+                            <a href="#">我的收藏</a>
+                            <a href="#">帮助中心</a>
+                            <a href="#">全部吐槽</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--头部logo-->
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+            <!--头部右边搜索框-->
+            <div class="right">
+                <form action="" method="get" target="_blank" class="search_box">
+                    <div class="search">
+                        <input class="int" type="text" placeholder="请搜索Stan smith试试">
+                    </div>
+                    <input class="sbt" type="submit" value="">
+                </form>
+            </div>
+            <!--头部导航-->
+            <div id="head_nav">
+                <ul class="inhead_nav">
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="#">新品</a></li>
+                    <li><a href="#">男士</a></li>
+                    <li><a href="#">女士</a></li>
+                    <li><a href="#">品牌</a></li>
+                    <li><a class="hot" href="#">发现</a></li>
+                    <li><a href="#">专题</a></li>
+                    <li><a href="#">手机走秀</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<div id="nav">
+    <div class="margin">
+        <ul class="nav clear">
+            <li>
+                <a class="nav_title" href="#">包装</a>
+                <div class="nav_show_menu">
+                    <div class="nav_show_menu_box clear">
+                        <div class="show_left">
+                            <a class="list_main" href="#">频道精选</a>
+                        </div>
+                        <div class="show_right"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="nav_title" href="#">服装</a>
+                <div class="nav_show_menu">
+                    <div class="nav_show_menu_box clear">
+                        <div class="show_left">
+                            <a class="list_main" href="#">频道精选</a>
+                        </div>
+                        <div class="show_right"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="nav_title" href="#">鞋靴</a>
+                <div class="nav_show_menu">
+                    <div class="nav_show_menu_box clear">
+                        <div class="show_left">
+                            <a class="list_main" href="#">频道精选</a>
+                        </div>
+                        <div class="show_right"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="nav_title" href="#">腕表</a>
+            </li>
+            <li>
+                <a class="nav_title" href="#">配饰</a>
+            </li>
+            <li>
+                <a class="nav_title" href="#">妆品</a>
+            </li>
+            <li>
+                <a class="nav_title" href="#">生活</a>
+            </li>
+            <li>
+                <a class="nav_title" href="#">婴童</a>
+            </li>
+            <li>
+                <a class="nav_title" href="#">豪车</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--主体部分-->
+<div id="main">
+    <div class="margin2">
+        <!--小标题-->
+        <div class="title">
+            <span>您的位置：</span>
+            <a href="#">走秀首页 &gt;</a>
+            <a href="#">男装 &gt;</a>
+            <a href="#">上装 &gt;</a>
+            <a href="#">夹克 &gt;</a>
+            <span>男士拼色夹克</span>
+        </div>
+        <!--详情页放大镜部分内容-->
+        <div class="detail clear">
+            <!--产品图片-->
+            <div class="photo_box">
+                <div class="photo_big">
+                    <img class="bigImg" src="img/bigphoto1.jpg" alt="">
+                    <div class="photo_huge">
+                        <img class="hugeImg" src="img/hugephoto1.jpg" alt="">
+                    </div>
+                    <div class="mouseMove"></div>
+                </div>
+                <div class="photo_small">
+                    <ul class="photo_small_ul">
+                        <li class="change">
+                            <img class="changeimg" src="img/smallphoto1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/smallphoto2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/smallphoto3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/smallphoto4.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/smallphoto5.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--图片右侧部分-->
+            <div class="style">
+                <div class="style_title">
+                    <p class="p_title">男士拼色夹克</p>
+                    <span class="brand">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌 :</span>
+                    <a class="englishName" href="#">Neil Barrett </a>
+                    <a class="chineseName" href="#">&nbsp;(尼奥·贝奈特)</a>
+                    <a id="messageNum" href="#">已有146条品牌评论</a>
+                    <span class="number">商品编号：10485230</span>
+                </div>
+                <div class="price_box">
+                    <div class="price clear">
+                        <span class="zouXiu">走 秀 价 ：</span>
+                        <span class="priceNum1">￥</span>
+                        <span class="priceNum">6339</span>
+                        <span class="shiChang">市场参考价 ：￥8584</span>
+                    </div>
+                    <div class="place">
+                        <span class="faHuo">发 货 地 ：</span>
+                        <span class="faGuo">法国.巴黎</span>
+                        <span class="days">预计7-14天送达</span>
+                        <span class="chaKan" >
+                            <span>查看配送流程</span>
+                            <div class="liuChen">
+                                <img src="img/liuchen.jpg" alt="">
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="style_choice">
+                    <div class="style_color clear">
+                        <span class="yanSe">颜&nbsp;&nbsp;&nbsp;&nbsp;色 :</span>
+                        <ul class="color_list">
+                            <li class="selected1">
+                                <span>黑/灰色</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="style_size clear">
+                        <span class="yanSe">尺&nbsp;&nbsp;&nbsp;&nbsp;码 :</span>
+                        <ul class="color_list">
+                            <li class="selected2">
+                                <span>S</span>
+                            </li>
+                            <li>
+                                <span>M</span>
+                            </li>
+                            <li>
+                                <span>L</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="zhinan">尺码指南</a>
+                    </div>
+                    <div class="style_num clear">
+                        <span class="yanSe">数&nbsp;&nbsp;&nbsp;&nbsp;量 :</span>
+                        <div class="jianshu clear">
+                            <span class="minus"></span>
+                            <input  class="jianshu_number" type="text" value="1">
+                            <span class="plus"></span>件
+                            <span class="tishi">
+                                仅剩
+                                <b>1</b>
+                                件，剩余时间
+                                <div class="time-item">
+                                        <span id="day_show">0天</span>
+                                        <strong id="hour_show">0时</strong>
+                                        <strong id="minute_show">0分</strong>
+                                        <strong id="second_show">0秒</strong>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="style_service clear">
+                        <a href="#" class="fenqi">
+                            支持分期付款
+                            <div class="fukuan clear">
+                                <img src="img/zaixian.jpg" alt="">
+                                <span class="fukuan_up">
+                                    订单总额大于
+                                    <b>500</b>
+                                    元即可选择订单分期付款
+                                </span>
+                                <span>支付时选择“信用卡分期“"-"银联在线支付，<br/>即可分期付款</span>
+                            </div>
+                        </a>
+                        <span class="who">
+                            <a href="#">由ENJOY发货</a>
+                        </span>
+                        <span class="tigong">由走秀网提供售后服务</span>
+                    </div>
+                    <div class="buy">
+                        <a href="#" class="buy_gou"></a>
+                        <a class="buy_bag"></a>
+                        <a href="#" class="collect"></a>
+                    </div>
+                    <div class="call">
+                        电话订购：
+                        <strong>400-888-4499</strong>
+                        <span>(08:00-24:00)</span>
+                    </div>
+                </div>
+                <div class="style_share clear">
+                    <div class="clear">
+                        <img src="img/erweima.jpg" alt="">
+                        <p>扫一扫二维码<br/>分享给朋友</p>
+                    </div>
+                    <div class="tupian">
+                        <span>分享到：</span>
+                        <a href="#"><img src="img/xinlang.jpg" alt=""></a>
+                        <a href="#"><img src="img/weibo.jpg" alt=""></a>
+                        <a href="#"><img src="img/wei.jpg" alt=""></a>
+                        <a href="#"><img src="img/she.jpg" alt=""></a>
+                        <a href="#"><img src="img/dou.jpg" alt=""></a>
+                        <a href="#"><img src="img/kong.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--详情页下部分-->
+        <!--详情页下部分导航-->
+        <div class="detail_nav">
+            <div class="detail_nav_box">
+                <ul class="detail_box_ul">
+                    <li class="on"><span>商品信息</span></li>
+                    <li><span>品牌评论(146)</span></li>
+                    <li><span>走秀承诺</span></li>
+                    <li><span>服务保障</span></li>
+                </ul>
+                <div class="jiarubag">
+                    <span>￥6339</span>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+        <!--详情页部分-->
+        <div class="detail_container clear">
+            <div class="container_left">
+                <div class="container_left_1">
+                    <img src="img/container101.jpg" alt="">
+                    <img src="img/container102.jpg" alt="">
+                    <img src="img/container103.jpg" alt="">
+                    <img src="img/container104.jpg" alt="">
+                    <img src="img/container105.jpg" alt="">
+                    <img src="img/container106.jpg" alt="">
+                    <img src="img/container107.jpg" alt="">
+                    <img src="img/container108.jpg" alt="">
+                    <div class="container_left_2">
+                        <div class="pinglun clear">
+                            <img src="img/manyidu.jpg" alt="">
+                            <div class="fabiao">
+                                <p></p>
+                                <p><a class="fbpl" href="#">发表评论</a></p>
+                                <p>每天100名发表评论用户可获赠现金券
+                                    <a href="#">评论规则</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="container_left_4_list">
+                            <form  method="post" action="">
+                                <div class="form_title clear">
+                                    <ul class="left">
+                                        <li><span class="chosen">全部(146)</span></li>
+                                        <li><span>满意(142)</span></li>
+                                        <li><span>一般(2)</span></li>
+                                        <li><span>不满意(2)</span></li>
+                                    </ul>
+                                    <div class="right">
+                                        <select name="" >
+                                            <option value="0" selected="selected">品牌全部评论</option>
+                                            <option value="1">当前商品评论</option>
+                                        </select>
+                                        <select name="" >
+                                            <option value="0" selected="selected">全部商品类型</option>
+                                            <option value="1">服装服饰</option>
+                                            <option value="2">箱包皮具</option>
+                                            <option value="3">鞋类</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="pjneirong">
+                                    <div class="firstUser clear">
+                                        <div class="userName left">
+                                            <p>
+                                                <img src="img/smallphoto1.jpg" alt="">
+                                            </p>
+                                            <p>林******傲</p>
+                                            <a href="#">
+                                                已购买过此商品
+                                            </a>
+                                        </div>
+                                        <div class="user_pingjia right">
+                                            <div class="image left">
+                                                <a href="#">
+                                                    <img src="img/image1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <ul>
+                                                <li class="pingfen">
+                                                    <p>
+                                                        <span>评分：</span>
+                                                        <span class="star"></span>
+                                                    </p>
+                                                    <p class="color">颜色：黑色</p>
+                                                    <p class="size">尺码：34</p>
+                                                </li>
+                                                <li class="value">
+                                                    <p>好好好</p>
+                                                </li>
+                                                <li class="goodsName">
+                                                    <p><a class="over" href="#">男士牛仔裤</a></p>
+                                                    <span class="time">发表于2016-09-18 12:34:32</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="firstUser clear">
+                                        <div class="userName left">
+                                            <p>
+                                                <img src="img/smallphoto1.jpg" alt="">
+                                            </p>
+                                            <p>林******傲</p>
+                                            <a href="#">
+                                                已购买过此商品
+                                            </a>
+                                        </div>
+                                        <div class="user_pingjia right">
+                                            <div class="image left">
+                                                <a href="#">
+                                                    <img src="img/image1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <ul>
+                                                <li class="pingfen">
+                                                    <p>
+                                                        <span>评分：</span>
+                                                        <span class="star"></span>
+                                                    </p>
+                                                    <p class="color">颜色：黑色</p>
+                                                    <p class="size">尺码：34</p>
+                                                </li>
+                                                <li class="value">
+                                                    <p>好好好</p>
+                                                </li>
+                                                <li class="goodsName">
+                                                    <p><a class="over" href="#">男士牛仔裤</a></p>
+                                                    <span class="time">发表于2016-09-18 12:34:32</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="firstUser clear">
+                                        <div class="userName left">
+                                            <p>
+                                                <img src="img/smallphoto1.jpg" alt="">
+                                            </p>
+                                            <p>林******傲</p>
+                                            <a href="#">
+                                                已购买过此商品
+                                            </a>
+                                        </div>
+                                        <div class="user_pingjia right">
+                                            <div class="image left">
+                                                <a href="#">
+                                                    <img src="img/image1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <ul>
+                                                <li class="pingfen">
+                                                    <p>
+                                                        <span>评分：</span>
+                                                        <span class="star"></span>
+                                                    </p>
+                                                    <p class="color">颜色：黑色</p>
+                                                    <p class="size">尺码：34</p>
+                                                </li>
+                                                <li class="value">
+                                                    <p>好好好</p>
+                                                </li>
+                                                <li class="goodsName">
+                                                    <p><a class="over" href="#">男士牛仔裤</a></p>
+                                                    <span class="time">发表于2016-09-18 12:34:32</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="firstUser clear">
+                                        <div class="userName left">
+                                            <p>
+                                                <img src="img/smallphoto1.jpg" alt="">
+                                            </p>
+                                            <p>林******傲</p>
+                                            <a href="#">
+                                                已购买过此商品
+                                            </a>
+                                        </div>
+                                        <div class="user_pingjia right">
+                                            <div class="image left">
+                                                <a href="#">
+                                                    <img src="img/image1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <ul>
+                                                <li class="pingfen">
+                                                    <p>
+                                                        <span>评分：</span>
+                                                        <span class="star"></span>
+                                                    </p>
+                                                    <p class="color">颜色：黑色</p>
+                                                    <p class="size">尺码：34</p>
+                                                </li>
+                                                <li class="value">
+                                                    <p>好好好</p>
+                                                </li>
+                                                <li class="goodsName">
+                                                    <p><a class="over" href="#">男士牛仔裤</a></p>
+                                                    <span class="time">发表于2016-09-18 12:34:32</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page clear">
+                                    <a href="#" class="page_more">查看品牌全部评论>></a>
+                                    <div class="change_page">
+                                        <span class="spanHover">第一页</span>
+                                        <span class="pageNone">上一页</span>
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                        <p>...</p>
+                                        <span>下一页</span>
+                                        <span>最后页</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_left_2">
+                    <div class="pinglun clear">
+                        <img src="img/manyidu.jpg" alt="">
+                        <div class="fabiao">
+                            <p></p>
+                            <p><a class="fbpl" href="#">发表评论</a></p>
+                            <p>每天100名发表评论用户可获赠现金券
+                                <a href="#">评论规则</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container_left_4_list">
+                        <form id="form_pinglun" method="post" action="">
+                            <div class="form_title clear">
+                                <ul class="left">
+                                    <li><span class="chosen">全部(146)</span></li>
+                                    <li><span>满意(142)</span></li>
+                                    <li><span>一般(2)</span></li>
+                                    <li><span>不满意(2)</span></li>
+                                </ul>
+                                <div class="right">
+                                    <select name="" >
+                                        <option value="0" selected="selected">品牌全部评论</option>
+                                        <option value="1">当前商品评论</option>
+                                    </select>
+                                    <select name="" >
+                                        <option value="0" selected="selected">全部商品类型</option>
+                                        <option value="1">服装服饰</option>
+                                        <option value="2">箱包皮具</option>
+                                        <option value="3">鞋类</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="pjneirong">
+                                <div class="firstUser clear">
+                                    <div class="userName left">
+                                        <p>
+                                            <img src="img/smallphoto1.jpg" alt="">
+                                        </p>
+                                        <p>林******傲</p>
+                                        <a href="#">
+                                            已购买过此商品
+                                        </a>
+                                    </div>
+                                    <div class="user_pingjia right">
+                                        <div class="image left">
+                                            <a href="#">
+                                                <img src="img/image1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <ul>
+                                            <li class="pingfen">
+                                                <p>
+                                                    <span>评分：</span>
+                                                    <span class="star"></span>
+                                                </p>
+                                                <p class="color">颜色：黑色</p>
+                                                <p class="size">尺码：34</p>
+                                            </li>
+                                            <li class="value">
+                                                <p>好好好</p>
+                                            </li>
+                                            <li class="goodsName">
+                                                <p><a class="over" href="#">男士牛仔裤</a></p>
+                                                <span class="time">发表于2016-09-18 12:34:32</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="firstUser clear">
+                                    <div class="userName left">
+                                        <p>
+                                            <img src="img/smallphoto1.jpg" alt="">
+                                        </p>
+                                        <p>林******傲</p>
+                                        <a href="#">
+                                            已购买过此商品
+                                        </a>
+                                    </div>
+                                    <div class="user_pingjia right">
+                                        <div class="image left">
+                                            <a href="#">
+                                                <img src="img/image1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <ul>
+                                            <li class="pingfen">
+                                                <p>
+                                                    <span>评分：</span>
+                                                    <span class="star"></span>
+                                                </p>
+                                                <p class="color">颜色：黑色</p>
+                                                <p class="size">尺码：34</p>
+                                            </li>
+                                            <li class="value">
+                                                <p>好好好</p>
+                                            </li>
+                                            <li class="goodsName">
+                                                <p><a class="over" href="#">男士牛仔裤</a></p>
+                                                <span class="time">发表于2016-09-18 12:34:32</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="firstUser clear">
+                                    <div class="userName left">
+                                        <p>
+                                            <img src="img/smallphoto1.jpg" alt="">
+                                        </p>
+                                        <p>林******傲</p>
+                                        <a href="#">
+                                            已购买过此商品
+                                        </a>
+                                    </div>
+                                    <div class="user_pingjia right">
+                                        <div class="image left">
+                                            <a href="#">
+                                                <img src="img/image1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <ul>
+                                            <li class="pingfen">
+                                                <p>
+                                                    <span>评分：</span>
+                                                    <span class="star"></span>
+                                                </p>
+                                                <p class="color">颜色：黑色</p>
+                                                <p class="size">尺码：34</p>
+                                            </li>
+                                            <li class="value">
+                                                <p>好好好</p>
+                                            </li>
+                                            <li class="goodsName">
+                                                <p><a class="over" href="#">男士牛仔裤</a></p>
+                                                <span class="time">发表于2016-09-18 12:34:32</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="firstUser clear">
+                                    <div class="userName left">
+                                        <p>
+                                            <img src="img/smallphoto1.jpg" alt="">
+                                        </p>
+                                        <p>林******傲</p>
+                                        <a href="#">
+                                            已购买过此商品
+                                        </a>
+                                    </div>
+                                    <div class="user_pingjia right">
+                                        <div class="image left">
+                                            <a href="#">
+                                                <img src="img/image1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <ul>
+                                            <li class="pingfen">
+                                                <p>
+                                                    <span>评分：</span>
+                                                    <span class="star"></span>
+                                                </p>
+                                                <p class="color">颜色：黑色</p>
+                                                <p class="size">尺码：34</p>
+                                            </li>
+                                            <li class="value">
+                                                <p>好好好</p>
+                                            </li>
+                                            <li class="goodsName">
+                                                <p><a class="over" href="#">男士牛仔裤</a></p>
+                                                <span class="time">发表于2016-09-18 12:34:32</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page clear">
+                                <a href="#" class="page_more">查看品牌全部评论>></a>
+                                <div class="change_page">
+                                    <span class="spanHover">第一页</span>
+                                    <span class="pageNone">上一页</span>
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <p>...</p>
+                                    <span>下一页</span>
+                                    <span>最后页</span>
+                                </div>
+                                <!--<div id="div1" style="height: 34px;text-align: center;float: right"></div>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="container_left_3">
+                    <img src="img/container3.jpg" alt="">
+                </div>
+                <div class="container_left_4">
+                    <img src="img/container401.jpg" alt="">
+                    <span class="span_4">走秀网提供Neil Barrett夹克11516624 - PBJS116C B510C 21，全网最低，购买夹克，上xiu.com男士拼色夹克专区-全球时尚正品百货</span>
+                    <p class="title_4">
+                        更多常见问题：
+                    </p>
+                    <div class="question">
+                        <a href=""><span>购物类常见问题</span></a>
+                        <a href=""><span>支付类常见问题</span></a>
+                        <a href=""><span>配送类常见问题</span></a>
+                        <a href=""><span>售后类常见问题</span></a>
+                        <a href=""><span>会员类常见问题</span></a>
+                        <a href=""><span>商品类常见问题</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container_right right">
+                <div class="container_right_box">
+                    <div class="right_title"><span>你可能对以下商品感兴趣</span></div>
+                    <div class="right_like">
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_right_box">
+                    <div class="right_title"><span>你最近浏览的商品</span></div>
+                    <div class="right_like">
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                        <div class="shangping">
+                            <a class="right_sp" href="#"><img src="img/right1.jpg" alt=""></a>
+                            <p class="right_sp_t">Lee</p>
+                            <p class="right_sp_ti">
+                                <a href="#">Lee 男款 毛呢 时尚夹克皮衣夹克  夹克</a>
+                            </p>
+                            <p class="right_price">￥662</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--尾部-->
+<div id="foot">
+    <div class="foot_head">
+        <div class="margin clear">
+            <div class="foot_head_left">
+                <a class="waiter" href="#"></a>
+                <p class="phone"></p>
+                <a class="say" href="#"></a>
+            </div>
+            <dl class="foot_head_dl">
+                <dt>新手入门</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员等级与升级</a></dd>
+                <dd><a href="#">我的走秀</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">手机走秀</a></dd>
+            </dl>
+            <dl class="foot_head_dl">
+                <dt>配送方式</dt>
+                <dd><a href="#">海外配送说明</a></dd>
+                <dd><a href="#">配送运费</a></dd>
+                <dd><a href="#">配送查询</a></dd>
+            </dl>
+            <dl class="foot_head_dl">
+                <dt>支付方式</dt>
+                <dd><a href="#">在线支付</a></dd>
+                <dd><a href="#">货到付款</a></dd>
+                <dd><a href="#">银行汇款</a></dd>
+            </dl>
+            <dl class="foot_head_dl">
+                <dt>售后服务</dt>
+                <dd><a href="#">退换货自动申请</a></dd>
+                <dd><a href="#">退换货政策</a></dd>
+                <dd><a href="#">退换货流程</a></dd>
+                <dd><a href="#">退款说明</a></dd>
+                <dd><a href="#">CEO邮箱</a></dd>
+            </dl>
+            <dl class="code">
+                <dt>走秀微信客服</dt>
+                <dd></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="foot_nav">
+        <ul class="foot_nav_ul clear">
+            <li><a href="#">关于走秀</a>|</li>
+            <li><a href="#">About us</a>|</li>
+            <li><a href="#">媒体报道</a>|</li>
+            <li><a href="#">品牌招商</a>|</li>
+            <li><a href="#">加入走秀</a>|</li>
+            <li><a href="#">网站地图</a>|</li>
+            <li><a href="#">联系我们</a>|</li>
+            <li><a href="#">品牌大全</a>|</li>
+            <li><a href="#">邮政订阅</a>|</li>
+            <li><a href="#">品牌专题</a>|</li>
+            <li><a href="#">WAP站点</a></li>
+        </ul>
+    </div>
+    <div class="foot_promise">
+        <a class="promise_1" href="#"></a>
+        <a class="promise_2" href="#"></a>
+        <a class="promise_3" href="#"></a>
+    </div>
+    <p class="foot_text">
+        Copyright &copy; 2008-2016
+        <a href="#">Xiu.com</a>
+        深圳走秀网络科技有限公司 版权所有 .
+        <a href="#">粤ICP备07502993号</a>
+    </p>
+    <div class="friend">
+        <a href="#"><img src="../img/friend1.jpg" alt=""></a>
+        <a href="#"><img src="../img/friend2.jpg" alt=""></a>
+        <a href="#"><img src="../img/friend3.jpg" alt=""></a>
+        <a href="#"><img src="../img/friend4.jpg" alt=""></a>
+        <a href="#"><img src="../img/friend5.jpg" alt=""></a>
+        <a href="#"><img src="../img/friend6.jpg" alt=""></a>
+        <a href="#"><img src="../img/friend7.jpg" alt=""></a>
+        <a href="#"><img src="../img/friend8.jpg" alt=""></a>
+        <a href="#"><img src="../img/friend9.jpg" alt=""></a>
+    </div>
+</div>
+<!--左侧二维码-->
+<div class="erweima">
+    <img src="img/erweima2.png" alt="">
+</div>
+<!--右侧菜单-->
+<div class="right_menu">
+    <span class="close">关闭</span>
+    <div class="menu">
+        <a class="kefu" href="#"></a>
+        <a class="right_bag" href="#">
+            <span class="bag_number">0</span>
+        </a>
+        <a class="tucao" href="#"></a>
+        <a class="dingbu" href="#"></a>
+    </div>
+</div>
+</body>
+</html>

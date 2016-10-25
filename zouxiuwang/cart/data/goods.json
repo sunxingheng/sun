@@ -1,0 +1,38 @@
+{
+	"sp1" : {
+		"name1" : "Neil Barrett",
+		"name2" :"男士拼色夹克",
+		"price" : 6339,
+		"尺码" :{
+			"size1":"S",
+			"size2":"M",
+			"size3":"L"
+		},
+		"src" : "img/images1.jpg",
+		"颜色" : "黑/灰色"
+	},
+	"sp2" : {
+		"name1" : "Mocler",
+		"name2" :"男士夹克",
+		"price" : 3645,
+		"尺码" :{
+			"size1":"S",
+			"size2":"M",
+			"size3":"L"
+		},
+		"src" : "img/images2.jpg",
+		"颜色" : "深蓝色"
+	},
+	"sp3" : {
+		"name1" : "Mac New York",
+		"name2" :"男士立领休闲夹克TM6AC104",
+		"price" : 699,
+		"尺码" :{
+			"size1":"S",
+			"size2":"M",
+			"size3":"L"
+		},
+		"src" : "img/images3.jpg",
+		"颜色" : "藏青色"
+	}
+}

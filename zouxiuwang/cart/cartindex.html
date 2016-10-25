@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/cart.css" type="text/css">
+    <link rel="stylesheet" href="css/public.css" type="text/css">
+    <script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="head" class="clear">
+        <a href="../index.html" class="logo"><img src="img/logo.png" alt=""></a>
+        <div class="head_right right">
+            <p class="connect">
+                <a href="#">在线客服</a>
+                <span>客服热线(免长途费)：
+                    <b>400-888-4499</b>
+                </span>
+            </p>
+            <p class="welcome">
+               <span>您好！欢迎光临走秀网！</span>
+                <a href="../login/logindenglu.html">[登录/注册]</a>
+                <span>|</span>
+                <a href="#">帮助中心</a>
+            </p>
+        </div>
+    </div>
+    <div id="shop_list">
+        <ul class="shop_ul">
+            <li class="check">
+                <span class="list1"></span>
+                1.我的购物袋
+            </li>
+            <li>
+                <span class="list2"></span>
+                2.填写并核对订单信息
+            </li>
+            <li>
+                3.成功提交订单
+            </li>
+        </ul>
+    </div>
+    <div class="goods">
+        <ul class="ul_list clear">
+            <li class="li1"><input class="checked" type="checkbox" checked>全选</li>
+            <li class="li2">商品</li>
+            <li class="li3">购买价(元)</li>
+            <li class="li4">小计(元)</li>
+            <li class="li5">数量</li>
+            <li class="li6">操作</li>
+        </ul>
+    </div>
+    <div class="blank">
+        <a href="../detail/detail.html"><img src="img/none.jpg" alt=""></a>
+    </div>
+    <div class="foot">
+        <a href="#"><img src="img/foot.jpg" alt=""></a>
+    </div>
+    <script type="text/javascript">
+        $(function (){
+            // 取出在cookie中存的购物车信息
+            var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+            //console.log(cartStr);
+            if(!cartStr){
+                $(".blank").css({display : "block"});
+            } else {
+                var cartObj = convertCartStrToObj(cartStr);
+                // 遍历所有的商品，生成html添加到购物车列表中去
+                    // 商品信息对象
+                //console.log(cartObj);
+                     var good = cartObj;
+                     var str='<ul class="goods_list clear">'+
+                                '<li class="goods_li1"><input type="checkbox" checked>'+
+                                '<span class="czdq"></span>'+
+                                '</li>'+
+                                '<li class="imgage"><a href="#">'+'<img src="'+good.src+'" alt=""></a></li>'+
+                                '<li class="miaoshu">'+
+                                '<p>'+good.name1+'<br/>'+good.name2+'</p>'+
+                                '<span>'+'颜色：'+good["颜色"]+'&nbsp;'+'尺码：'+good["尺码"]+'</span>'+
+                                '</li>'+
+                                '<li class="price">￥'+good.price+'</li>'+
+                                '<li class="xiaoji">￥'+good.price+'</li>'+
+                                '<li class="shuliang">'+
+                                '<a class="jian">-</a>'+
+                                '<input type="text" class="shu" value='+good.num+'>'+
+                                '<a class="jia">+</a>'+
+                                '<span class="czdq"></span>'+
+                                '</li>'+
+                                '<li class="delete">'+
+                                '<a href="#" class="yichu">移至收藏夹</a>'+
+                                '<a class="shan">删除</a>'+
+                                '</li>'+
+                                '</ul>'+
+                             '<div class="zongjie clear">'+
+                                '<div class="quanxuan">'+
+                                '<input class="checked" type="checkbox" checked>'+
+                                '全选'+
+                                '</div>'+
+                                '<div class="chuli">'+
+                                '<a class="shan">'+'删除'+'</a>'+
+                                '<a class="qingchu">'+'清除失效商品'+'</a>'+
+                                '<a class="yichu">'+'移至收藏夹'+'</a>'+
+                                '</div>'+
+                                '<div class="yixuan">'+
+                                '已选商品'+
+                                '<b id="num">'+'1'+'</b>'+
+                                '件'+
+                                '</div>'+
+                                '<div class="zongji clear">'+
+                                '总计(不含运费):'+
+                                '<span class="qian">'+
+                                '￥'+
+                                '<span id="money">'+good.price+'</span>'+
+                                '</span>'+
+                                '</div>'+
+                                '<div class="jiesuan">'+
+
+                                '</div>'+
+                                '</div>';
+                    // 将上面的结构添加到goods中去
+                    $(str).appendTo(".goods");
+
+                // 给每个商品添加从购物车删除的事件
+                $('.shan').click(function (){
+                    // 在页面上将商品信息删除，顺便获取一下该商品的id
+                    // 从cookie中将该商品删除
+                    var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+                    var cartObj = convertCartStrToObj(cartStr);
+                    $(".goods_list").remove();
+                    $(".zongjie").remove();
+                    $.removeCookie("cart", {path : "/"});
+                    $(".blank").css({display : "block"})
+                    // 将新的商品信息放回cookie
+                    //$.cookie('cart', convertObjToCartStr(cartObj), {expires:7, path:"/"});
+                });
+
+                // 给增加按钮添加事件
+                $(".jia").click(function (){
+                    //var id = $(this).parents('.goodInfo').attr("data-good-id");
+                    var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+                    var cartObj = convertCartStrToObj(cartStr);
+                    cartObj.num += 1;
+                    // 将页面上显示的数量加1
+                    $(this).siblings("input").val("" + cartObj.num);
+                    // 更新页面上的小计
+                    $(this).parent().siblings('.xiaoji').html(cartObj.num * cartObj.price + "");
+                    $("#money").html(cartObj.num * cartObj.price + "");
+                    // 将信息放回cookie
+                    $.cookie('cart', convertObjToCartStr(cartObj), {expires:7, path:"/"});
+                });
+
+                // 给减按钮添加点击事件
+                $(".jian").click(function (){
+                    //var id = $(this).parents('.goodInfo').attr("data-good-id");
+                    var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+                    var cartObj = convertCartStrToObj(cartStr);
+                    if (cartObj.num > 1){ // 商品数量减少不能少于1
+                        cartObj.num -= 1;
+
+                        $(this).siblings("input").val("" + cartObj.num);
+                        $(this).parent().siblings('.xiaoji').html(cartObj.num * cartObj.price + "");
+                        $("#money").html(cartObj.num * cartObj.price + "");
+                        $.cookie('cart', convertObjToCartStr(cartObj), {expires:7, path:"/"});
+                    }
+                });
+
+                // 改数量的input绑定一个blur事件
+                $(".shu").blur(function (){
+                    //var id = $(this).parents('.goodInfo').attr("data-good-id");
+                    var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+                    var cartObj = convertCartStrToObj(cartStr);
+                    // 判断用户输入是否合法
+                    var pattern = /^\d+$/;
+                    if(!pattern.test($(this).val())){
+                        cartObj.num = 1;
+                        $(this).val("1");
+                    } else {
+                        // 修改一下数量
+                        cartObj.num = parseInt($(this).val());
+                    }
+
+                    $(this).siblings("input").val("" + cartObj.num);
+                    $(this).parent().siblings('.xiaoji').html(cartObj.num * cartObj.price + "");
+                    $.cookie('cart', convertObjToCartStr(cartObj), {expires:7, path:"/"});
+                });
+            }
+        });
+
+        function convertCartStrToObj(cartStr){
+            // 如果是空字符串，即没有购物车信息，那么购物车为空，直接返回一个空对象
+            if(!cartStr){
+                return {};
+            }
+            // "name1.name2,"颜色",“尺码”，price,num,src"
+            var obj = {};
+            var data = cartStr.split(",");
+            //console.log(data[0]);
+            obj = {
+                name1 : data[0],
+                name2 : data[1],
+                "颜色" : data[2],
+                "尺码" : data[3],
+                price : parseInt(data[4]),
+                num : parseInt(data[5]),
+                src : data[6]
+            };
+            //console.log(obj);
+            return obj;
+        }
+
+        function convertObjToCartStr(obj){
+            /*{
+             name1 : data[0],
+             name2 : data[1],
+             "颜色" : data[2],
+             "尺码" : data[3],
+             price : parseInt(data[4]),
+             num : parseInt(data[5]),
+             src : data[6]
+             }
+             */
+            //console.log(obj);
+            var cartStr = "";
+            cartStr= obj.name1 + "," + obj.name2 + "," + obj["颜色"] + "," + obj["尺码"] + "," + obj.price + "," + obj.num + "," + obj.src;
+            return cartStr;
+        }
+    </script>
+</body>
+</html>
