@@ -1,0 +1,68 @@
+
+.width{width:1100px;margin:0 auto;}
+
+
+#head p{margin:5px 0 10px 0;position:relative;}
+#head .top a{color:#f99;}
+#head img{display:inline-block;margin-left:20px;}
+#head span{margin:0 10px;}
+#head .logo p a{font:14px/20px "";}
+#head .logo p img{margin-right:30px;}
+#head .logo p a:hover{color:#f00;}
+#head .logo .ipt1{width:430px;height:30px;border: 2px solid #f00;z-index:3;}
+#head .logo .ipt2{height:36px;width:100px;border: 2px solid #f00;background:#f00;margin-top:10px;font:600 16px/16px "";color:#fff;}
+#head .sch{margin-left:650px;font:12px/20px "";padding-bottom:20px;}
+#head .zt1,.zt2,.zt3{background:#fef9f9;padding:4px;}
+/*二级菜单*/
+#head .zt1x{top:28px;right:530px;}
+/*ajax导入数据*/
+#head .zt2x{top:28px;right:430px;}
+#head .zt3x{top:28px;right:320px;}
+#head .zt1x,.zt2x,.zt3x{position:absolute;background:#fef9f9;padding:4px;display:none;z-index:6;}
+#head .zt4x{position:absolute;top:28px;right:466px;background:#fff9f0;padding:4px;display:none;z-index:6;}
+
+
+
+
+#main .main{text-align:center;background:#fff9f1;}
+#main .main .s1{opacity:0.1;filter:alpha(opacity=10)}
+#main .main .s2{margin-left:-300px;}
+#main .main .s3{margin-left:300px;}
+#main .main .s4{display:inline-block;}
+/*table选项卡*/
+#main .table .ul1 li{cursor:pointer;float: left;font:600 25px/30px "";color:#f00;width:366px;padding:3px 0;}
+#main .table .ul1 li.active{background:#eee;}
+#main .table .ul2 li{display:none;}
+#main .table .ul2 li.active{display:block;}
+
+
+h3{color:#33f;text-align:center;border-top:1px solid #a7e0ee;border-top:1px solid #fff;background:#b4ecf6;}
+#banner{background:url("images/banner.png") no-repeat;height:727px;}
+#banner .banner .bn{margin:0}
+
+
+
+
+
+
+
+
+#foot{height:364px;background:url("../images/bg2.png");}
+#foot .foot{height:200px;border-bottom:2px solid #d9d9d9;}
+#foot .foot dl{float:left;margin:30px 30px 12px 30px;}
+#foot .foot .lix{margin:50px 20px 0 0px;float:left;}
+#foot .foot dt{font:600 16px/30px "";color:#666;}
+#foot .foot dd{font:14px/30px "";color:#666;}
+#foot .foot .dd{margin-top:20px;}
+#foot .foot .p-t{margin-top:22px;text-align:center;}
+#foot .foot .p-t a,span{margin-right:16px;}
+#foot .foot .you{text-align:center;margin:7px 270px;}
+#foot .foot .youx{width:500px;height:16px;overflow:hidden;position: relative;}
+#foot .foot .yox{width:1000px;height:16px;position: absolute;}
+#foot .foot .yox li{margin-right:5px;float:left;}
+#foot .foot .about{text-align:center;margin:3px 0;}
+#foot .foot .about img{display:inline-block;margin-right:10px;}
+#foot .foot .bm{text-align:center;margin-top:10px;}
+#foot .foot .bm img{display:inline-block;margin-right:20px;}
+
+.fx{position:fixed;width:100px;height:353px;right:10px;bottom:270px;z-index:999999999;line-height:0;display:none;}

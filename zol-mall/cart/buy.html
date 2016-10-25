@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin : 0; padding : 0;}
+			.cartList {
+				margin: 0 auto;
+				width : 960px;
+			}
+			ul {
+				list-style : none;
+			}
+			.cartHead {
+				width: 960px;
+				margin: 0 auto;
+				border-top: 4px solid #c40000;
+				height : 40px;
+				background-color: #ededed;
+			}
+			.cartHead li{
+				width : 160px;
+				height : 40px;
+				float : left;
+				font : 14px/40px "微软雅黑";
+				text-align : center;
+			}
+			.goodInfo{
+				margin-top: 30px;
+				border: 1px solid #EEEEEE;
+				height : 80px;
+			}
+			.goodInfo li{
+				padding-top: 10px;
+				float : left;
+				width : 158px;
+				height : 50px;
+				text-align : center;
+				font : 12px/50px "";
+				color: #756570;
+			}
+			.goodInfo li.num input {
+				width : 30px;
+				text-align : center;
+			}
+			.goodInfo li.num a{
+				display : inline-block;
+				width : 20px;
+				height : 20px;
+				font : 12px/20px "";
+				border: 1px solid #ddd;
+				text-decoration: none;
+			}
+			.goodInfo li img {
+				width : 40px;
+				height : 40px;
+				margin-top : 5px;
+				text-align : center;
+			}
+			.blank {
+				height : 65px;
+				color: #666;
+				font: 24px/50px "";
+				text-align:center;
+				border : 1px solid #EEEEEE;
+				display : none;
+			}
+			.calute{
+				padding-top: 20px;
+				width: 960px;
+				text-align: right;
+			}
+			.calute a{
+				line-height: 35px;
+				font-size: 18px;
+				color: #FFFFFF;
+				text-align: center;
+				display: inline-block;
+				width: 130px;
+				height: 35px;
+				background-color: #F8A200;
+			}
+		</style>
+		<link rel="stylesheet" href="css/public.css">
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	<div class="wrapper" style="padding-bottom: 40px">
+		<img src="img/zolmall.jpg" alt="">
+	</div>
+		<div class="cartList">
+			<ul class="cartHead">
+				<li>全选</li>
+				<li>所选商品</li>
+				<li>单价(元)</li>
+				<li>数量</li>
+				<li>小计(元)</li>
+				<li>操作</li>
+			</ul>
+			<!--
+			<ul class="goodInfo">
+				<li><img src="img/1.jpg"></li>
+				<li>测试</li>
+				<li>30</li>
+				<li class="num">
+					<a href="javascript:;" class="minus">-</a>
+					<input type="text" value="2" />
+					<a href="javascript:;" class="plus">+</a>
+				</li>
+				<li>60</li>
+				<li><a href="javascript:;">删除</a></li>
+			</ul>-->
+			<div class="blank" style="margin-top: 40px">
+				您的购物车空空如也~~
+			</div>
+		</div>
+	<div class="calute wrapper">
+		<a href="../confirmPay.html">去结算</a>
+	</div>
+	<div class="wrapper" style="margin-top: 60px">
+		<img src="img/like.jpg" alt="">
+	</div>
+
+		<script type="text/javascript">
+			$(function (){
+				// 取出在cookie中存的购物车信息
+				var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+				if(!cartStr){
+					$(".blank").css({display : "block"});
+				} else {
+					var cartObj = convertCartStrToObj(cartStr);
+					// 遍历所有的商品，生成html添加到购物车列表中去
+					for(var id in cartObj){
+						// 商品信息对象
+						var good = cartObj[id];
+						var str = '<ul class="goodInfo" data-good-id="' + id + '">' + 
+							'<li><img src="' + good.src + '"></li>' + 
+							'<li>' + good.name + '</li>' + 
+							'<li>' + good.price + '</li>' + 
+							'<li class="num">' + 
+								'<a href="javascript:;" class="minus">-</a>' +
+								' <input type="text" value="' + good.num + '" /> ' +
+								'<a href="javascript:;" class="plus">+</a>' + 
+							'</li>' +
+							'<li class="total">' + good.num * good.price + '</li>' +
+							'<li><a href="javascript:;" class="del">删除</a></li>' +
+						'</ul>';
+						
+						// 将上面的结构添加到cartList中去
+						$(str).appendTo(".cartList");
+					}	
+					// 给每个商品添加从购物车删除的事件
+					$('.goodInfo a.del').click(function (){
+						// 在页面上将商品信息删除，顺便获取一下该商品的id
+						var id = $(this).parents('.goodInfo').remove().attr("data-good-id");
+						// 从cookie中将该商品删除
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						delete cartObj[id];
+						
+						// 将新的商品信息放回cookie
+						$.cookie('cart', convertObjToCartStr(cartObj), {expires:7, path:"/"});
+					});
+					
+					// 给增加按钮添加事件
+					$(".goodInfo a.plus").click(function (){
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						cartObj[id].num += 1;
+						// 将页面上显示的数量加1
+						$(this).siblings("input").val("" + cartObj[id].num);
+						// 更新页面上的小计
+						$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+						// 将信息放回cookie
+						$.cookie('cart', convertObjToCartStr(cartObj), {expires:7, path:"/"});
+					});
+					
+					// 给减按钮添加点击事件
+					$(".goodInfo a.minus").click(function (){
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						if (cartObj[id].num > 1){ // 商品数量减少不能少于1
+							cartObj[id].num -= 1;
+						
+							$(this).siblings("input").val("" + cartObj[id].num);
+							$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+							$.cookie('cart', convertObjToCartStr(cartObj), {expires:7, path:"/"});
+						}
+					});
+					
+					// 改数量的input绑定一个blur事件
+					$(".goodInfo li.num input").blur(function (){
+						var id = $(this).parents('.goodInfo').attr("data-good-id");
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						// 判断用户输入是否合法
+						var pattern = /^\d+$/;
+						if(!pattern.test($(this).val())){
+							cartObj[id].num = 1;
+							$(this).val("1");
+						} else {
+							// 修改一下数量
+							cartObj[id].num = parseInt($(this).val());
+						}
+
+						$(this).siblings("input").val("" + cartObj[id].num);
+						$(this).parent().siblings('.total').html(cartObj[id].num * cartObj[id].price + "");
+						$.cookie('cart', convertObjToCartStr(cartObj), {expires:7, path:"/"});
+					});
+				}
+			});
+			
+			function convertCartStrToObj(cartStr){
+				// 如果是空字符串，即没有购物车信息，那么购物车为空，直接返回一个空对象
+				if(!cartStr){
+					return {};
+				}
+				// "sp1,香蕉,30,1,src1:sp2,苹果,40,2,src2:sp3,梨,50,3,src3"
+				var goods = cartStr.split(":");
+				var obj = {};
+				for(var i = 0 ; i < goods.length; i++){
+					var data = goods[i].split(",");
+					// 以商品的id为键，商品的其他信息为值, 这个值也设计为一个对象
+					obj[data[0]] = {
+						name : data[1],
+						price : parseFloat(data[2]),
+						num : parseInt(data[3]),
+						src : data[4]
+					};
+				}
+				
+				return obj;
+			}
+			
+			function convertObjToCartStr(obj){
+					/* {
+					 * 	sp1 : {
+					 * 		name : "香蕉",
+					 *      price  : 30,
+					 *      num  : 1,
+					 *      src : "img/1.jpg"
+					 * 	},
+					 * sp2 : {
+					 * 		name : "苹果",
+					 *      price  : 40,
+					 *      num  : 2,
+					 *      src : "img/2.jpg"
+					 * 	},
+					 * sp3 : {
+					 * 		name : "梨",
+					 *      price  : 50,
+					 *      num  : 3,
+					 *      src : "img/3.jpg"
+					 * 	},
+					 * }
+					 * 
+					 */
+					// "sp1,香蕉,30,1,src1:sp2,苹果,40,2,src2:sp3,梨,50,3,src3"
+					
+					var cartStr = "";
+					for(var id in obj){
+						if(cartStr){
+							cartStr += ":";
+						}
+						cartStr += id + "," + obj[id].name + "," + obj[id].price + "," + obj[id].num + "," + obj[id].src;
+					}
+					
+					return cartStr;
+			}
+		</script>
+	</body>
+</html>

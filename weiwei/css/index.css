@@ -1,0 +1,156 @@
+#festival img{display: block;margin: 0 auto;}
+body{background: #e6e6e6;}
+/*banner部分 轮播图*/
+#banner{
+    height:400px;
+    width:auto;
+    position: relative;
+    margin:0 auto;
+    margin-bottom:15px;
+    overflow: hidden; }
+#banner #show{
+    height:400px;
+    width:1600px;
+    overflow: hidden;
+}
+#banner #container{
+    height:400px;
+    width:9600px;}
+#banner #container img{
+    display: block;
+    float: left;
+    height:400px;
+    width:1600px;
+}
+#banner #small{
+    position: absolute;
+    bottom:15px;
+    left:600px;
+    height:25px;
+    width: 180px;
+    padding-top:5px;
+    padding-left:10px;
+}
+#banner #small span{
+    display: block;
+    height:20px;
+    width: 20px;
+    background: #f0f0f0;
+    margin-right:15px;
+    float: left;
+    border-radius: 40px;
+    }
+#banner #small span.active{
+    background: #ff1a17;
+
+}
+.f1{
+    position: absolute;
+    display: none;}
+#fastshop{
+    height:400px;
+    background: #fff;
+}
+#fastshop .img1{
+    position: absolute;
+    top:170px;
+    left:15px;
+    cursor: pointer;
+
+}
+
+#fastshop .img2{
+    position: absolute;
+    top:170px;
+    right:15px;
+    cursor: pointer;
+}
+#fastshop .fastshop{
+    float: left;
+    display: block;
+    margin:15px 35px 0;
+
+}
+#fastshop .fastshop .simen{
+    font: 12px/24px "";
+    color: #ff1a17;
+}
+#fastshop .fastshop .text{
+    font: 12px/24px "";
+    color: #666465;
+}
+#fastshop .fastshop .price{
+    font: 16px/24px "";
+    color: #c30000;
+}
+#fastshop .fastshop .price span{
+    font: 10px/24px "";
+    color: #bcbcbc;
+    text-decoration: line-through;
+}
+
+#bound {
+    background: #f3f3f3;
+    height:auto;
+    padding-bottom:15px ;
+    margin-bottom: 20px;
+}
+#floor1,#floor2,#floor3,#floor4,#floor5{
+    height:auto;
+    background: #fff;
+    margin-bottom: 15px;
+}
+.f1_left .text1{
+    padding:10px;
+    overflow: hidden;
+    height:180px;
+
+}
+.f1_left p{
+    font: 700 14px/40px "";
+}
+.f1_left ul{
+    margin-right:35px;
+
+}
+
+.f1_left ul li a{
+    font:12px/30px "";
+    color: #000;
+}
+.f1_left ul li a:hover{color: #ff1a17;}
+.f1_right img{
+    display: block;
+    float: left;}
+ .f1_right .p1_1 img{
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #ddd;
+}
+.f1_right img.first{
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #ddd;
+}
+.f1_right img.last{
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+}
+.f1_right .p1_1{
+    position: relative;
+}
+.f1_right a.a1{position: absolute;top:0;left:0;}
+.f1_right a.a2{position: absolute;top:0;left:500px;}
+.f1_right a.a3{position: absolute;top:250px;left:0;}
+.f1_right a.a4{position: absolute;top:250px;left:250px;}
+.f1_right a.a5{position: absolute;top:0px;left:751px;}
+.f1_right a.a6{position: absolute;top:0px;left:250px;}
+.f1_right a.a7{position: absolute;top:250px;left:751px;}
+
+
+
+.hotbranc img{float: left;margin:25px 14px;}
+.hotbranc span{
+    padding-top:10px ;
+    padding-left:20px ;
+    font: 700 16px/75px "";
+    color: #333333;
+}

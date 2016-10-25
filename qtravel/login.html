@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>【穷游网】登陆</title>
+		<link rel="shortcut icon" href="img/imdex.ico" />
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+	</head>
+
+	<body>
+
+		<body>
+			<div id="login-top">
+				<div class="">
+					<div class="login-box">
+						<div class="login-logo">
+							<img src="img/register/login_logo2.png" alt="穷游">
+							<span class="">登录</span>
+						</div>
+						<div class="login-box-top">
+							<div class="login-margin">
+								<div class="login-box-top-head">
+									<a class="login-active logins" href="javascript:;">账号登录</a>
+									<!--<a class="login-active2 logins" href="javascript:;">短信快捷登录</a>-->
+								</div>
+								<div class="login-section">
+									<form id="loginForm" action="/" autocomplete="off">
+										<div class="login-name login1" >
+											<a href="" class=""></a>
+											<input id="username" type="text" class="" name="" title="邮箱/手机号" tabindex="1" placeholder="邮箱/手机号" autocomplete="off">
+											<input type="hidden" name="" value="mail">
+											<div class=""></div>
+										</div>
+										
+										<div class="login-name login3 ">
+											<input id="password" type="password " class=" " name=" " title="密码 " tabindex="2 " placeholder="密码 " autocomplete="off ">
+											<div class=" "></div>
+										</div>
+										
+										<div class="login-sunbmit" style="height:70px ; " >
+											<input type="button" id="login" style="text-align: center;" class="login-sunbmit-buttom " value="登录 " >
+											<div class="remanber">
+												<span class="left"><input class="" type="checkbox"  checked="checked "> 记住我</span>
+												<span class="right " style="font:12px/16px ''; ">
+                                <a class=" " href=" " target="_blank " style="color:#999 " >忘记密码</a>
+                            </span>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class=" " style="padding:20px 0 ">
+									
+								</div>
+								<div class="login-footer ">
+									<a class="right register " href="register.html">立即注册</a>
+									<a class=" " href=" ">用户名登录</a> <span>|</span>
+									<a class=" " href=" ">境外手机号登录</a>
+								</div>
+								<div class=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="foot">
+				<div class="margin3 ">
+					<img src="img/bigcut/271.png " />
+				</div>
+			</div>
+		</body>
+		
+		<script type="text/javascript">
+			$(function (){
+				$("#login").click(function (){
+					// 获取用户输入的用户名和密码
+					var usn = $('#username').val();
+					var pwd = $("#password").val();
+					
+					// 校验用户名和密码是否正确
+					var users = $.cookie("registerUsers") ? $.cookie("registerUsers") : "";
+				
+					users = convertStrToObj(users);
+					// users["test1"]    "123"
+					if(users[usn] == pwd){
+						// 如果正确，则登录成功
+						// name value expires
+						// 登录成功
+						$.cookie("loginedUser", usn, {expires:7 , path:"/"});
+					
+						// 跳转到首页
+						window.location.href = "index.html";
+					} else {
+						// 登录失败
+						alert("用户名或密码不匹配， 请确认后重试。");
+					}
+				});
+				
+				$("#goRegister").click(function (){
+					location.href = "register.html";
+					
+				});
+				
+				function convertObjToStr(obj){
+					
+					// "test1,123:test2,abc:test3,888"
+					var res = "";
+					for(var usn in obj){
+						var pwd = obj[usn];
+						// 看是否是第一组用户名和密码信息
+						// 如果不是，先在前面添加一个:
+						if(res){
+							res += ":";
+						}
+						res += usn + "," + pwd;
+					}
+					return res;
+				}
+				function convertStrToObj(str){
+					if(!str){
+						return {};
+					}
+					// "test1,123:test2,abc:test3,888"
+					var users = str.split(":");
+					var res = {};
+					for(var i = 0; i < users.length; i++){
+						//["test1", "123"]
+						var userData = users[i].split(",");
+						res[userData[0]] = userData[1];
+					}
+					
+					return res;
+				}
+			});
+		</script>
+
+</html>

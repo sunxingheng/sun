@@ -1,0 +1,29 @@
+.width{width:1100px;margin:0 auto;}
+
+
+#head .head{}
+#head .head .lg1{margin-top:24px;}
+#head .head .lg2{margin-top:40px;}
+
+
+
+
+#foot{height:364px;background:url("../images/bg2.png");}
+#foot .foot{height:200px;border-bottom:2px solid #d9d9d9;}
+#foot .foot dl{float:left;margin:30px 30px 12px 30px;}
+#foot .foot .lix{margin:50px 20px 0 0;float:left;}
+#foot .foot dt{font:600 16px/30px "";color:#666;}
+#foot .foot dd{font:14px/30px "";color:#666;}
+#foot .foot .dd{margin-top:20px;}
+#foot .foot .p-t{margin-top:22px;text-align:center;}
+#foot .foot .p-t a,span{margin-right:16px;}
+#foot .foot .you{text-align:center;margin:7px 270px;}
+#foot .foot .youx{width:500px;height:16px;overflow:hidden;position: relative;}
+#foot .foot .yox{width:1000px;height:16px;position: absolute;}
+#foot .foot .yox li{margin-right:5px;float:left;}
+#foot .foot .about{text-align:center;margin:3px 0;}
+#foot .foot .about img{display:inline-block;margin-right:10px;}
+#foot .foot .bm{text-align:center;margin-top:10px;}
+#foot .foot .bm img{display:inline-block;margin-right:20px;}
+
+.fx{position:fixed;width:100px;height:353px;right:10px;bottom:270px;z-index:999999999;line-height:0;display:none;}

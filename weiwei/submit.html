@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/submit.css"/>
+    <link rel="stylesheet" href="css/common1.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/common1.js"></script>
+    <script type="text/javascript" src="js/submit.js"></script>
+    <script type="text/javascript" src="js/buy.js"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--公共头部二-->
+<div id="homeContion">
+    <div id="top">
+        <div id="topLeft">
+            <a href="index.html" rel="nofollow">返回为为网首页</a>
+        </div>
+        <div id="topCentre">
+            <div class="phone">
+                <a href="#">
+                    <span class="span1"></span>
+                    <span class="span2">手机版</span>
+                    <b></b>
+                </a>
+                <div class="tc-phone">
+                    <div class="jt-up"></div>
+                    <p>扫描二维码下载客户端</p>
+                    <div class="smery">
+                        <ul>
+                            <a href="#" class="iphone"></a>
+                            <a href="#" class="android"></a>
+                        </ul>
+                    </div>
+                    <div class="smery-img">
+                        <img src="images/top-2.jpg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome">
+                欢迎光临为为网，<a href="login.html" style="color:#ffa500;" id="log"></a>&nbsp;<a href="register.html">免费注册</a>
+            </div>
+        </div>
+        <div id="topRight">
+            <ul>
+                <li><span><a href="help.html">帮助中心</a></span></li>
+                <li><span><a href="#">购物咨询</a></span></li>
+                <li><span><a href="#">在线客服</a></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--*******************logo搜索区********************-->
+<div id="seek">
+    <div class="seekCont">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.jpg"/></a>
+        </div>
+        <div class="search">
+            <div class="searchInput">
+                <div class="form">
+                    <input id="keyword" type="text" class="text" value="  请输入您要查询的商品关键字" name="" onfocus="if(this.value=='  请输入您要查询的商品关键字'){this.value=''}" onblur="if(this.value.length==0){this.value='  请输入您要查询的商品关键字'}" autocomplete="off">
+                    <input type="button" class="button" value="搜 索" />
+                    <div class="formdiv">
+                        <b>商品</b>
+                        <img src="images/top_png7.png" />
+                        <div class="formdiv_menu">
+                            <span>旅游</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searchHot">
+                <a class="hot-item" title="最新活动" style="color:#FF6600;" href="index.html" >最新活动</a>
+                <a class="hot-item" title="家具家纺" style="color:#999999;" href="index.html" >家具家纺</a>
+                <a class="hot-item" title="建材" style="color:#999999;" href="index.html" >建材</a>
+                <a class="hot-item" title="开关" style="color:#FF6600;" href="index.html" >开关</a>
+                <a class="hot-item" title="灯饰" style="color:#999999;" href="index.html" >灯饰</a>
+                <a class="hot-item" title="五金" style="color:#999999;" href="index.html" >五金</a>
+            </div>
+        </div>
+        <div class="member">
+            <span></span>
+            <a href="">我的为为</a>
+            <b></b>
+        </div>
+        <div class="account">
+            <span class="sp1"></span>
+            <a href="buy.html">去购物车结算</a>
+            <b></b>
+            <img src="images/che3.bmp" />
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<!--******************导航****************************-->
+<div id="daohang">
+    <div id="navList">
+        <div class="navList_left">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html">建材</a></li>
+                <li><a href="index.html">家具</a></li>
+                <li><a href="index.html">云超市</a></li>
+                <li><a href="index.html">找商铺</a></li>
+                <li><a href="index.html">为家宝</a></li>
+            </ul>
+        </div>
+        <div class="navList_right">
+            <a href="#"><img src="images/Sign_in.png"/></a>
+        </div>
+    </div>
+</div>
+<!--公共头部二结束-->
+<!--中间部分-->
+<div id="main" class="margin">
+    <p style="font: 12px/30px '';margin-bottom: 10px;color: #000;">
+        <span style="margin:5px;height: 5px;width: 5px ;background: #ff1a17"></span>您当前的位置：首页 > 填写订单信息</p>
+    <div class="clear" style="background: url('images/h1.png')">
+        <img src="images/head1.png" style="float: left"/>
+        <img src="images/head3.png" style="float: right;height:65px;width: 510px;"/>
+    </div>
+    <p style="font:700 14px/30px '';color: #000;background: #f6f6f6;padding-left:  5px;">填写核对订单信息</p>
+
+    <!--表单信息-->
+    <div id="FormBuilder">
+        <div id="receipt">收货人信息</div>
+        <!--保存收货信息-->
+        <div id="receiving" data-id="id1">
+            <div class="div1">
+                <p><font color="red">*</font>收货人姓名：</p>
+                <input class="inp1" type="text" value="abc123" maxlength="6" id="user"/>
+            </div>
+            <div class="div2">
+                <p><font color="red">*</font>地区：</p>
+                <p>省份：</p><select name="loc_province" id="loc_province">
+
+            </select>
+                <p>县/市：</p><select name="loc_city" id="loc_city">
+
+            </select>
+                <p>区：</p><select name="loc_town" id="loc_town">
+
+            </select>
+
+            </div>
+            <div class="div3">
+                <p><font color="red">*</font>收货人地址：</p>
+                <input id="msg" type="text" value="上海市宝山区" />
+            </div>
+            <div class="div4">
+                <p>邮政编码：</p>
+                <input type="text" maxlength="6" value="" id="youzheng"/>
+                <p><span id="s1" style="color: #f00;display: none;">请输入邮政编码</span> 有助于快速确认收货地址</p>
+            </div>
+            <div class="div5">
+                <p>固定电话：</p>
+                <input type="text" value="" id="phone1"/>
+                <p><span id="s2" style="color: #f00;display: none;">输入有误</span>  如：010-12345678，固话与手机至少填写一项</p>
+            </div>
+            <div class="div6">
+                <p>手机号码：</p>
+                <input type="text" value="" id="phone2"/>
+                <p><span id="s3" style="color: #f00;display: none;">输入有误</span> 填写手机号便于接收发货通知短信及送货前确认</p>
+            </div>
+            <div class="div7">
+                <p>电子邮件：</p>
+                <input type="text" value="" id="youjian"/>
+                <p><span id="s4" style="color: #f00;display: none;">请输入电子邮件</span>用来接收订单提醒邮件，便于您及时了解订单状态</p>
+            </div>
+            <div class="div8">
+                <input type="checkbox" checked="checked" name="like"  value="" />&nbsp;&nbsp;保存为我的收货人地址
+            </div>
+            <div class="div9">
+                <input type="button" name="button" id="saveBtn" value="保存收货人信息" />
+            </div>
+        </div>
+
+
+        <!--支付方式-->
+        <div id="payment">
+            <div class="payment1">支付及配送方式</div>
+            <div class="payment2">
+                <p class="p1">支付方式</p>
+                <p class="p2">备注</p>
+            </div>
+            <div class="payment3">
+                <p class="p1"><input type="radio" checked="checked" name="ral" id="ral" value="" />&nbsp;在线支付</p>
+                <p class="p2">即时到帐，支持绝大数银行借记卡及部分银行信用卡</p>
+            </div>
+            <div class="payment4">
+                <div class="payDiv1">支持以下银行在线支付：</div>
+                <div class="payDiv2"> 为家宝在线充值即增值5%。 </div>
+                <div class="payDiv3">
+                    <a href="#"><img src="images/logo_zggsyh.jpg" alt="中国工商银行" title="中国工商银行" /></a>
+                    <a href="#"><img src="images/logo_zgjsyh.jpg" alt="中国建设银行" title="中国建设银行" /></a>
+                    <a href="#"><img src="images/logo_zsyh.jpg" alt="招商银行" title="招商银行" /></a>
+                    <a href="#"><img src="images/logo_gfyh.jpg" alt="广东发展银行" title="广东发展银行" /></a>
+                    <a href="#"><img src="images/logo_jtyh.jpg" alt="交通银行" title="交通银行" /></a>
+                    <a href="#"><img src="images/logo_payh.jpg" alt="平安银行" title="平安银行" /></a>
+                    <a href="#"><img src="images/logo_bjyh.jpg" alt="北京银行" title="北京银行" /></a>
+                    <a href="#"><img src="images/logo_gfyh.jpg" alt="广东发展银行" title="广东发展银行" /></a>
+                    <a href="#"><img src="images/logo_zggdyh.jpg" alt="中国光大银行" title="中国光大银行" /></a>
+                    <a href="#"><img src="images/logo_zxyh.jpg" alt="中信银行" title="中信银行" /></a>
+                    <a href="#"><img src="images/logo_zgmsyh.jpg" alt="民生银行" title="民生银行" /></a>
+                    <a href="#"><img src="images/logo_pfyh.jpg" alt="浦发银行" title="浦发银行" /></a>
+                    <a href="#"><img src="images/logo_zgyh.jpg" alt="中国银行" title="中国银行" /></a>
+                    <a href="#"><img src="images/logo_szfzyhn.jpg" alt="深圳发展银行" title="深圳发展银行" /></a>
+                    <a href="#"><img src="images/logo_fsyh.jpg" alt="富滇银行" title="富滇银行" /></a>
+                    <a href="#"><img src="images/logo_hzyh.jpg" alt="杭州银行" title="杭州银行" /></a>
+                    <a href="#"><img src="images/logo_bjnsyh.jpg" alt="北京农商银行" title="北京农商银行" /></a>
+                    <a href="#"><img src="images/logo_zsyh.jpg" alt="招商银行" title="招商银行" /></a>
+                    <a href="#"><img src="images/logo_nbyh.jpg" alt="宁波银行" title="宁波银行" /></a>
+                    <a href="#"><img src="images/tenpay.gif" alt="财付通支付" title="财付通支付" /></a>
+                </div>
+            </div>
+        </div>
+
+        <!--修改发票信息开始-->
+        <div id="bill">
+            <p>发票信息</p>
+            <div class="billDiv1">
+                <div class="bill_1">发票类型：
+                    <input type="radio" class="radio1" checked="checked" value="" />电子发票
+                    <input type="radio" class="radio1" value="" />纸质发票
+                    <input type="radio" class="radio1" value="" />增值税发票
+                    <span>(选择电子发票必须填写收货人手机号码)</span>
+                </div>
+                <div class="bill_2">发票抬头：
+                    <input type="radio" id="radio2" checked="checked" value=""/>个人
+                </div>
+                <div class="bill_3">发票内容：
+                    <span>商品明细</span><font color="red">*</font>
+                </div>
+            </div>
+            <div class="billDiv2">
+                <input type="button" class="billBtn" value="保存发票信息"/>
+            </div>
+        </div>
+
+        <!--修改备注信息开始-->
+        <div id="remark">
+            <p class="p1">订单备注<a href="javascript:void(0);">[选择/修改]</a></p>
+            <p class="p2">暂无备注</p>
+        </div>
+
+        <!--商品清单-->
+        <div id="commodity">
+            <div class="commonDiv1">
+                <p>商品清单</p>
+                <a href="buy.html">返回修改购物车</a>
+            </div>
+            <div class="cartList">
+                <ul class="cartHead">
+                    <li class="l1">缩略图</li>
+                    <li class="l2">品名</li>
+                    <li class="l3">原价</li>
+                    <li>会员价</li>
+                    <li>库存状态</li>
+                    <li>数量</li>
+                    <li>小计</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--结算信息-->
+        <div id="balance">
+            <div class="balance1">结算信息</div>
+            <div class="balance2">
+                <p>合计：<span id="totalPrice" class="jiage"> </span>&nbsp;元</p>
+                <div id="auth_code">
+                    <span class="label">验证码:</span>
+                    <input id="authCode" type="text" value="" maxlength="6" />
+                    <input id="verify5" type="button" value="获取验证码" />
+                    <input type="text" name="" id="yanBtn" value="请输入验证码！" />
+                </div>
+                <div class="balance3">
+                    <input type="checkbox" name="like" id="balance3Btn" checked="checked" value="" />同意为为网退换货政策
+                </div>
+                <div class="balance4">
+                    <div style="width:827px;height:50px;margin-left:50px;border-bottom:1px dotted #ccc;">
+                        <input id="saveOrderBtn" type="button" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--公共尾部-->
+<div id="bottom">
+    <div style="width:100%;height:175px;">
+        <div style="width:1200px;height:145px;margin:auto;">
+            <div class="diva1">
+                <p style="height:36px;font-size:12px;color:#4d4d4d;"><b>7x12H客服在线</b></p>
+                <div style="width:260px;height:70px;">
+                    <img src="images/phone1.jpg" style="float:left;width:70px;height:70px;"/>
+                    <div id="" style="float:left;margin-left:10px;width:160px;height:70px;">
+                        <p style="font-size:17px;font-weight:bold;color:#ff1a17;height:23px;line-height:23px">4006-698-698</p>
+                        <p style="font-size:11px;font-weight:bold;color:#888;height:11px;margin-top:12px;">周一至周日&nbsp;8:00-21:00</p>
+                        <p style="font-size:9px;color:#888;height:9px;margin-top:15px;">E-mail:kefu@homevv.cn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diva2">
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">会员指南</li>
+                    <li><a href="">会员注册</a></li>
+                    <li><a href="">购物和订单</a></li>
+                    <li><a href="">会员制度</a></li>
+                    <li><a href="">积分规则</a></li>
+                    <li><a href="">评论规则</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">支付方式</li>
+                    <li><a href="">货到付款</a></li>
+                    <li><a href="">网上支付</a></li>
+                    <li><a href="">邮局汇款</a></li>
+                    <li><a href="">发票制度</a></li>
+                    <li><a href="">礼品券使用</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">配送方式</li>
+                    <li><a href="">快递运送</a></li>
+                    <li><a href="">邮政普包</a></li>
+                    <li><a href="">特快专递</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">售后服务</li>
+                    <li><a href="">退换货政策</a></li>
+                    <li><a href="">退换货流程</a></li>
+                    <li><a href="">退款说明</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">购物帮助</li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">找回密码</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">投诉建议</a></li>
+                </ul>
+            </div>
+            <div class="diva3">
+                <p class="p1"><span>为为网APP</span><span>为为网微信</span></p>
+                <div style="height:84px;width:265px;">
+                    <img src="images/weiwei.jpg"/><img src="images/weiwei.jpg"/>
+                </div>
+                <p class="p2"><span>下载移动客户端</span><span>为为网官方微信</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="da"></div>
+    <div style="width:822px;height:156px;margin:auto;margin-top:27px;">
+        <ul class="diul1">
+            <li><a href="">关于我们</a></li>
+            <li><a href="">招商合作</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">诚聘英才</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">网站地图</a></li>
+            <li><a href="">品牌大全</a></li>
+        </ul>
+        <ul class="diul2">
+            <li style="width:118px;"><a href="#" style="color:#4d4d4d;">沪ICP备08001311号</a></li>
+            <li style="width:63px;"><p>营业执照</p></li>
+            <li style="width:191px;border-right:0px;">
+                <span><img src="images/16.jpg" style="margin-left:13px;width:16px;height:16px;float:left;"/></span>
+                <p style="float:left;margin-left:6px;">沪公网安备31011302002015</p>
+            </li>
+        </ul>
+        <div style="margin:15px 0px 0px 251px;width:312px;height:33px;font-size:12px;">
+            <a href="#" style="color:#4d4d4d;">Copyright &copy; 2008-2016    homevv.com All Rights Reserved</a>
+        </div>
+        <div class="divimg">
+            <a href="#"><img src="images/idx_23.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_25.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_27.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_29.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_31.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_33.jpg" alt="" /></a>
+            <a href="#" style="margin-right:0;"><img src="images/idx_34.png" /></a>
+        </div>
+    </div>
+</div>
+
+<!--绝对定位 回到顶部-->
+<div id="abs">
+    <p>投诉建议</p>
+    <p>问卷调查</p>
+
+    <div id="abs2">
+        <img src="images/weiwei.jpg" style="margin-left: 16px;"/>
+        <span>扫描二维码<br/>下载手机App</span>
+    </div>
+    <p id="abs1"><img src="images/erweima.jpg" style="margin: 7px;"/></p>
+
+    <p id="gotop">回到顶部</p>
+
+</div>
+</body>
+</html>

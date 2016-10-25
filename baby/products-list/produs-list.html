@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品列表</title>
+    <link href="../common/public.css" type="text/css" rel="stylesheet"/>
+    <link href="products-list.css" type="text/css" rel="stylesheet"/>
+    <script src="../common/jquery-1.11.3.js" type="text/javascript"></script>
+    <script src="products-list.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="head">
+    <div class="width">
+        <div class="clear"><p class="top right">您好，欢迎来到亲亲宝贝！请 <a href="../login/login.html">登录</a><span>|</span><a href="../register/register.html">免费注册</a><img src="images/phone.png"/><span>客服电话：400-610-9993</span></p></div>
+        <div class="logo clear">
+            <p class="left"><img src="images/logo.png"/><a href="#">首页</a><span>|</span><a href="#">手商云</a><span>|</span><a href="#">关于我们</a><span>|</span><a href="#">商家入驻</a></p>
+            <p class="right"><input type="text" class="ipt1"/><input type="button" value="搜索" class="ipt2"/></p>
+        </div>
+        <div class="sch left"><a href="#">宝宝玩具</a><span>|</span><a href="#">奶粉</a><span>|</span><a href="#">辅食营养</a><span>|</span><a href="#">尿裤</a><span>|</span><a href="#">湿巾</a></div>
+    </div>
+
+</div>
+<img src="images/line.png" width="1263"/>
+
+<!--商品列表-->
+<div id="list">
+    <div class="fu kuan">
+        <!--一级分类-->
+        <table class="k">
+            <tr>
+            <th class="yiji">一级分类:</th>
+            <td><a id="first1"  href="#"   >
+                防尿用品    </a>
+            <a id="first2"  href="#"   >
+                奶粉专区    </a>
+            <a id="first3"  href="#"   >
+                宝宝洗护    </a>
+            <a id="first4"  href="#"   >
+                喂养用品    </a>
+            <a id="first5"  href="#"   >
+                辅食营养    </a>
+            <a id="first6"  href="#"   >
+                玩具图书    </a>
+            <a id="first7"  href="#"   >
+                童装童鞋    </a>
+            <a id="first8"  href="#"   >
+                妈妈专区    </a>
+            <a id="first9"  href="#"   >
+                车/床/椅    </a>
+            <a id="first161"  href="#" class="active type-id">
+                生活服务    </a>
+            <a id="first303"  href="#"   >
+                智能生活    </a>
+            <a id="first308"  href="#"   >
+                食品保健    </a>
+            <a id="first321"  href="#"   >
+                美妆个护    </a>
+            <a id="first337"  href="#"   >
+                居家生活    </a>
+            <a id="first393"  href="#"   >
+                服装内衣    </a>
+            <a id="first397"  href="#"   >
+                箱包配饰    </a></td>
+            </tr>
+        </table>
+        <!--二级分类-->
+        <table class="table2">
+            <tr>
+                <th class="erji">二级分类:</th>
+                <td id="second1" class="active">
+                    <a id="second11"  href="/home/search/sou/pid/1/tid/11"   >
+                        新生儿     </a>
+                    <a id="second13"  href="/home/search/sou/pid/1/tid/13"   >
+                        s码     </a>
+                    <a id="second14"  href="/home/search/sou/pid/1/tid/14"   >
+                        m码     </a>
+                    <a id="second15"  href="/home/search/sou/pid/1/tid/15"   >
+                        l码     </a>
+                    <a id="second16"  href="/home/search/sou/pid/1/tid/16"   >
+                        xl码     </a>
+                    <a id="second17"  href="/home/search/sou/pid/1/tid/17"   >
+                        xxl码     </a>
+                    <a id="second18"  href="/home/search/sou/pid/1/tid/18"   >
+                        裤型纸尿裤    </a>
+                    <a id="second279"  href="/home/search/sou/pid/1/tid/279"   >
+                        尿布桶    </a>
+                </td>
+                <td id="second2">
+                    <a id="second25"  href="/home/search/sou/pid/2/tid/25"   >
+                        1段    </a>
+                    <a id="second26"  href="/home/search/sou/pid/2/tid/26"   >
+                        2段    </a>
+                    <a id="second27"  href="/home/search/sou/pid/2/tid/27"   >
+                        3段    </a>
+                    <a id="second28"  href="/home/search/sou/pid/2/tid/28"   >
+                        4段    </a>
+                    <a id="second29"  href="/home/search/sou/pid/2/tid/29"   >
+                        5段    </a>
+                    <a id="second30"  href="/home/search/sou/pid/2/tid/30"   >
+                        羊奶粉    </a>
+                    <a id="second34"  href="/home/search/sou/pid/2/tid/34"   >
+                        特殊配方奶粉    </a>
+                    <a id="second263"  href="/home/search/sou/pid/2/tid/263"   >
+                        妈妈奶粉    </a>
+                    <a id="second500"  href="/home/search/sou/pid/2/tid/500"   >
+                        成人奶粉    </a>
+                </td>
+                <td id="second3" >
+
+                    <a id="second35"  href="/home/search/sou/pid/3/tid/35"   >
+                        爽身防晒    </a>
+
+
+                    <a id="second37"  href="/home/search/sou/pid/3/tid/37"   >
+                        安全防护
+                    </a>
+
+
+                    <a id="second38"  href="/home/search/sou/pid/3/tid/38"   >
+                        宝宝护肤    </a>
+
+
+                    <a id="second39"  href="/home/search/sou/pid/3/tid/39"   >
+                        洗发／沐浴    </a>
+
+
+                    <a id="second40"  href="/home/search/sou/pid/3/tid/40"   >
+                        日常护理
+                    </a>
+
+
+                    <a id="second41"  href="/home/search/sou/pid/3/tid/41"   >
+                        驱蚊防蚊
+                    </a>
+
+
+                    <a id="second42"  href="/home/search/sou/pid/3/tid/42"   >
+                        洗衣液/皂
+                    </a>
+
+
+                    <a id="second43"  href="/home/search/sou/pid/3/tid/43"   >
+                        牙膏牙刷
+                    </a>
+
+
+                    <a id="second44"  href="/home/search/sou/pid/3/tid/44"   >
+                        奶瓶清洗    </a>
+
+
+                    <a id="second45"  href="/home/search/sou/pid/3/tid/45"   >
+                        座便器
+                    </a>
+
+
+                    <a id="second46"  href="/home/search/sou/pid/3/tid/46"   >
+                        洗澡/游泳用具    </a>
+
+
+                    <a id="second47"  href="/home/search/sou/pid/3/tid/47"   >
+                        洗手液/皂    </a>
+
+
+                    <a id="second48"  href="/home/search/sou/pid/3/tid/48"   >
+                        套装礼盒    </a>
+
+
+                    <a id="second271"  href="/home/search/sou/pid/3/tid/271"   >
+                        护肤湿巾    </a>
+
+
+                    <a id="second273"  href="/home/search/sou/pid/3/tid/273"   >
+                        婴儿理发器    </a>
+
+
+                </td>
+
+                <td id="second4" >
+
+                    <a id="second49"  href="/home/search/sou/pid/4/tid/49"   >
+                        奶瓶    </a>
+
+
+                    <a id="second50"  href="/home/search/sou/pid/4/tid/50"   >
+                        水杯水壶    </a>
+
+
+                    <a id="second51"  href="/home/search/sou/pid/4/tid/51"   >
+                        餐具    </a>
+
+
+                    <a id="second52"  href="/home/search/sou/pid/4/tid/52"   >
+                        奶瓶配件相关
+                    </a>
+
+
+                    <a id="second53"  href="/home/search/sou/pid/4/tid/53"   >
+                        消毒/bb煲/暖奶保温
+                    </a>
+
+
+                    <a id="second57"  href="/home/search/sou/pid/4/tid/57"   >
+                        牙胶    </a>
+
+
+                    <a id="second176"  href="/home/search/sou/pid/4/tid/176"   >
+                        奶嘴/安抚奶嘴    </a>
+
+
+                </td>
+
+                <td id="second5" >
+
+                    <a id="second58"  href="/home/search/sou/pid/5/tid/58"   >
+                        泥糊/果汁    </a>
+
+
+                    <a id="second61"  href="/home/search/sou/pid/5/tid/61"   >
+                        米粉    </a>
+
+
+                    <a id="second62"  href="/home/search/sou/pid/5/tid/62"   >
+                        肉松    </a>
+
+
+                    <a id="second63"  href="/home/search/sou/pid/5/tid/63"   >
+                        面条/粥/调味    </a>
+
+
+                    <a id="second64"  href="/home/search/sou/pid/5/tid/64"   >
+                        宝宝零食    </a>
+
+
+                    <a id="second65"  href="/home/search/sou/pid/5/tid/65"   >
+                        冲调类    </a>
+
+
+                    <a id="second69"  href="/home/search/sou/pid/5/tid/69"   >
+                        清火开胃    </a>
+
+
+                    <a id="second71"  href="/home/search/sou/pid/5/tid/71"   >
+                        益生菌/初乳    </a>
+
+
+                    <a id="second72"  href="/home/search/sou/pid/5/tid/72"   >
+                        钙铁锌/维生素    </a>
+
+
+                    <a id="second74"  href="/home/search/sou/pid/5/tid/74"   >
+                        DHA/鱼油    </a>
+
+
+                </td>
+
+                <td id="second6" >
+
+                    <a id="second79"  href="/home/search/sou/pid/6/tid/79"   >
+                        DIY/情景
+                    </a>
+
+
+                    <a id="second80"  href="/home/search/sou/pid/6/tid/80"   >
+                        仿真/模型
+                    </a>
+
+
+                    <a id="second81"  href="/home/search/sou/pid/6/tid/81"   >
+                        毛绒布艺
+                    </a>
+
+
+                    <a id="second82"  href="/home/search/sou/pid/6/tid/82"   >
+                        摇铃床铃    </a>
+
+
+                    <a id="second83"  href="/home/search/sou/pid/6/tid/83"   >
+                        健身户外
+                    </a>
+
+
+                    <a id="second86"  href="/home/search/sou/pid/6/tid/86"   >
+                        乐器相关
+                    </a>
+
+
+                    <a id="second89"  href="/home/search/sou/pid/6/tid/89"   >
+                        积木拼插
+                    </a>
+
+
+                    <a id="second90"  href="/home/search/sou/pid/6/tid/90"   >
+                        早教益智
+                    </a>
+
+
+                    <a id="second183"  href="/home/search/sou/pid/6/tid/183"   >
+                        遥控/电动    </a>
+
+
+                    <a id="second184"  href="/home/search/sou/pid/6/tid/184"   >
+                        娃娃玩具    </a>
+
+
+                    <a id="second229"  href="/home/search/sou/pid/6/tid/229"   >
+                        幼儿启蒙-书    </a>
+
+
+                    <a id="second231"  href="/home/search/sou/pid/6/tid/231"   >
+                        手工/游戏-书    </a>
+
+
+                    <a id="second233"  href="/home/search/sou/pid/6/tid/233"   >
+                        绘本    </a>
+
+
+                    <a id="second235"  href="/home/search/sou/pid/6/tid/235"   >
+                        智力开发-书    </a>
+
+
+                    <a id="second237"  href="/home/search/sou/pid/6/tid/237"   >
+                        布书    </a>
+
+
+                    <a id="second239"  href="/home/search/sou/pid/6/tid/239"   >
+                        科普/百科    </a>
+
+
+                    <a id="second241"  href="/home/search/sou/pid/6/tid/241"   >
+                        儿童文学    </a>
+
+
+                    <a id="second243"  href="/home/search/sou/pid/6/tid/243"   >
+                        动漫/卡通-书    </a>
+
+
+                    <a id="second245"  href="/home/search/sou/pid/6/tid/245"   >
+                        立体书    </a>
+
+
+                    <a id="second247"  href="/home/search/sou/pid/6/tid/247"   >
+                        励志成长-书    </a>
+
+
+                    <a id="second249"  href="/home/search/sou/pid/6/tid/249"   >
+                        音乐/舞蹈-书    </a>
+
+
+                    <a id="second251"  href="/home/search/sou/pid/6/tid/251"   >
+                        美术/书法    </a>
+
+
+                    <a id="second253"  href="/home/search/sou/pid/6/tid/253"   >
+                        传统文化    </a>
+
+
+                    <a id="second255"  href="/home/search/sou/pid/6/tid/255"   >
+                        少儿英语    </a>
+
+
+                    <a id="second257"  href="/home/search/sou/pid/6/tid/257"   >
+                        笑话/幽默    </a>
+
+
+                    <a id="second265"  href="/home/search/sou/pid/6/tid/265"   >
+                        文具用品    </a>
+
+
+                </td>
+
+                <td id="second7" >
+
+                    <a id="second20"  href="/home/search/sou/pid/7/tid/20"   >
+                        隔尿垫/尿布    </a>
+
+
+                    <a id="second91"  href="/home/search/sou/pid/7/tid/91"   >
+                        礼盒    </a>
+
+
+                    <a id="second93"  href="/home/search/sou/pid/7/tid/93"   >
+                        套装
+                    </a>
+
+
+                    <a id="second95"  href="/home/search/sou/pid/7/tid/95"   >
+                        口水巾/肚兜    </a>
+
+
+                    <a id="second97"  href="/home/search/sou/pid/7/tid/97"   >
+                        寝居    </a>
+
+
+                    <a id="second98"  href="/home/search/sou/pid/7/tid/98"   >
+                        童帽/围巾
+                    </a>
+
+
+                    <a id="second173"  href="/home/search/sou/pid/7/tid/173"   >
+                        宝宝鞋
+                    </a>
+
+
+                    <a id="second179"  href="/home/search/sou/pid/7/tid/179"   >
+                        裤子    </a>
+
+
+                    <a id="second180"  href="/home/search/sou/pid/7/tid/180"   >
+                        裙子    </a>
+
+
+                    <a id="second181"  href="/home/search/sou/pid/7/tid/181"   >
+                        亲子装    </a>
+
+
+                    <a id="second182"  href="/home/search/sou/pid/7/tid/182"   >
+                        袜子/手套
+                    </a>
+
+
+                    <a id="second275"  href="/home/search/sou/pid/7/tid/275"   >
+                        内衣配饰    </a>
+
+
+                    <a id="second384"  href="/home/search/sou/pid/7/tid/384"   >
+                        婴儿装    </a>
+
+
+                    <a id="second385"  href="/home/search/sou/pid/7/tid/385"   >
+                        羽绒棉服    </a>
+
+
+                    <a id="second386"  href="/home/search/sou/pid/7/tid/386"   >
+                        毛衣针织    </a>
+
+
+                    <a id="second387"  href="/home/search/sou/pid/7/tid/387"   >
+                        T恤衬衫    </a>
+
+
+                    <a id="second388"  href="/home/search/sou/pid/7/tid/388"   >
+                        外套卫衣    </a>
+
+
+                </td>
+
+                <td id="second8" >
+
+                    <a id="second105"  href="/home/search/sou/pid/8/tid/105"   >
+                        妈妈洗护套装    </a>
+
+
+                    <a id="second106"  href="/home/search/sou/pid/8/tid/106"   >
+                        口腔/身体护理    </a>
+
+
+                    <a id="second107"  href="/home/search/sou/pid/8/tid/107"   >
+                        面部护理    </a>
+
+
+                    <a id="second108"  href="/home/search/sou/pid/8/tid/108"   >
+                        妊娠纹护理    </a>
+
+
+                    <a id="second109"  href="/home/search/sou/pid/8/tid/109"   >
+                        吸奶器    </a>
+
+
+                    <a id="second110"  href="/home/search/sou/pid/8/tid/110"   >
+                        防辐射服    </a>
+
+
+                    <a id="second111"  href="/home/search/sou/pid/8/tid/111"   >
+                        孕妇装    </a>
+
+
+                    <a id="second112"  href="/home/search/sou/pid/8/tid/112"   >
+                        内衣    </a>
+
+
+                    <a id="second113"  href="/home/search/sou/pid/8/tid/113"   >
+                        产褥护理    </a>
+
+
+                    <a id="second115"  href="/home/search/sou/pid/8/tid/115"   >
+                        待产包    </a>
+
+
+                    <a id="second116"  href="/home/search/sou/pid/8/tid/116"   >
+                        妈咪鞋    </a>
+
+
+                    <a id="second117"  href="/home/search/sou/pid/8/tid/117"   >
+                        妈咪包    </a>
+
+
+                    <a id="second118"  href="/home/search/sou/pid/8/tid/118"   >
+                        婴背带    </a>
+
+
+                    <a id="second119"  href="/home/search/sou/pid/8/tid/119"   >
+                        学步带    </a>
+
+
+                    <a id="second120"  href="/home/search/sou/pid/8/tid/120"   >
+                        产后塑身    </a>
+
+
+                    <a id="second186"  href="/home/search/sou/pid/8/tid/186"   >
+                        哺乳用品    </a>
+
+
+                    <a id="second261"  href="/home/search/sou/pid/8/tid/261"   >
+                        营养健康    </a>
+
+
+                    <a id="second353"  href="/home/search/sou/pid/8/tid/353"   >
+                        日常用品    </a>
+
+
+                    <a id="second389"  href="/home/search/sou/pid/8/tid/389"   >
+                        哺乳装/月子服    </a>
+
+
+                </td>
+
+                <td id="second9" >
+
+                    <a id="second121"  href="/home/search/sou/pid/9/tid/121"   >
+                        婴儿床    </a>
+
+
+                    <a id="second122"  href="/home/search/sou/pid/9/tid/122"   >
+                        婴儿推车    </a>
+
+
+                    <a id="second123"  href="/home/search/sou/pid/9/tid/123"   >
+                        餐椅摇椅    </a>
+
+
+                    <a id="second124"  href="/home/search/sou/pid/9/tid/124"   >
+                        安全座椅    </a>
+
+
+                    <a id="second125"  href="/home/search/sou/pid/9/tid/125"   >
+                        自行车    </a>
+                    <a id="second126"  href="/home/search/sou/pid/9/tid/126"   >
+                        学步车    </a>
+                    <a id="second128"  href="/home/search/sou/pid/9/tid/128"   >
+                        三轮车    </a>
+                    <a id="second129"  href="/home/search/sou/pid/9/tid/129"   >
+                        电动车    </a>
+                    <a id="second130"  href="/home/search/sou/pid/9/tid/130"   >
+                        健身车/滑板车    </a>
+                </td>
+                <td id="second161"   >
+                    <a id="second189"  href="/home/search/sou/pid/161/tid/189"   >
+                        医疗/保健    </a>
+                    <a id="second201"  href="/home/search/sou/pid/161/tid/201"   >
+                        月嫂/家政    </a>
+                    <a id="second211"  href="/home/search/sou/pid/161/tid/211"   >
+                        运动健身    </a>
+                    <a id="second213"  href="/home/search/sou/pid/161/tid/213"   >
+                        商务服务    </a>
+                    <a id="second217"  href="/home/search/sou/pid/161/tid/217"   >
+                        亲子    </a>
+                    <a id="second219"  href="/home/search/sou/pid/161/tid/219"   >
+                        教育/培训    </a>
+                    <a id="second223"  href="/home/search/sou/pid/161/tid/223"   >
+                        影院/剧院/赛演    </a>
+                    <a id="second286"  href="/home/search/sou/pid/161/tid/286"   >
+                        美容/美发/美体    </a>
+                    <a id="second288"  href="/home/search/sou/pid/161/tid/288" class="active type-id">
+                        旅游服务    </a>
+                    <a id="second360"  href="/home/search/sou/pid/161/tid/360"   >
+                        休闲/娱乐    </a>
+                    <a id="second362"  href="/home/search/sou/pid/161/tid/362"   >
+                        餐饮美食/蛋糕烘焙    </a>
+                    <a id="second363"  href="/home/search/sou/pid/161/tid/363"   >
+                        酒店/特色客栈    </a>
+                    <a id="second364"  href="/home/search/sou/pid/161/tid/364"   >
+                        购物    </a>
+                    <a id="second365"  href="/home/search/sou/pid/161/tid/365"   >
+                        家装家具家纺类    </a>
+                    <a id="second366"  href="/home/search/sou/pid/161/tid/366"   >
+                        定制/设计/DIY    </a>
+                    <a id="second367"  href="/home/search/sou/pid/161/tid/367"   >
+                        3C数码类    </a>
+                    <a id="second368"  href="/home/search/sou/pid/161/tid/368"   >
+                        电器    </a>
+                    <a id="second369"  href="/home/search/sou/pid/161/tid/369"   >
+                        母婴店    </a>
+                    <a id="second370"  href="/home/search/sou/pid/161/tid/370"   >
+                        便民服务    </a>
+                    <a id="second371"  href="/home/search/sou/pid/161/tid/371"   >
+                        开发/建站服务    </a>
+                    <a id="second372"  href="/home/search/sou/pid/161/tid/372"   >
+                        汽车服务    </a>
+                    <a id="second373"  href="/home/search/sou/pid/161/tid/373"   >
+                        婚庆摄影    </a>
+                    <a id="second374"  href="/home/search/sou/pid/161/tid/374"   >
+                        农林牧副渔    </a>
+                    <a id="second375"  href="/home/search/sou/pid/161/tid/375"   >
+                        租赁服务    </a>
+                    <a id="second376"  href="/home/search/sou/pid/161/tid/376"   >
+                        房产服务    </a>
+                    <a id="second377"  href="/home/search/sou/pid/161/tid/377"   >
+                        其它服务    </a>
+                    <a id="second497"  href="/home/search/sou/pid/161/tid/497"   >
+                        宠物服务    </a>
+                </td>
+                <td id="second303" >
+                    <a id="second304"  href="/home/search/sou/pid/303/tid/304"   >
+                        智能穿戴    </a>
+                    <a id="second305"  href="/home/search/sou/pid/303/tid/305"   >
+                        智能家居    </a>
+                    <a id="second355"  href="/home/search/sou/pid/303/tid/355"   >
+                        手机通讯    </a>
+                    <a id="second357"  href="/home/search/sou/pid/303/tid/357"   >
+                        数码配件    </a>
+                </td>
+                <td id="second308" >
+                    <a id="second309"  href="/home/search/sou/pid/308/tid/309"   >
+                        新鲜果蔬    </a>
+                    <a id="second310"  href="/home/search/sou/pid/308/tid/310"   >
+                        南北干货    </a>
+                    <a id="second311"  href="/home/search/sou/pid/308/tid/311"   >
+                        肉类禽蛋    </a>
+                    <a id="second312"  href="/home/search/sou/pid/308/tid/312"   >
+                        海鲜水产    </a>
+                    <a id="second313"  href="/home/search/sou/pid/308/tid/313"   >
+                        粮油副食    </a>
+                    <a id="second314"  href="/home/search/sou/pid/308/tid/314"   >
+                        零食坚果    </a>
+                    <a id="second315"  href="/home/search/sou/pid/308/tid/315"   >
+                        茶饮冲调    </a>
+                    <a id="second359"  href="/home/search/sou/pid/308/tid/359"   >
+                        进口食品    </a>
+                    <a id="second379"  href="/home/search/sou/pid/308/tid/379"   >
+                        营养保健    </a>
+                    <a id="second380"  href="/home/search/sou/pid/308/tid/380"   >
+                        滋补养生    </a>
+                    <a id="second381"  href="/home/search/sou/pid/308/tid/381"   >
+                        中西医药品    </a>
+                    <a id="second382"  href="/home/search/sou/pid/308/tid/382"   >
+                        保健器械    </a>
+                    <a id="second383"  href="/home/search/sou/pid/308/tid/383"   >
+                        成人用品    </a>
+                </td>
+                <td id="second321" >
+                    <a id="second323"  href="/home/search/sou/pid/321/tid/323"   >
+                        面部护肤    </a>
+                    <a id="second325"  href="/home/search/sou/pid/321/tid/325"   >
+                        洗发护发    </a>
+                    <a id="second327"  href="/home/search/sou/pid/321/tid/327"   >
+                        身体护肤    </a>
+                    <a id="second329"  href="/home/search/sou/pid/321/tid/329"   >
+                        口腔护理    </a>
+                    <a id="second331"  href="/home/search/sou/pid/321/tid/331"   >
+                        香水彩妆    </a>
+                    <a id="second333"  href="/home/search/sou/pid/321/tid/333"   >
+                        男士专区    </a>
+                    <a id="second335"  href="/home/search/sou/pid/321/tid/335"   >
+                        美容工具    </a>
+                    <a id="second351"  href="/home/search/sou/pid/321/tid/351"   >
+                        女性护理    </a>
+                </td>
+                <td id="second337" >
+                    <a id="second339"  href="/home/search/sou/pid/337/tid/339"   >
+                        家居家纺    </a>
+                    <a id="second341"  href="/home/search/sou/pid/337/tid/341"   >
+                        生活日用
+                    </a>
+                    <a id="second343"  href="/home/search/sou/pid/337/tid/343"   >
+                        生活电器
+                    </a>
+                    <a id="second345"  href="/home/search/sou/pid/337/tid/345"   >
+                        厨房用品
+                    </a>
+                    <a id="second349"  href="/home/search/sou/pid/337/tid/349"   >
+                        礼品饰品    </a>
+                </td>
+                <td id="second393" >
+                    <a id="second409"  href="/home/search/sou/pid/393/tid/409"   >
+                        精品男装    </a>
+                    <a id="second418"  href="/home/search/sou/pid/393/tid/418"   >
+                        特色女装    </a>
+                    <a id="second437"  href="/home/search/sou/pid/393/tid/437"   >
+                        文胸塑身    </a>
+                    <a id="second445"  href="/home/search/sou/pid/393/tid/445"   >
+                        家居服    </a>
+                    <a id="second446"  href="/home/search/sou/pid/393/tid/446"   >
+                        内裤背心    </a>
+                    <a id="second452"  href="/home/search/sou/pid/393/tid/452"   >
+                        袜类    </a>
+                    <a id="second495"  href="/home/search/sou/pid/393/tid/495"   >
+                        运动户外    </a>
+                </td>
+                <td id="second397" >
+                    <a id="second465"  href="/home/search/sou/pid/397/tid/465"   >
+                        时尚女包    </a>
+                    <a id="second466"  href="/home/search/sou/pid/397/tid/466"   >
+                        精品男包    </a>
+                    <a id="second467"  href="/home/search/sou/pid/397/tid/467"   >
+                        钱包/卡包    </a>
+                    <a id="second468"  href="#"   >
+                        旅行箱/包    </a>
+                    <a id="second469"  href="#"   >
+                        双肩背包    </a>
+                    <a id="second471"  href="#"   >
+                        服饰配件    </a>
+                    <a id="second476"  href="#"   >
+                        眼镜    </a>
+                    <a id="second477"  href="#"   >
+                        腕表    </a>
+                    <a id="second499"  href="#"   >
+                        潮流饰品    </a>
+                </td>
+
+            </tr>
+        </table>
+        <!--品牌-->
+        <table class="table3">
+            <tr>
+                <th>品牌:</th>
+                <td><a href="#">欧米伽</a></td>
+                <td><a href="#">特步</a></td>
+                <td><a href="#">LV</a></td>
+                <td><a href="#">美特斯邦威</a></td>
+                <td><a href="#">花花公子</a></td>
+                <td><a href="#">卡西欧</a></td>
+                <td><a href="#">西铁城</a></td>
+            </tr>
+        </table>
+        <div class="renqi">
+            <a href="#">人气<span></span></a>
+            <a href="#">销量<span></span></a>
+            <a href="#">价格<span></span></a>
+            <a href="#">折扣<span></span></a>
+            <a href="#" class="no">只显示有货商品</a>
+        </div>
+    </div>
+</div>
+
+<!--平铺列表-->
+<div id="main">
+    <div class="main kuan">
+        <ul class="clear">
+            <li>
+               <a href="#" class="active"><img  src="images/s1.jpg" width="225" height="225"/></a>
+               <a href="#"><img src="images/x1.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">塞班岛悦泰海景或同星级5晚7日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥20000.00(1.1折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/x2.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/s2.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">夏威夷岛悦泰海景或同星级5晚7日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥69900.00(6.0折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s3.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x3.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">马达加斯加岛悦泰海景或同星级2晚4日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥34500.00(8.0折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s4.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x4.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">好望角恒悦山悦泰海景或同星级5晚7日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥999200.00(3.1折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s5.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x5.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">冰岛七星级海景或同星级7晚9日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥3457200.00(5.0折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s6.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x6.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">马岛五星悦泰海景或同星级5晚7日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥234200.00(4.1折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s7.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x7.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">新西兰悦泰海景或同星级3晚5日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥235600.00(2.0折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s8.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x8.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">关岛七星悦泰海景或同星级5晚7日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥4567200.00(6.1折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s9.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x9.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">塔斯马里亚岛悦泰海景或同星级4晚6日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥2345200.00(5.0折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s10.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x10.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">钓鱼岛悦泰海景或同星级5晚7日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥7865200.00(7.1折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s6.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x7.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">复活节岛悦泰海景或同星级6晚8日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥4568200.00(7.1折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+            <li>
+                <a href="#" class="active"><img  src="images/s6.jpg" width="225" height="225"/></a>
+                <a href="#"><img src="images/x4.jpg"width="225" height="225"/></a>
+                <div style="font-size:12px;margin:10px 0 10px 5px;;"><a href="#" style="display:inline-block">塞班岛悦泰海景或同星级5晚7日游半自助</a></div>
+                <div style="margin:5px 0 5px 5px;"><span style="color: #f00;padding:5px 0;">￥4576200.00(7.1折)</span><del style="font-size:12px">￥230.00</del></div>
+            </li>
+        </ul>
+
+        <ol class="fenye clear">
+            <li class="gt">&gt;</li>
+            <li>3</li>
+            <li>2</li>
+            <li>1</li>
+            <li class="gt">&lt;</li>
+            <li style="border:0;">共56条</li>
+        </ol>
+    </div>
+</div>
+
+
+<div id="foot">
+    <div class="width">
+        <div class="foot">
+            <div class="clear">
+                <dl>
+                    <dt>新手入门</dt>
+                    <dd>购物指南</dd>
+                    <dd>会员介绍</dd>
+                    <dd>服务协议</dd>
+                    <dd>联系客服</dd>
+                </dl>
+                <dl>
+                    <dt>售后服务</dt>
+                    <dd>退款说明</dd>
+                    <dd>退货政策</dd>
+                    <dd>换货政策</dd>
+                    <dd>顾客意见</dd>
+                </dl>
+                <dl>
+                    <dt>支付方式</dt>
+                    <dd>货到付款</dd>
+                    <dd>在线支付</dd>
+                    <dd>优惠券使用</dd>
+                </dl>
+                <dl>
+                    <dt>配送服务</dt>
+                    <dd>配送政策</dd>
+                    <dd>配送范围</dd>
+                    <dd>配送服务查询</dd>
+                    <dd>配送运费</dd>
+                </dl>
+                <dl>
+                    <dt>常见问题</dt>
+                    <dd>购物须知</dd>
+                    <dd>商品验货与签收</dd>
+                    <dd>大宗商品购买</dd>
+                    <dd>找回密码</dd>
+                </dl>
+                <img src="images/dlx.png" class="lix"/>
+                <dl>
+                    <dt><img src="images/wx.jpg" /></dt>
+                    <dd class="td">亲亲宝贝官方微信</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/xl.jpg" /></dt>
+                    <dd class="td">亲亲宝贝官方微博</dd>
+                </dl>
+            </div>
+            <p class="p-t">
+                <a href="http://www.qinqinbaby.com/home/index/promise" target="_blank">关于我们</a><span>|</span>
+                <a href="http://www.qinqinbaby.com/friend/invite" target=_blank>邀请好友</a><span>|</span>
+                <a href="http://www.qinqinbaby.com/home/footer/lxkf" target="_blank">联系我们</a><span>|</span>
+                <a href="http://www.qinqinbaby.com/home/footer/job" target="_blank">招贤纳士</a><span>|</span>
+                <a href="http://www.qinqinbaby.com/home/footer/zhaoshang" target="_blank">商家入驻</a>
+            </p>
+            <p class="you">
+                <span class="left">友情链接:</span>
+            <div class="youx">
+                <ul class="yox">
+                    <li><a href="http://zs.fang.com" target="_blank">房天下</a></li>
+                    <li><a href="http://www.azb22.com" target="_blank">化妆品代理</a></li>
+                    <li><a href="http://www.vipcn.com/" target="_blank">清风手游网</a></li>
+                    <li><a href="http://www.bianwanjia.com/" target="_blank">便玩家</a></li>
+                    <li><a href="http://www.yqdown.com/" target="_blank">友情手机站</a></li>
+                    <li><a href="http://www.9553.com/" target="_blank">9553下载</a></li>
+                    <li><a href="http://www.cr173.com/" target="_blank">西西软件园</a></li>
+                    <li><a href="http://www.97sky.cn/" target="_blank">就去天空</a></li>
+                    <li><a href="http://game.91.com/" target="_blank">91游戏网</a></li>
+                    <li><a href="http://www.downcc.com/" target="_blank">绿色资源网</a></li>
+                    <li><a href="http://mydown.yesky.com/" target="_blank">天极下载</a></li>
+                    <li><a href="http://www.xpgod.com/" target="_blank">系统天堂</a></li>
+                    <li><a href="http://www.downxia.com/" target="_blank">当下软件园</a></li>
+                    <li><a href="http://www.hackhome.com/" target="_blank">网侠软件</a></li>
+                    <li><a href="http://www.greenxf.com/" target="_blank">绿色先锋</a></li>
+                    <li><a href="http://bbs.cnmo.com/" target="_blank">手机中国</a></li>
+                    <li><a href="http://www.bizport.cn/" target="_blank">信析宝</a></li>
+                </ul>
+            </div>
+            </p>
+            <div class="clear"></div>
+            <p class="about">&copy;&nbsp;&nbsp;亲亲宝贝网2003-2014 qinqinbaby.com All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京公安网备11010802015478号 京ICP备11017831号-1</p>
+            <p class="about"><img src="images/phone.png"/>客服热线：400-610-9993 周一~周日 9:00~21:00</p>
+            <p class="bm"><img src="images/lice1.jpg" /><img src="images/lice3.jpg"/></p>
+        </div>
+    </div>
+</div>
+<div class="fx">
+    <!-- 头图  -->
+    <img src="images/fix01.png" alt=""/>
+    <!-- 邮箱 -->
+    <a href="Mailto:kefu@qinqinbaby.com"><img src="images/fix02.png" alt=""/></a>
+
+    <!-- 美恰 联系客服-->
+    <img src="images/fix03.png" alt=""></a>
+    <!-- 在线客服图标:首页联系客服 结束-->
+    <!-- 公众号 -->
+    <img src="images/fix04.png" alt=""/>
+    <a href="#"><img src="images/fix05.png" alt=""/></a>
+</div>
+</body>
+</html>

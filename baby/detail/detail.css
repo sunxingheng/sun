@@ -1,0 +1,105 @@
+.width{width:1100px;margin:0 auto;}
+
+
+#head p{margin:5px 0 10px 0;}
+#head .top a{color:#f99;}
+#head img{display:inline-block;margin-left:20px;}
+#head span{margin:0 10px;}
+#head .logo p a{font:14px/20px "";}
+#head .logo p img{margin-right:30px;}
+#head .logo p a:hover{color:#f00;}
+#head .logo .ipt1{width:430px;height:30px;border: 2px solid #f00;}
+#head .logo .ipt2{height:36px;width:100px;border: 2px solid #f00;background:#f00;margin-top:10px;font:600 16px/16px "";color:#fff;}
+#head .sch{margin-left:650px;font:12px/20px "";padding-bottom:20px;}
+
+#main{background:#e7f8ff;height:auto;}
+#main .main{width:1000px;margin:0 auto;margin-top:-5px;}/*图片5px的padding去不掉*/
+#main .main .title{font:12px/20px "";padding:24px 0 16px 0;}
+
+#main .main .hai{height:596px;background:#fff;border:1px solid #eee;margin-bottom:20px;}
+/*放大镜*/
+#fang { display: inline-block;width: 400px;height: 400px;position: relative;border:1px solid #eee;margin:35px 10px 0 10px;cursor: move;}
+#xiao {position: relative;z-index: 1;}
+#qqq {display: none;width: 160px;height: 120px;position: absolute;background: #ffffcc;border: 2px solid #f00;filter: alpha(opacity=50);opacity: 0.5;}
+#p {position: absolute;display: block;width: 400px;height: 400px;background-color: #f2f2f2;filter: alpha(opacity=0);opacity: 0;z-index: 10;}
+#da {display: none;position: absolute;top: 10px;left: 460px;width: 400px;height: 400px;overflow: hidden;z-index: 1;border:1px solid #666;}
+#da img {position: absolute;z-index: 5}
+.smalltu{border:1px solid #eee;width:63px;height:63px;margin:10px 0 0 10px;display: inline-block;}
+/*海-右边*/
+#main .main .hai .hai-you{width:524px;height:566px;float:right;padding:26px 50px 0 0;}
+#main .main .hai .hai-you .h-top span,img{display: inline-block;}
+#main .main .hai .hai-you .h-top span{margin:0;padding:0 11px;}
+#main .main .hai .hai-you h3{margin-top:20px;}
+#main .main .hai .hai-you h5{color:#f00;margin:10px 0;}
+#main .main .hai .hai-you h2{display: inline-block;margin-bottom: 10px;}
+#main .main .hai .hai-you .del{color:#666;font:14px/14px "";margin-left:30px; }
+#main .main .hai .hai-you .zhuanzhu{margin:10px 0;}
+#main .main .hai .hai-you .num{margin:25px 0 35px 10px;font:12px/20px "";}
+#main .main .hai .hai-you .num .dian{border:1px solid #666;padding:3px;cursor: pointer;}
+#main .main .hai .hai-you .numx{border:1px solid #666;width:100px;display:inline-block;}
+#main .main .hai .hai-you .num .shu{border-left:1px solid #666;margin-right:0;padding:3px 20px;border-right:1px solid #666;}
+#main .main .hai .hai-you .num .jia{padding:10px;margin-right:0;cursor:pointer;}
+#main .main .hai .hai-you .num .jian{padding:10px;margin-right:0;cursor:pointer;}
+#main .main .hai .hai-you .anniu{border:1px solid #f89d44;width:140px;height:54px;background:#f7922f;font:16px/20px "";color:#fff;cursor:pointer;}
+#main .main .hai .hai-you .anniu:hover{background:#f22;}
+#main .main .hai .hai-you .ben{color:#999;margin:20px 0;}
+
+/*弹窗效果*/
+.father{display:none;}
+#tan{width:100%;height:100%;position:fixed;z-index:100;text-align:center;top:0;}
+#tanchuang{width:100%;height:100%;opacity:0.5;background:#666;position:fixed;z-index:100;top:0;text-align:center;}
+.tfu{width:640px;height:425px;background:#fff;display:inline-block;margin-top:100px;z-index:110;}
+#tan .cha{float:right;margin:5px 5px;}
+
+/*fixd nav*/
+#main .main .lou ul{background:#eaeaea;height:46px;border-top:2px solid #71d9ed;}
+#main .main .lou ul li{width:100px;height:46px;float:left;text-align:center;font:600 14px/46px "";cursor:pointer;}
+#main .main .lou ul #wen{float:right;color:#f00;}
+#main .main .lou ul li.active{background:#71d9ed;color:#fff;}
+
+
+/*七个楼梯*/
+#main .main .lout{background:#fff;}
+#main .main .lout .mulu{border-bottom:2px solid #c2c2c2;z-index: 1;height:57px;}
+#main .main .lout .mulu img{border-bottom:2px solid #666;margin-left:20px;padding:17px 0;z-index:2;}
+
+/*一楼*/
+#main .main .lout .yi .yi_main{margin:50px 0 44px 34px;}
+#main .main .lout .yi .yi_main img{margin-right:50px;}
+/*二楼*/
+#main .main .lout .er table{width:550px;margin:30px 0 60px 110px;float:left;}
+#main .main .lout .er td{vertical-align:baseline;}
+#main .main .lout .er img{float:left;padding:34px 0 0 30px;}
+/*三楼*/
+#main .main .lout .san-main{text-align: center;margin-top:20px;}
+/*四楼*/
+#main .main .lout .si-main{text-align: center;margin-top:30px;}
+/*五楼*/
+#main .main .lout .wu-main{text-align: center;margin-top:30px;}
+/*六楼*/
+#main .main .lout .liu p{margin:30px;}
+/*七楼*/
+#main .main .lout .qi-main{text-align: center;margin-top:30px;}
+
+
+
+/*公共底部*/
+#foot{height:364px;background:url("../images/bg2.png");}
+#foot .foot{height:200px;border-bottom:2px solid #d9d9d9;}
+#foot .foot dl{float:left;margin:30px 30px 12px 30px;}
+#foot .foot .lix{margin:50px 20px 0 0px;float:left;}
+#foot .foot dt{font:600 16px/30px "";color:#666;}
+#foot .foot dd{font:14px/30px "";color:#666;}
+#foot .foot .dd{margin-top:20px;}
+#foot .foot .p-t{margin-top:22px;text-align:center;}
+#foot .foot .p-t a,span{margin-right:16px;}
+#foot .foot .you{text-align:center;margin:7px 270px;}
+#foot .foot .youx{width:500px;height:16px;overflow:hidden;position: relative;}
+#foot .foot .yox{width:1000px;height:16px;position: absolute;}
+#foot .foot .yox li{margin-right:5px;float:left;}
+#foot .foot .about{text-align:center;margin:3px 0;}
+#foot .foot .about img{display:inline-block;margin-right:10px;}
+#foot .foot .bm{text-align:center;margin-top:10px;}
+#foot .foot .bm img{display:inline-block;margin-right:20px;}
+
+.fx{position:fixed;width:100px;height:353px;right:10px;bottom:270px;z-index:999999999;line-height:0;display:none;}

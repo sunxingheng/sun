@@ -1,0 +1,45 @@
+.main1{
+    width: 140px;
+    margin-right: 5px;
+    padding:0 10px;
+    border:3px solid #f1f1f1;
+    border-radius: 5px;
+    height: auto;
+    padding-bottom: 20px;
+}
+.main1 .p1{
+    font:12px/32px "";
+    padding-left: 15px;
+    background: url("../images/ico_helplopen.gif") no-repeat left center;
+}
+.main1 ul{
+    padding: 5px 8px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px dashed #ddd;
+}
+.main1 ul li{
+    font:12px/22px "";
+    padding-left: 14px;
+    background: url("../images/jiann.png") no-repeat left center;
+
+}
+.main2 .p2{
+    font:14px/32px "";
+    padding-left: 25px;
+    background: url("../images/go.png") no-repeat left center;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+.main2 .ul1{
+    margin-right: 200px;
+}
+.main2 ul li{
+    font: 12px/30px "";
+    padding-left: 20px;
+    background: url("../images/block.png") no-repeat 15px center;
+    color: #000;
+}
+#main a:hover{
+    color: #ff1a17;
+}

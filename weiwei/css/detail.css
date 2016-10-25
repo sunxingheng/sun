@@ -1,0 +1,252 @@
+#detail_top{
+    height:auto;
+}
+#de_l{
+    height: auto;
+    width: 360px;
+    margin-right: 25px;
+
+}
+
+#de_l .l2 img{
+    height: 360px;
+    width: 368px;
+    display: none;
+}
+#de_l .l2 img.active{
+    display: block;
+}
+/*购买数量*/
+
+#count span.c2{
+    height:20px;
+    width: 20px;
+    margin:5px ;
+    display: block;
+    float: left;
+    background: #dddddd;
+    text-align: center;
+    font: 12px/20px "";
+    cursor: pointer;
+}
+ #c1{
+    text-align: center;
+    float: left;
+    width: 30px;
+    height:20px;
+}
+/*结束*/
+/*放大部分*/
+#expend {
+    display: block;
+    width: 368px;
+    height: 360px;
+     position: relative;
+    margin:5px;
+     }
+#small{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #dddddd;}
+#index{
+    position: absolute;
+    height:80px;
+    width: 80px;
+    background: #ff6600;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    display: none;
+}
+#big{
+   height:200px;
+    width: 200px;
+    overflow: hidden;
+    position: absolute;
+    top:320px;
+    left:480px;
+    display: none;
+    border: 1px solid #dddddd;
+}
+#big img{
+    display: none;
+    position: absolute;
+    z-index: 5
+}
+#big img.active{
+    display: inline;
+
+}
+/*放大结束*/
+#de_l .l1{
+    margin-top:20px;
+}
+#de_l .l1 img{
+    height: 53px;
+    width: 53px;
+    float: left;
+    margin:0 10px ;
+    border:1px solid #dddddd ;
+
+}
+#de_r p{
+   font: 12px/30px "";
+    color: #666;
+}
+#de_l img.first{
+    margin-top: 40px;
+    height:auto;
+    width: auto;
+    border: none;
+    float: left;
+    cursor: pointer;
+}
+#de_l img.last{
+    margin-top: -38px;
+    height:auto;
+    width: auto;
+    border: none;
+    float: right;
+    cursor: pointer;
+}
+#de_l .l1 img.active{
+    border-color:#ff1a17 ;
+}
+#de_r .btn{
+    height:40px;
+    width: 115px;
+    background: #4c96ff;
+    color: #fff;
+    border: 1px solid #4c96ff;
+    margin:10px 10px 10px 0;
+    font:700 21px/40px '';
+    border-radius:5px ;
+}
+#de_r #addCart{
+    height:40px;
+    width: 135px;
+    background: #ff1a17;
+    color: #fff;
+    border: 1px solid #ff1a17;
+    margin:0 10px;
+    font:700 21px/40px '';
+    border-radius:5px ;
+}
+#de_bottom{
+    margin-top:10px;
+}
+
+.bo_l{
+    width: 200px;
+    height: auto;
+}
+#ulx{
+border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+.ulx_1{
+    background: #fff ;
+    margin-left: -26px;
+    border-top:1px solid #ddd;
+    display:none;
+}
+#ulx .ulx_1 span{height:30px;display: block;width: 100%;padding-left: 26px; color: #666;}
+#ulx .ulx_1 span:hover{background: #f0f0f0;width: 173px;}
+
+#ulx li{
+    height:auto;
+    padding-left: 26px;
+    font: 14px/30px "";
+    color:#666;
+    border-bottom: 1px solid #dddddd;
+    background: url("../images/bj1.png") no-repeat 10px 8px;
+    cursor: pointer;
+}
+#ulx li:hover{
+    color: #ff1a17;
+}
+#build-down{
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+.hot-top {
+    height: 30px;
+    line-height: 30px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e4e4e4;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.hot-down {
+    width: 160px;
+    height: 950px;
+    margin: 11px 19px 0px 19px;
+}
+
+.hot-down ul li {
+    width: 160px;
+    height: 223px;
+    margin-bottom: 10px;
+}
+
+.hot-down ul li a img {
+    width: 160px;
+    height: 160px;
+    display: block;
+}
+
+.hot-down ul li p {
+    display: block;
+    color: #ff1a17;
+    font-size: 13px;
+    padding-top: 5px;
+}
+.hot-down ul li a:hover{
+    color: #ff1a17;
+}
+.bo_r{
+    margin-left: 10px;
+    width:990px;
+}
+#list{
+    border-top: 2px solid #ff1a17;
+    height:34px;
+    background: #f6f7fa;
+    width: 100%;
+}
+#list2{
+    margin-top: 15px ;
+    border-top: 2px solid #ddd;
+    height:26px;
+    background: #f9f9f9;
+    width: 100%;
+    display: none;
+}
+#list2 span{
+    display: block;
+    float: left;
+    font:12px/26px "";
+    color: #666;
+    width:120px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #fafafa;
+}
+#list2 span:hover{
+    border-top: 2px solid #ff1a17;
+    background: #fff;
+}
+#list span{
+    display: block;
+    float: left;
+    font:700 14px/34px "";
+    color: #666;
+    width:120px;
+    text-align: center;
+    cursor: pointer;
+}
+#list span:hover{
+    color: #fff;
+    background: #ff1a17;
+}

@@ -1,0 +1,23 @@
+.width{width:984px;margin:0 auto;}
+
+
+#login2 .top{margin-top:38px;}
+#login2 .t{width:426px;height:30px;overflow:hidden;margin-top:20px;
+          background:url("images/loginmain.png") no-repeat 0 -187px;}
+#login2 .cent{float:left;margin-left:-100px;}
+#login2 .centl{width:277px;float:left;margin:100px 0 0 130px;}
+#login2 .centl .qin{font:600 14px/30px "";}
+#login2 .centl .fu{width:274px;height:32px;border:1px solid #eee;margin:10px 0;}
+#login2 .centl .fu input{width:250px;margin:7px 0 0 10px;border:0;}
+#login2 .centl .ex{color:#aea6a6;}
+#login2 .centl .zhuce{width:145px;height:45px;margin:10px 0;}
+#login2 .centl .btn{width:140px;height:40px;font:600 16px/30px "";color:#fff;border:1px solid #f99;border-radius:6px;background: #de3888;}
+#login2 .centl .ckx{color:#aea6a6;margin-bottom:10px;}
+#login2 .centl .ckx a{color:#aea6a6;margin-left:60px;}
+#login2 .centl .wei a{width:24px;height:24px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:10px;}
+#login2 .centl .wei a:hover img{margin-top:-24px;}
+#login2 .bottom{text-align: center;}
+#login2 .bottom .p1{margin:200px 0 5px 0;}
+#login2 .bottom .p1 a,span{margin-right:10px;}
+#login2 .bottom .yahei{color:#666;}
+

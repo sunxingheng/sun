@@ -1,0 +1,12 @@
+.main1{
+    height: auto;
+    border: 2px solid #f3f3f3;
+    padding-left: 20px;
+}
+.main1 a{
+    color: #666;
+    margin: 0 10px;
+}
+.main1 a:hover{
+    color: #ff1a17;
+}

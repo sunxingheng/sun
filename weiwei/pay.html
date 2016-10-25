@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/pay.css"/>
+    <link rel="stylesheet" href="css/common1.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/common1.js"></script>
+    <script type="text/javascript" src="js/submitorder.js"></script>
+    <script type="text/javascript" src="js/pay.js"></script>
+    <script type="text/javascript" src="js/buy.js"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--公共头部二-->
+<div id="homeContion">
+    <div id="top">
+        <div id="topLeft">
+            <a href="index.html" rel="nofollow">返回为为网首页</a>
+        </div>
+        <div id="topCentre">
+            <div class="phone">
+                <a href="#">
+                    <span class="span1"></span>
+                    <span class="span2">手机版</span>
+                    <b></b>
+                </a>
+                <div class="tc-phone">
+                    <div class="jt-up"></div>
+                    <p>扫描二维码下载客户端</p>
+                    <div class="smery">
+                        <ul>
+                            <a href="#" class="iphone"></a>
+                            <a href="#" class="android"></a>
+                        </ul>
+                    </div>
+                    <div class="smery-img">
+                        <img src="images/top-2.jpg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome">
+                欢迎光临为为网，<a href="login.html" style="color:#ffa500;" id="log"></a>&nbsp;<a href="register.html">免费注册</a>
+            </div>
+        </div>
+        <div id="topRight">
+            <ul>
+                <li><span><a href="help.html">帮助中心</a></span></li>
+                <li><span><a href="#">购物咨询</a></span></li>
+                <li><span><a href="#">在线客服</a></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--*******************logo搜索区********************-->
+<div id="seek">
+    <div class="seekCont">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.jpg"/></a>
+        </div>
+        <div class="search">
+            <div class="searchInput">
+                <div class="form">
+                    <input id="keyword" type="text" class="text" value="  请输入您要查询的商品关键字" name="" onfocus="if(this.value=='  请输入您要查询的商品关键字'){this.value=''}" onblur="if(this.value.length==0){this.value='  请输入您要查询的商品关键字'}" autocomplete="off">
+                    <input type="button" class="button" value="搜 索" />
+                    <div class="formdiv">
+                        <b>商品</b>
+                        <img src="images/top_png7.png" />
+                        <div class="formdiv_menu">
+                            <span>旅游</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searchHot">
+                <a class="hot-item" title="最新活动" style="color:#FF6600;" href="index.html" >最新活动</a>
+                <a class="hot-item" title="家具家纺" style="color:#999999;" href="index.html" >家具家纺</a>
+                <a class="hot-item" title="建材" style="color:#999999;" href="index.html" >建材</a>
+                <a class="hot-item" title="开关" style="color:#FF6600;" href="index.html" >开关</a>
+                <a class="hot-item" title="灯饰" style="color:#999999;" href="index.html" >灯饰</a>
+                <a class="hot-item" title="五金" style="color:#999999;" href="index.html" >五金</a>
+            </div>
+        </div>
+        <div class="member">
+            <span></span>
+            <a href="">我的为为</a>
+            <b></b>
+        </div>
+        <div class="account">
+            <span class="sp1"></span>
+            <a href="buy.html">去购物车结算</a>
+            <b></b>
+            <img src="images/che3.bmp" />
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<!--******************导航****************************-->
+<div id="daohang">
+    <div id="navList">
+        <div class="navList_left">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html">建材</a></li>
+                <li><a href="index.html">家具</a></li>
+                <li><a href="index.html">云超市</a></li>
+                <li><a href="index.html">找商铺</a></li>
+                <li><a href="index.html">为家宝</a></li>
+            </ul>
+        </div>
+        <div class="navList_right">
+            <a href="#"><img src="images/Sign_in.png"/></a>
+        </div>
+    </div>
+</div>
+<!--公共头部二结束-->
+<!--中间部分-->
+<div id="main" class="margin clear">
+    <p style="font: 12px/30px '';margin-bottom: 10px;color: #000;">
+        <span style="margin:5px;height: 5px;width: 5px ;background: #ff1a17"></span>您当前的位置：首页 > 个人中心 > 查看订单</p>
+   <div class="main1 left">
+       <p class="p2">会员中心</p>
+       <p class="p1">交易管理</p>
+       <ul>
+           <li><a href="">订单中心</a></li>
+           <li><a href="">产品评价</a></li>
+           <li><a href="">退货记录</a></li>
+           <li><a href="">联营退款记录</a></li>
+           <li><a href="">我的投诉</a></li>
+           <li><a href="">配送评价</a></li>
+           <li><a href="">我的为家宝</a></li>
+       </ul>
+       <p class="p1">个人应用管理</p>
+       <ul>
+           <li><a href="">我的收藏</a></li>
+           <li><a href="">我的足迹</a></li>
+           <li><a href="">地址管理</a></li>
+           <li><a href="">邀请朋友</a></li>
+       </ul>
+       <p class="p1">个人信息管理</p>
+       <ul>
+           <li><a href="">我的消息</a></li>
+           <li><a href="">个人资料</a></li>
+           <li><a href="">安全中心</a></li>
+           <li><a href="">我的级别</a></li>
+           <li><a href="">我的积分</a></li>
+           <li><a href="">我的礼品券/刮刮卡</a></li>
+       </ul>
+   </div>
+    <div class="shopMenu-right">
+        <div class="cartList" style="display: none">
+            <ul class="cartHead">
+                <li class="l1">缩略图</li>
+                <li class="l2">品名</li>
+                <li class="l3">原价</li>
+                <li>会员价</li>
+                <li>库存状态</li>
+                <li>数量</li>
+                <li>小计</li>
+            </ul>
+        </div>
+        <div class="order1">
+            <p>
+                <span style="float:left;">订单状态：</span>
+                <font style="color:red;float:left;">等待付款</font>
+                <a href="#" id="webBankButton"><img src="images/time9.gif" alt="立即支付" /></a>
+                <a href="#" id="cancelOrderButton"><img src="images/fim02.gif" alt="取消订单" /></a>
+            </p>
+        </div>
+        <div class="order2">
+            <p class="bianhao">订单号：<span>D150910883216</span></p>
+            <p>应付金额：&nbsp;<span id="totalPrice" class="jiage"></span>元</p>
+            <p>支付方式：在线支付</p>
+        </div>
+        <div class="order3"><p>订单信息</p></div>
+        <div class="order4">
+            <div class="ordivImg1">
+                <p>请扫描下面的二维码</p>
+                <img src="images/erweima_png.png" alt="二维码" />
+            </div>
+            <div class="ordivImg2">
+                <p>请点击下面的银行支付</p>
+                <a href=""><img src="images/logo_bjnsyh.jpg" alt="银行" /></a>
+                <a href=""><img src="images/logo_bjyh.jpg" alt="银行" /></a>
+                <a href=""><img src="images/logo_gfyh.jpg" alt="银行" /></a>
+                <a href=""><img src="images/logo_zggsyh.jpg" alt="银行" /></a>
+                <a href=""><img src="images/logo_zgmsyh.jpg" alt="银行" /></a>
+                <a href=""><img src="images/logo_zgyh.jpg" alt="银行" /></a>
+                <a href=""><img src="images/logo_zsyh.jpg" alt="银行" /></a>
+                <a href=""><img src="images/logo_payh.jpg" alt="银行" /></a>
+            </div>
+        </div>
+    </div>
+    <!--清除浮动-->
+    <div class="clear"></div>
+
+</div>
+
+
+<!--公共尾部-->
+<div id="bottom">
+    <div style="width:100%;height:175px;">
+        <div style="width:1200px;height:145px;margin:auto;">
+            <div class="diva1">
+                <p style="height:36px;font-size:12px;color:#4d4d4d;"><b>7x12H客服在线</b></p>
+                <div style="width:260px;height:70px;">
+                    <img src="images/phone1.jpg" style="float:left;width:70px;height:70px;"/>
+                    <div id="" style="float:left;margin-left:10px;width:160px;height:70px;">
+                        <p style="font-size:17px;font-weight:bold;color:#ff1a17;height:23px;line-height:23px">4006-698-698</p>
+                        <p style="font-size:11px;font-weight:bold;color:#888;height:11px;margin-top:12px;">周一至周日&nbsp;8:00-21:00</p>
+                        <p style="font-size:9px;color:#888;height:9px;margin-top:15px;">E-mail:kefu@homevv.cn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diva2">
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">会员指南</li>
+                    <li><a href="">会员注册</a></li>
+                    <li><a href="">购物和订单</a></li>
+                    <li><a href="">会员制度</a></li>
+                    <li><a href="">积分规则</a></li>
+                    <li><a href="">评论规则</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">支付方式</li>
+                    <li><a href="">货到付款</a></li>
+                    <li><a href="">网上支付</a></li>
+                    <li><a href="">邮局汇款</a></li>
+                    <li><a href="">发票制度</a></li>
+                    <li><a href="">礼品券使用</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">配送方式</li>
+                    <li><a href="">快递运送</a></li>
+                    <li><a href="">邮政普包</a></li>
+                    <li><a href="">特快专递</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">售后服务</li>
+                    <li><a href="">退换货政策</a></li>
+                    <li><a href="">退换货流程</a></li>
+                    <li><a href="">退款说明</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">购物帮助</li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">找回密码</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">投诉建议</a></li>
+                </ul>
+            </div>
+            <div class="diva3">
+                <p class="p1"><span>为为网APP</span><span>为为网微信</span></p>
+                <div style="height:84px;width:265px;">
+                    <img src="images/weiwei.jpg"/><img src="images/weiwei.jpg"/>
+                </div>
+                <p class="p2"><span>下载移动客户端</span><span>为为网官方微信</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="da"></div>
+    <div style="width:822px;height:156px;margin:auto;margin-top:27px;">
+        <ul class="diul1">
+            <li><a href="">关于我们</a></li>
+            <li><a href="">招商合作</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">诚聘英才</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">网站地图</a></li>
+            <li><a href="">品牌大全</a></li>
+        </ul>
+        <ul class="diul2">
+            <li style="width:118px;"><a href="#" style="color:#4d4d4d;">沪ICP备08001311号</a></li>
+            <li style="width:63px;"><p>营业执照</p></li>
+            <li style="width:191px;border-right:0px;">
+                <span><img src="images/16.jpg" style="margin-left:13px;width:16px;height:16px;float:left;"/></span>
+                <p style="float:left;margin-left:6px;">沪公网安备31011302002015</p>
+            </li>
+        </ul>
+        <div style="margin:15px 0px 0px 251px;width:312px;height:33px;font-size:12px;">
+            <a href="#" style="color:#4d4d4d;">Copyright &copy; 2008-2016    homevv.com All Rights Reserved</a>
+        </div>
+        <div class="divimg">
+            <a href="#"><img src="images/idx_23.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_25.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_27.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_29.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_31.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_33.jpg" alt="" /></a>
+            <a href="#" style="margin-right:0;"><img src="images/idx_34.png" /></a>
+        </div>
+    </div>
+</div>
+
+<!--绝对定位 回到顶部-->
+<div id="abs">
+    <p>投诉建议</p>
+    <p>问卷调查</p>
+
+    <div id="abs2">
+        <img src="images/weiwei.jpg" style="margin-left: 16px;"/>
+        <span>扫描二维码<br/>下载手机App</span>
+    </div>
+    <p id="abs1"><img src="images/erweima.jpg" style="margin: 7px;"/></p>
+
+    <p id="gotop">回到顶部</p>
+
+</div>
+</body>
+</html>

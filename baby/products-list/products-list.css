@@ -1,0 +1,73 @@
+.width{width:1100px;margin:0 auto;}
+.kuan{width:1000px;margin:0 auto;}
+
+#head p{margin:5px 0 10px 0;}
+#head .top a{color:#f99;}
+#head img{display:inline-block;margin-left:20px;}
+#head span{margin:0 10px;}
+#head .logo p a{font:14px/20px "";}
+#head .logo p img{margin-right:30px;}
+#head .logo p a:hover{color:#f00;}
+#head .logo .ipt1{width:430px;height:30px;border: 2px solid #f00;}
+#head .logo .ipt2{height:36px;width:100px;border: 2px solid #f00;background:#f00;margin-top:10px;font:600 16px/16px "";color:#fff;}
+#head .sch{margin-left:650px;font:12px/20px "";padding-bottom:20px;}
+
+#list{background:#f0fbfd;padding:20px 0 10px 0;}
+#list .fu{background:#fff;padding:10px 0 20px 0;}
+#list .k{width:860px;}
+#list .k a{margin:10px 10px;font:12px/12px "";display:inline-block;}/*一级分类*/
+#list .k a:hover{color:#99f;}
+#list .k .yiji{white-space: nowrap;vertical-align:top;margin:6px 0 0 20px;display: inline-block;}
+/*二级分类*/
+#list .erji{white-space: nowrap;vertical-align:top;margin:6px 0 0 20px;display: inline-block;}
+#list .table2{width:880px;margin-bottom:10px;}
+#list .table2 td{display: none;width:780px;margin-left:-5px;}
+#list .table2 td.active{display: inline-block;}
+#list .table2 a{margin:10px 10px;font:12px/12px "";display:inline-block;}
+#list .table2 a:hover{color:#99f;}
+/*品牌*/
+#list .table3{width:960px;border-bottom:1px dashed #eee;border-top:1px dashed #eee;margin-left:20px;}
+#list .table3 th{white-space: nowrap;vertical-align:top;margin-top:6px;display: inline-block;}
+#list .table3 td{margin:10px 10px;font:12px/12px "";display:inline-block;}
+/*人气*/
+#list .renqi{margin:20px 0 0 20px;}
+#list .renqi span{background:url("images/arrow.png") -10px 5px no-repeat;width:10px;height:17px;display:inline-block;overflow:hidden;margin:0;}
+#list .renqi a:hover span{background:url("images/arrow.png") 0 5px no-repeat;}
+#list .renqi a{display:inline-block;border:1px solid #eee;padding:3px 10px;}
+#list .renqi a:hover{border:1px solid #ccc;background:#eee;}
+#list .renqi a.no{padding:4px}
+/*平铺列表*/
+#main{background:#f0fbfd;}
+#main .main{background:#fff;height:auto;}
+#main .main a{display:none;}
+#main .main .active{display:inline-block;}
+#main .main ul{width: 1000px;padding:10px 0;}
+#main .main ul li{border:1px solid #f5f5f5;width:223px;margin:20px 0 0 20px;float: left;}
+
+/*box-shadow:水平 上下 阴影宽  负数为 左 上*/
+#main .main ul li:hover{border:1px solid #f00;box-shadow:3px 3px 5px #999;}
+/*分页*/
+#main .fenye{margin:10px 20px 0 0;padding-bottom: 20px;}
+#main .fenye li{float:right;margin-left:5px;border:1px solid #eee;padding:5px 10px;}
+#main .fenye li:hover{border:1px solid #999;}
+#main .fenye .gt:hover{background:#999;}
+
+#foot{height:364px;background:url("../images/bg2.png");}
+#foot .foot{height:200px;border-bottom:2px solid #d9d9d9;}
+#foot .foot dl{float:left;margin:30px 30px 12px 30px;}
+#foot .foot .lix{margin:50px 20px 0 0px;float:left;}
+#foot .foot dt{font:600 16px/30px "";color:#666;}
+#foot .foot dd{font:14px/30px "";color:#666;}
+#foot .foot .dd{margin-top:20px;}
+#foot .foot .p-t{margin-top:22px;text-align:center;}
+#foot .foot .p-t a,span{margin-right:16px;}
+#foot .foot .you{text-align:center;margin:7px 270px;}
+#foot .foot .youx{width:500px;height:16px;overflow:hidden;position: relative;}
+#foot .foot .yox{width:1000px;height:16px;position: absolute;}
+#foot .foot .yox li{margin-right:5px;float:left;}
+#foot .foot .about{text-align:center;margin:3px 0;}
+#foot .foot .about img{display:inline-block;margin-right:10px;}
+#foot .foot .bm{text-align:center;margin-top:10px;}
+#foot .foot .bm img{display:inline-block;margin-right:20px;}
+
+.fx{position:fixed;width:100px;height:353px;right:10px;bottom:270px;z-index:999999999;line-height:0;display:none;}

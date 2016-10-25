@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script rel="stylesheet" src="js/Ajax.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/clock.js"></script>
+    <script type="text/javascript" src="js/buy.js"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head>
+<body>
+<!--节日宣传-->
+<div id="festival">
+    <a href=""><img src="images/festival.jpg"/></a>
+</div>
+<!--头部-->
+<div id="head">
+    <div id="headtop">
+        <ul id="leftul">
+            <li><a href="index.html">返回为为网首页</a></li>
+            <li><a href="javascript:void(0);"><img src="images/phone.jpg" style="display:inline-block;"/>手机客户端</a></li>
+            <li>欢迎光临为为网，<a href="login.html" style="color:#ffa500;" id="log"></a>&nbsp;<a href="register.html">免费注册</a></li>
+        </ul>
+        <ul id="rightul">
+            <li><a href="">我的订单</a></li>
+            <li><a href="login.html">我的为为</a>
+                <ul class="rightul-ul1">
+                    <li><a href="login.html">我的优惠券</a></li>
+                    <li><a href="login.html">我的收藏</a></li>
+                    <li><a href="login.html">我的为家宝</a></li>
+                    <li><a href="login.html">申请退货</a></li>
+                </ul>
+            </li>
+            <li><a href="help.html">帮助中心</a>
+                <ul class="rightul-ul2">
+                    <li><a href="help.html">购买流程</a></li>
+                    <li><a href="help.html">在线服务</a></li>
+                </ul>
+            </li>
+            <li><a href="#">收藏本站</a></li>
+            <li><a href="login.html">签到送送积分</a></li>
+        </ul>
+    </div>
+</div>
+<!--搜索框-->
+<div id="search">
+    <div class="margin clear">
+        <img src="images/logo.jpg" class="left" style="margin:0 105px 5px 5px"/>
+        <div class="search left">
+            <input type="text" class="int"/>
+            <input type="button" value="搜索" class="btn">
+            <p>
+                <a href="" style="color:#ff6600">活动报名</a>
+                <a href="">家居家纺</a>
+                <a href="">建材</a>
+                <a href="" style="color:#ff6600">开关</a>
+                <a href="">灯饰</a>
+                <a href="">五金</a>
+                <a href="" style="color:#ff6600">英皇</a>
+                <a href="">方饰</a>
+                <a href="">代金券</a>
+            </p>
+        </div>
+        <!--购物车-->
+        <p class="right shopcar">
+            <img src="images/shopcar.png" style="display: inline ;margin-left:-15px;"/>
+            <span class="che" id="buy"><a href="buy.html"> 购物车(0)</a></span>
+            <span id="goshop"><a href="index.html"> 购物车里什么也没有哦 快去选购吧</a></span>
+        </p>
+
+    </div>
+
+</div>
+
+<!--导航栏-->
+<div id="nav">
+    <div class="margin">
+        <!--json导入数据-->
+        <a href="" id="fenlei">全部商品分类
+
+            <div id="proNone"><!--一级菜单-->
+                <div class="main"> <span class="arrow-right"></span>
+                    <div class="nodes" class="clear">  <!--二级菜单-->
+                        <ul class="nodes1">
+                        </ul>
+                    </div>
+                </div>
+                <div class="main"> <span class="arrow-right"></span>
+                    <div class="nodes" class="clear">  <!--二级菜单-->
+                        <ul class="nodes1">
+                        </ul>
+                    </div>
+                </div>
+                <div class="main"> <span class="arrow-right"></span>
+                    <div class="nodes" class="clear">  <!--二级菜单-->
+                        <ul class="nodes1">
+                        </ul>
+                    </div>
+                </div>
+                <div class="main"> <span class="arrow-right"></span>
+                    <div class="nodes" class="clear">  <!--二级菜单-->
+                        <ul class="nodes1">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="" style="margin-left:50px; ">首页</a>
+        <a href="">建材</a>
+        <a href="">家具</a>
+        <a href="">云超市</a>
+        <a href="">旅游</a>
+        <a href="" class="hotnav">为家宝<span><img src="images/hot%20.gif" class="hotimg"/> </span></a>
+        <img src="images/cheap.jpg"/>
+    </div>
+</div>
+<!--头部公共部分一 结束-->
+
+<!--banner 部分 轮播图效果-->
+<div id="banner">
+        <div id="show">
+            <div id="container">
+                <img src="images/banner1.jpg"/>
+                <img src="images/banner2.jpg"/>
+                <img src="images/banner3.jpg"/>
+                <img src="images/banner4.jpg"/>
+                <img src="images/banner5.jpg"/>
+                <img src="images/banner1.jpg"/>
+            </div>
+        </div>
+        <div id="small">
+            <span class=""></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+</div>
+<!--轮播结束 main tab 效果 限时抢购-->
+<div id="fastshop" class="margin clear" style="position: relative">
+
+     <img src="images/fastshop.jpg" style="padding: 16px "/>
+
+        <img src="images/lizi_img0111.png" class="img1" style="z-index: 5"/>
+
+        <div class="f1">
+            <a href="detail.html" class="fastshop" style="margin-left: 70px">
+                <img src="images/s1.jpg"/>
+                <p class="simen">[西门子(Simens)]</p>
+                <p class="text">西门子远景系列二开双控带</p>
+                <p class="price">14.00 <span>18.03</span></p>
+                <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+            </a>
+            <a href="detail.html" class="fastshop ">
+                <img src="images/s2.jpg"/>
+                <p class="simen">[西门子(Simens)]</p>
+                <p class="text">西门子远景系列三开双控带荧光</p>
+                <p class="price">18.07 <span>25.04</span></p>
+                <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+            </a>
+            <a href="detail.html" class="fastshop ">
+                <img src="images/s3.jpg"/>
+                <p class="simen">[西门子(Simens)]</p>
+                <p class="text">西门子远景系列白五孔10a电源</p>
+                <p class="price">8.30 <span>10.08</span></p>
+                <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+            </a>
+            <a href="detail.html" class="fastshop ">
+                <img src="images/s4.jpg"/>
+                <p class="simen">[西门子(Simens)]</p>
+                <p class="text">西门子远景系列16a空调插座面</p>
+                <p class="price">13.01 <span>17.39</span></p>
+                <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+            </a>
+        </div>
+
+        <div class="f1">
+            <a href="detail.html" class="fastshop" style="margin-left: 70px ">
+                <img src="images/xs9.png"/>
+                <p class="simen">[西门子(Simens)]</p>
+                <p class="text">西门子远景系列二开双控带</p>
+                <p class="price">14.00 <span>18.03</span></p>
+                <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+
+            </a>
+            <a href="detail.html" class="fastshop ">
+                <img src="images/xs10.png"/>
+                <p class="simen">[西门子(Simens)]</p>
+                <p class="text">西门子远景系列二开双控带</p>
+                <p class="price">14.00 <span>18.03</span></p>
+                <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+            </a>
+            <a href="detail.html" class="fastshop ">
+                <img src="images/xs11.png"/>
+                <p class="simen">[西门子(Simens)]</p>
+                <p class="text">西门子远景系列二开双控带</p>
+                <p class="price">14.00 <span>18.03</span></p>
+                <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+            </a>
+            <a href="detail.html" class="fastshop ">
+                <img src="images/xs12.png"/>
+                <p class="simen">[西门子(Simens)]</p>
+                <p class="text">西门子远景系列二开双控带</p>
+                <p class="price">14.00 <span>18.03</span></p>
+                <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+            </a>
+        </div>
+
+        <div class="f1">
+        <a href="detail.html" class="fastshop" style="margin-left: 70px">
+            <img src="images/xs5.png"/>
+            <p class="simen">[西门子(Simens)]</p>
+            <p class="text">西门子远景系列二开双控带</p>
+            <p class="price">14.00 <span>18.03</span></p>
+            <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+        </a>
+        <a href="detail.html" class="fastshop ">
+            <img src="images/xs6.png"/>
+            <p class="simen">[西门子(Simens)]</p>
+            <p class="text">西门子远景系列三开双控带荧光</p>
+            <p class="price">18.07 <span>25.04</span></p>
+            <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+        </a>
+        <a href="detail.html" class="fastshop ">
+            <img src="images/xs7.png"/>
+            <p class="simen">[西门子(Simens)]</p>
+            <p class="text">西门子远景系列白五孔10a电源</p>
+            <p class="price">8.30 <span>10.08</span></p>
+            <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+            </a>
+        <a href="detail.html" class="fastshop ">
+            <img src="images/xs8.png"/>
+            <p class="simen">[西门子(Simens)]</p>
+            <p class="text">西门子远景系列16a空调插座面</p>
+            <p class="price">13.01 <span>17.39</span></p>
+            <span href="#" style="height:23px;margin-left:20px;color:#bcbcbc;" >
+                    <img src="images/clock.png" style="display:block;float:left;" />
+                    <div class="time_item" id="l0"  style="margin-left:6px;float:left;color:#666465;">
+                        <span class="day_show">0</span>天
+                        <strong class="hour_show">0</strong>时
+                        <strong class="minute_show">0</strong>分
+                        <strong class="second_show">0</strong>秒
+                    </div>
+                </span>
+        </a>
+     </div>
+
+
+    <img src="images/lizi_img0122.png" class="img2"/>
+
+</div>
+<!--品牌团-->
+<div id="bound" class="margin clear">
+        <a href=""><img src="images/bound.jpg"/></a>
+        <a href=""><img src="images/bound1.jpg" style="float:left;margin:0 15px;"/></a>
+        <a href=""><img src="images/bound2.jpg" style="float: left"/></a>
+</div>
+
+<!--楼层-->
+<div id="floor1" class="margin clear">
+        <div class="f1_left left">
+            <img src="images/floor1.gif"/>
+            <div class="text1 clear">
+                <p>热门标签</p>
+                <ul class="left">
+                    <li><a href="">开关</a> </li>
+                    <li><a href="">五金</a> </li>
+                    <li><a href="">涂料</a> </li>
+                    <li><a href="">吊顶</a> </li>
+                    <li><a href="">地板</a> </li>
+                </ul>
+
+                <ul class="left">
+                    <li><a href="">开关</a> </li>
+                    <li><a href="">五金</a> </li>
+                    <li><a href="">涂料</a> </li>
+                    <li><a href="">吊顶</a> </li>
+                    <li><a href="">地板</a> </li>
+                </ul>
+
+                <ul class="left">
+                    <li><a href="">开关</a> </li>
+                    <li><a href="">五金</a> </li>
+                    <li><a href="">涂料</a> </li>
+                    <li><a href="">吊顶</a> </li>
+                    <li><a href="">地板</a> </li>
+                </ul>
+            </div>
+           <a href=""> <img src="images/v7-1f-01.jpg"/></a>
+        </div>
+        <div class="f1_right left clear">
+           <p class="p1_1" style="position: relative">
+               <a href="category.html" class="a1"><img src="images/v7-1f-02.jpg"/></a>
+                <a href="category.html" class="a2"><img src="images/v7-1f-03.jpg"/></a>
+               <a href="category.html" class="a3"><img src="images/v7-1f-04.jpg"/></a>
+               <a href="category.html" class="a4"><img src="images/v7-1f-05.jpg"/></a>
+            <a href="category.html"  class="a5"><img src="images/v7-1f-06.jpg" class="left last"/></a> </p>
+        </div>
+        <div style="clear: both"></div>
+
+    <div class="hotbranc clear">
+        <span class="left ht">热门品牌 Hot Branc</span>
+        <a href=""><img src="images/v7-1f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-1f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-1f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-1f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-1f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-1f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-1f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-1f-logo1.jpg"/></a>
+    </div>
+</div>
+
+
+<div id="floor2" class="margin clear">
+    <div class="f1_left left">
+        <img src="images/floor2.gif"/>
+        <div class="text1 clear">
+            <p>热门标签</p>
+            <ul class="left">
+                <li><a href="">床</a> </li>
+                <li><a href="">沙发</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+        </div>
+        <a href=""><img src="images/v7-2f-01.jpg"/></a>
+    </div>
+    <div class="f1_right left clear">
+        <p class="p1_1 left">
+            <a href="category.html" class="a1"><img src="images/v7-2f-06.jpg" class="first"/></a>
+            <a href="category.html" class="a6"><img src="images/v7-2f-03.jpg"/></a>
+            <a href="category.html" class="a2"><img src="images/v7-2f-02.png " class="last"/></a><br/>
+            <a href="category.html" class="a4"><img src="images/v7-2f-05.png"/></a>
+            <a href="category.html" class="a7"><img src="images/v7-2f-04.png" class="last"/></a>
+        </p>
+    </div>
+    <div style="clear: both"></div>
+    <div class="hotbranc clear">
+        <span class="left ht">热门品牌 Hot Branc</span>
+        <a href=""><img src="images/v7-2f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-2f-logo2.jpg"/></a>
+        <a href=""><img src="images/v7-2f-logo3.jpg"/></a>
+        <a href=""><img src="images/v7-2f-logo4.jpg"/></a>
+        <a href=""><img src="images/v7-2f-logo5.jpg"/></a>
+        <a href=""><img src="images/v7-2f-logo6.jpg"/></a>
+        <a href=""><img src="images/v7-2f-logo7.jpg"/></a>
+        <a href=""><img src="images/v7-2f-logo8.jpg"/></a>
+    </div>
+</div>
+
+<div id="floor3" class="margin clear">
+    <div class="f1_left left">
+        <img src="images/floor3.gif"/>
+        <div class="text1 clear">
+            <p>热门标签</p>
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+        </div>
+       <a href=""> <img src="images/v7-3f-01.jpg"/></a>
+    </div>
+    <div class="f1_right left clear">
+        <p class="p1_1 left">
+            <a href="category.html" class="a1"><img src="images/v7-3f-02.jpg"/></a>
+            <a href="category.html" class="a2"><img src="images/v7-3f-03.jpg"/></a><br/>
+            <a href="category.html" class="a3"><img src="images/v7-3f-04.jpg"/></a>
+            <a href="category.html" class="a4"><img src="images/v7-3f-05.jpg"/></a>
+            <a href="category.html" class="a5"><img src="images/v7-3f-06.jpg" class="left last"/></a></p>
+    </div>
+    <div style="clear: both"></div>
+    <div class="hotbranc clear">
+        <span class="left ht">热门品牌 Hot Branc</span>
+        <a href=""><img src="images/v7-3f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-3f-logo2.jpg"/></a>
+        <a href=""><img src="images/v7-3f-logo3.jpg"/></a>
+        <a href=""><img src="images/v7-3f-logo4.jpg"/></a>
+        <a href=""><img src="images/v7-3f-logo5.jpg"/></a>
+        <a href=""><img src="images/v7-3f-logo6.jpg"/></a>
+        <a href=""><img src="images/v7-3f-logo7.jpg"/></a>
+        <a href=""><img src="images/v7-3f-logo8.jpg"/></a>
+    </div>
+</div>
+
+<img src="images/mydream.jpg" class="margin" style="margin-bottom: 15px;"/>
+
+<div id="floor4" class="margin clear">
+    <div class="f1_left left">
+        <img src="images/floor4.gif"/>
+        <div class="text1 clear">
+            <p>热门标签</p>
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+        </div>
+        <a href=""><img src="images/v7-4f-01.jpg"/></a>
+    </div>
+    <div class="f1_right left clear">
+
+        <p class="p1_1 left">
+            <a href="category.html" class="a1"><img src="images/v7-4f-02.jpg" class="first"/></a>
+            <a href="category.html" class="a6"><img src="images/v7-4f-03.jpg"/></a>
+            <a href="category.html" class="a2"><img src="images/v7-4f-04.jpg " class="last"/></a><br/>
+            <a href="category.html" class="a4"><img src="images/v7-4f-05.jpg"/></a>
+            <a href="category.html" class="a7"><img src="images/v7-4f-06.jpg" class="last"/></a>
+        </p>
+
+    </div>
+    <div style="clear: both"></div>
+    <div class="hotbranc clear">
+        <span class="left ht">热门品牌 Hot Branc</span>
+        <a href=""><img src="images/v7-4f-logo1.jpg"/></a>
+        <a href=""><img src="images/v7-4f-logo2.jpg"/></a>
+        <a href=""><img src="images/v7-4f-logo3.jpg"/></a>
+        <a href=""><img src="images/v7-4f-logo4.jpg"/></a>
+        <a href=""><img src="images/v7-4f-logo5.jpg"/></a>
+        <a href=""><img src="images/v7-4f-logo6.jpg"/></a>
+        <a href=""><img src="images/v7-4f-logo7.jpg"/></a>
+        <a href=""><img src="images/v7-4f-logo8.jpg"/></a>
+    </div>
+</div>
+
+<div id="floor5" class="margin clear">
+    <div class="f1_left left">
+        <img src="images/floor5.gif"/>
+        <div class="text1 clear">
+            <p>热门标签</p>
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+
+            <ul class="left">
+                <li><a href="">开关</a> </li>
+                <li><a href="">五金</a> </li>
+                <li><a href="">涂料</a> </li>
+                <li><a href="">吊顶</a> </li>
+                <li><a href="">地板</a> </li>
+            </ul>
+        </div>
+        <a href=""><img src="images/v7-5f-011.jpg"/></a>
+    </div>
+    <div class="f1_right left clear">
+        <p class="p1_1 left">
+            <a href="category.html" class="a1"><img src="images/v7-5f-01.jpg"/></a>
+            <a href="category.html" class="a2"><img src="images/v7-5f-02.jpg"/></a><br/>
+            <a href="category.html" class="a3"><img src="images/v7-5f-03.jpg"/></a>
+            <a href="category.html" class="a4"><img src="images/v7-5f-04.jpg"/></a>
+        <a href="category.html" class="a5"><img src="images/v7-5f-05.jpg" class="left last"/></a></p>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+<!--楼层结束-->
+<!--公共尾部-->
+<div id="bottom">
+    <div style="width:100%;height:147px;border-top: 1px solid #ffa500;">
+        <img src="images/bottom.jpg" style="width:1200px;height:147px;margin:auto;" />
+    </div>
+    <div style="width:100%;height:175px;">
+        <div style="width:1200px;height:145px;margin:auto;">
+            <div class="diva1">
+                <p style="height:36px;font-size:12px;color:#4d4d4d;"><b>7x12H客服在线</b></p>
+                <div style="width:260px;height:70px;">
+                    <img src="images/phone1.jpg" style="float:left;width:70px;height:70px;"/>
+                    <div id="" style="float:left;margin-left:10px;width:160px;height:70px;">
+                        <p style="font-size:17px;font-weight:bold;color:#ff1a17;height:23px;line-height:23px">4006-698-698</p>
+                        <p style="font-size:11px;font-weight:bold;color:#888;height:11px;margin-top:12px;">周一至周日&nbsp;8:00-21:00</p>
+                        <p style="font-size:9px;color:#888;height:9px;margin-top:15px;">E-mail:kefu@homevv.cn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diva2">
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">会员指南</li>
+                    <li><a href="">会员注册</a></li>
+                    <li><a href="">购物和订单</a></li>
+                    <li><a href="">会员制度</a></li>
+                    <li><a href="">积分规则</a></li>
+                    <li><a href="">评论规则</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">支付方式</li>
+                    <li><a href="">货到付款</a></li>
+                    <li><a href="">网上支付</a></li>
+                    <li><a href="">邮局汇款</a></li>
+                    <li><a href="">发票制度</a></li>
+                    <li><a href="">礼品券使用</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">配送方式</li>
+                    <li><a href="">快递运送</a></li>
+                    <li><a href="">邮政普包</a></li>
+                    <li><a href="">特快专递</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">售后服务</li>
+                    <li><a href="">退换货政策</a></li>
+                    <li><a href="">退换货流程</a></li>
+                    <li><a href="">退款说明</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">购物帮助</li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">找回密码</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">投诉建议</a></li>
+                </ul>
+            </div>
+            <div class="diva3">
+                <p class="p1"><span>为为网APP</span><span>为为网微信</span></p>
+                <div style="height:84px;width:265px;">
+                    <img src="images/weiwei.jpg"/><img src="images/weiwei.jpg"/>
+                </div>
+                <p class="p2"><span>下载移动客户端</span><span>为为网官方微信</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="da"></div>
+    <div style="width:822px;height:156px;margin:auto;margin-top:27px;">
+        <ul class="diul1">
+            <li><a href="">关于我们</a></li>
+            <li><a href="">招商合作</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">诚聘英才</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">网站地图</a></li>
+            <li><a href="">品牌大全</a></li>
+        </ul>
+        <ul class="diul2">
+            <li style="width:118px;"><a href="#" style="color:#4d4d4d;">沪ICP备08001311号</a></li>
+            <li style="width:63px;"><p>营业执照</p></li>
+            <li style="width:191px;border-right:0px;">
+                <span><img src="images/16.jpg" style="margin-left:13px;width:16px;height:16px;float:left;"/></span>
+                <p style="float:left;margin-left:6px;">沪公网安备31011302002015</p>
+            </li>
+        </ul>
+        <div id="" style="margin:15px 0px 0px 251px;width:312px;height:33px;font-size:12px;">
+            <a href="#" style="color:#4d4d4d;">Copyright &copy; 2008-2016    homevv.com All Rights Reserved</a>
+        </div>
+        <div class="divimg">
+            <a href="#"><img src="images/idx_23.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_25.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_27.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_29.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_31.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_33.jpg" alt="" /></a>
+            <a href="#" style="margin-right:0;"><img src="images/idx_34.png" /></a>
+        </div>
+    </div>
+</div>
+
+<!--绝对定位 回到顶部-->
+<div id="abs">
+    <p>投诉建议</p>
+    <p>问卷调查</p>
+
+    <div id="abs2">
+        <img src="images/weiwei.jpg" style="margin-left: 16px;"/>
+        <span>扫描二维码<br/>下载手机App</span>
+    </div>
+    <p id="abs1"><img src="images/erweima.jpg" style="margin: 7px;"/></p>
+
+    <p id="gotop">回到顶部</p>
+
+</div>
+</body>
+</html>

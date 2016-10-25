@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>【穷游网】出境游_旅游攻略_自助游攻略_游记攻略_境外旅游 - 穷游网,旅途永无穷尽</title>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css" />
+		<script src="js/Detail.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="shortcut icon" href="img/index.ico" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/Detail.css" />
+	</head>
+
+	<body>
+		<div id="best-nav">
+			<div class="">
+				<a href="index.html" style="float: left;"><img class="best-logo" src="img/active/logo_116x36.png" width="58" height="18" /></a>
+				<div class="">
+					<ul class="best-ul">
+						<li class="best-li">
+							<a class="best-li-title" href="aim.html" title="穷游目的地">目的地</a>
+						</li>
+						<li class="best-li">
+							<a class="best-li-title" href="javascript:;" title="穷游锦囊">锦囊</a>
+						</li>
+						<li class="best-li">
+							<a class="best-li-title" href="plan.html" title="穷游行程助手">行程助手</a>
+						</li>
+						<li class="best-li best-li4">
+							<a class="best-li-title" href="javascript:;" title="穷游论坛">社区<i class=""></i></a>
+							<div class="best-nav-list1" style="display: none;z-index: 10;">
+								<ul>
+									<li class="best-nav-list1-li best-nav-list1-li1">
+										<a href="javascript:;" title="穷游论坛"><i style="background: url(img/active/381.png)10px ;"></i> 旅行论坛 &nbsp;&gt;<i class=""></i></a>
+										<div class="best-nav-list1-li1-list" style="display: none;">
+											<div class="best-nav-list1-li1-list-top">
+												<div class="b">
+													<a class="best-li-title left" href="javascript:;">全部版块<i class=""></i></a>
+													<span class="right">热门版块</span>
+												</div>
+
+												<dl class="">
+													<dt>兴趣小组</dt>
+													<dd>
+														<a href="javascript:;">结伴同游</a>
+														<a href="javascript:;">签证</a>
+														<a href="javascript:;">旅行摄影</a>
+														<a href="javascript:;">潜水俱乐部</a>
+														<a href="javascript:;">带孩子旅行</a>
+														<a href="javascript:;">明信片</a>
+														<a href="javascript:;">旅行购物</a>
+													</dd>
+												</dl>
+												<dl class="">
+													<dt>穷游欧洲</dt>
+													<dd>
+														<a href="javascript:;">法国/摩纳哥</a>
+														<a href="javascript:;">德国</a>
+														<a href="javascript:;">英国/爱尔兰</a>
+														<a href="javascript:;">瑞士/列支敦士登</a>
+														<a href="javascript:;">土耳其</a>
+														<a href="javascript:;">挪威/瑞典/芬兰/丹麦/冰岛</a>
+														<a href="javascript:;">意大利/梵蒂冈/圣马力诺/马耳他</a>
+													</dd>
+												</dl>
+												<dl class="">
+													<dt>穷游亚洲</dt>
+													<dd>
+														<a href="javascript:;">台湾</a>
+														<a href="javascript:;">日本</a>
+														<a href="javascript:;">泰国</a>
+														<a href="javascript:;">新加坡</a>
+														<a href="javascript:;">斯里兰卡</a>
+														<a href="javascript:;">韩国/朝鲜</a>
+														<a href="javascript:;">香港/澳门</a>
+														<a href="javascript:;">马来西亚/文莱</a>
+														<a href="javascript:;">柬埔寨</a>
+														<a href="javascript:;">马尔代夫</a>
+														<a href="javascript:;">缅甸</a>
+														<a href="javascript:;">伊朗</a>
+														<a href="javascript:;">印度/孟加拉</a>
+													</dd>
+												</dl>
+												<dl class="">
+													<dt>穷游美洲</dt>
+													<dd>
+														<a href="javascript:;">加拿大</a>
+														<a href="javascript:;">美国</a>
+														<a href="javascript:;">中美</a>
+														<a href="javascript:;">南美/南极</a>
+													</dd>
+												</dl>
+												<dl class="">
+													<dt>穷游大洋洲</dt>
+													<dd>
+														<a href="javascript:;">澳大利亚</a>
+														<a href="javascript:;">新西兰</a>
+														<a href="javascript:;">太平洋海岛</a>
+													</dd>
+												</dl>
+												<dl class="">
+													<dt>穷游非洲</dt>
+													<dd>
+														<a href="javascript:;">东非地区</a>
+														<a href="javascript:;">非洲海岛</a>
+														<a href="javascript:;">北非地区</a>
+														<a href="javascript:;">非洲其他国家</a>
+													</dd>
+												</dl>
+
+											</div>
+										</div>
+									</li>
+									<li class="best-nav-list1-li">
+										<a href="javascript:;" title="穷游问答"><i></i> 旅行问答</a>
+									</li>
+									<li class="best-nav-list1-li">
+										<a href="javascript:;" title="JNE旅行生活美学" target="_blank"><i></i> JNE旅行生活美学</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<script>
+							$(function() {
+								$(".best-li4").hover(function() {
+									$(".best-nav-list1").stop().show(500)
+								}, function() {
+									$(".best-nav-list1").stop().hide(500);
+								})
+
+								$(".best-nav-list1-li1").hover(function() {
+									$(".best-nav-list1-li1-list").stop().show(500)
+								}, function() {
+									$(".best-nav-list1-li1-list").stop().hide(500);
+								})
+
+								$(".best-li8").hover(function() {
+									$(".best-nav-list2").stop().show(500)
+								}, function() {
+									$(".best-nav-list2").stop().hide(500);
+								})
+
+							})
+						</script>
+
+						<li class="best-li">
+							<a class="best-li-title" href="javascript:;" title="最世界·自由行">最世界<span class="">·</span>自由行</a>
+
+						</li>
+
+						<li class="best-li">
+							<a class="best-li-title" href="jipiao.html" title="机票">机票</a>
+						</li>
+
+						<li class="best-li">
+							<a class="best-li-title" href="javascript:;" title="穷游酒店">酒店</a>
+						</li>
+
+						<li class="best-li best-li8">
+							<span class="best-li-title">预订<i class=""></i></span>
+							<div class="best-nav-list2" style="display: none; z-index: 10;">
+								<ul class="best-nav-list2-ul">
+
+									<li>
+										<a href="javascript:;" title="特价酒店"><i class=""></i> 特价酒店</a>
+									</li>
+
+									<li>
+										<a href="javascript:;" title="保险"><i class=""></i> 保险</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="华人旅馆"><i class=""></i> 华人旅馆</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="邮轮"><i class=""></i> 邮轮</a>
+									</li>
+									<li>
+										<a href="javascript:;" title="租车"><i class=""></i> 租车</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				<ul class="best-nav_r right ">
+					<li>
+						<div class="search">
+							<input type="text" style="border:0;float: left;display: none;" width="168" height="20" />
+							<i class="fa fa-search "></i>
+						</div>
+
+					</li>
+					<li class="second">
+						<i class="fa fa-qq"></i>
+						<i class="fa fa-weibo"></i>
+						<i class="fa fa-weixin"></i>
+					</li>
+					<li class="third" id="login">
+
+					</li>
+					<script type="text/javascript">
+						$(function() {
+							// 获取到已登录的用户名
+							var loginedUser = $.cookie("loginedUser");
+							if(loginedUser) {
+								$('#login').append("<a href='myself.html'>" + loginedUser + "</a>");
+								var myA = $("<a href='login.html'>注销</a>");
+								myA.click(function() {
+									var res = $.removeCookie("loginedUser", {
+										path: "/"
+									});
+									if(!res) {
+										alert("注销失败");
+										return false;
+									}
+								});
+								$('#login').append(myA);
+							} else {
+								$('#login').append("<a href='login.html'>登录</a><a href='register.html'>注册</a>");
+							}
+
+						});
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div id="ban" class="ban">
+			<div class="margin2">
+				<img src="img/Detail/791.png" style="cursor: pointer;" />
+			</div>
+
+		</div>
+
+		<div>
+			<div class="contain2">
+				<div class="margin3">
+					<img src="img/Detail/8011.png" style="cursor: pointer;" />
+				</div>
+
+			</div>
+
+			<div class="contain1">
+				<div class="margin3">
+					<div class="num">
+						<div class="num-num">
+							<span style="border: 0;">人数</span>
+							<span class="minus">-</span>
+							<span class="nums">0</span>
+							<span class="add">+</span>
+						</div>
+						
+						<div class="insert">
+							<div class="goodInfo" data-good-id="sp2">
+								<img  style="display: none;" src="img/active/14744547702339.jpg" />
+								<span style="display: none;">【泰国一日游，不要钱】</span>
+								<span style="display: none;">1150RMB</span>
+								<span style="font:14px/60px '';vertical-align: bottom;color: #fff;">￥</span><span class="totle">0</span>
+							<input class="input addToCart" type="button" value="立即预定" />
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				function loadCart() {
+					var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+					var cartObj = convertCartStrToObj(cartStr);
+					// 获取到购物车中所有商品的数量
+					var total = 0;
+					for(var id in cartObj) {
+						total += cartObj[id].num;
+					}
+					$("#buy").val("购物车\n(" + total + ")");
+				}
+				$(function() {
+					// 加载已有的购物车信息
+					loadCart();
+					// 给购物车按钮添加一个点击事件
+					$('#buy').click(function() {
+						location.href = "cart.html";
+					});
+					// 改加入购物车按钮添加一个点击事件
+					$(".goodInfo .addToCart").click(function(e) {
+						// 获取商品的id（用来区分不同的商品的）
+						var goodId = $(this).parent().attr("data-good-id");
+						// 获取商品的名称
+						var goodName = $(this).siblings('span').eq(0).html();
+						// 获取商品的价格
+						var goodPrice = parseFloat($(this).siblings("span").eq(1).html());
+						// 获取商品的图片src
+						var goodSrc = $(this).siblings("img").attr('src');
+
+						var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+						var cartObj = convertCartStrToObj(cartStr);
+						// 判断一下该商品是否已经在购物车中存在 
+						if(goodId in cartObj) {
+							// 如果已存在，那么该商品的数量加1
+							cartObj[goodId].num += 1;
+						} else {
+							// 如果不存在，那么将新商品的信息存入
+							cartObj[goodId] = {
+								name: goodName,
+								price: goodPrice,
+								num: 1,
+								src: goodSrc
+							};
+						}
+
+						// 将新的购物信息存回cookie
+						cartStr = convertObjToCartStr(cartObj);
+						$.cookie("cart", cartStr, {
+							expires: 7,
+							path: "/"
+						});
+
+						// 做一个飞入购物车的效果
+						var cloneImg = $(this).siblings("img").clone().css({
+							width: 50,
+							height: 50
+						});
+						cloneImg.fly({
+							start: {
+								top: e.clientY,
+								left: e.clientX
+							},
+							end: {
+								top: $("#buy").offset().top,
+								left: $("#buy").offset().left,
+								width: 0,
+								height: 0
+							},
+							autoPlay: true,
+							onEnd: function() {
+								$("#buy").val(function(index, v) {
+									// "购物车(0)"
+									var pattern = /(\d+)/;
+									var num = parseInt(v.match(pattern)[1]);
+									return "购物车(" + (num + 1) + ")";
+								});
+								cloneImg.remove();
+							}
+						});
+
+					});
+				});
+
+				function convertCartStrToObj(cartStr) {
+					// 如果是空字符串，即没有购物车信息，那么购物车为空，直接返回一个空对象
+					if(!cartStr) {
+						return {};
+					}
+					// "sp1,香蕉,30,1,src1:sp2,苹果,40,2,src2:sp3,梨,50,3,src3"
+					var goods = cartStr.split(":");
+					var obj = {};
+					for(var i = 0; i < goods.length; i++) {
+						var data = goods[i].split(",");
+						// 以商品的id为键，商品的其他信息为值, 这个值也设计为一个对象
+						obj[data[0]] = {
+							name: data[1],
+							price: parseFloat(data[2]),
+							num: parseInt(data[3]),
+							src: data[4]
+						};
+					}
+
+					return obj;
+				}
+
+				function convertObjToCartStr(obj) {
+
+					var cartStr = "";
+					for(var id in obj) {
+						if(cartStr) {
+							cartStr += ":";
+						}
+						cartStr += id + "," + obj[id].name + "," + obj[id].price + "," + obj[id].num + "," + obj[id].src;
+					}
+
+					return cartStr;
+				}
+			</script>
+
+			<script type="text/javascript">
+				var sum = 0
+				$(function() {
+					$('.add').click(function() {
+
+						sum++;
+						$('.nums').html(sum);
+						$('.totle').html(sum * 1150);
+					})
+					$('.minus').click(function() {
+						if(sum > 0) {
+							sum--;
+							$('.nums').html(sum);
+							$('.totle').html(sum * 1150);
+						}
+
+					})
+				})
+			</script>
+			<div class="contain3">
+				<div class="margin3">
+					<img src="img/Detail/8013.png" style="cursor: pointer;" />
+				</div>
+
+			</div>
+		</div>
+
+		<!--底部1开始-->
+		<div id="foot">
+
+			<div class="back margin" style="cursor: pointer;">
+
+			</div>
+		</div>
+
+		<!--底部1结束-->
+
+		<!--底部2开始-->
+		<div id="foot2">
+			<div class="back margin" style="cursor: pointer;">
+
+			</div>
+		</div>
+		<!--地步2结束-->
+
+		<div id="body-goup">
+			<input type="button" value="购物车(0)" id="buy"/>
+			<a href="javascript:;">我的<br />收藏</a>
+			<a id="goup" href="">UP</a>
+		</div>
+
+	</body>
+
+</html>

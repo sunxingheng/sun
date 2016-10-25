@@ -1,0 +1,224 @@
+/*中间部分*/
+.main1{
+    width: 165px;
+    height:auto;
+    border:1px solid #ff1a17;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.main1 .p2{
+    height:30px;
+    font: 700 12px/30px "";
+    background: #ff1a17;
+    padding-left: 15px;
+    color: #fff;
+}
+.main1 .p1{
+    height:30px;
+    font: 12px/30px "";
+    background: #f3f3f3;
+    padding-left: 15px;
+    color: #000;
+    margin-bottom: 5px;
+}
+.main1 ul li{
+    font: 12px/24px "";
+    background:url("../images/my_icon.gif") no-repeat 15px center;
+    padding-left:22px;
+    color: #000;
+}
+.main1 ul{
+    margin-top: 5px;
+}
+/*订单表右边*/
+.shopMenu-right{
+    float:right;
+    display:block;
+   width: 770px;
+}
+.indent{
+    width: 770px;
+    display:block;
+}
+/*我的收藏*/
+#topSpin{
+    width:777px;
+    height:32px;
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    background:#f0f0f0;
+}
+#topSpin p{
+    margin-left:20px;
+    font-weight:bold;
+    line-height:32px;
+}
+
+
+#input-Btns{
+    border-bottom:1px dotted #cbcbcb;
+    padding:5px;
+    padding-left:5px;
+    display:block;
+}
+#input-Btns input{
+    width:100px;
+    height:30px;
+    cursor:pointer;
+    background:#ddd;
+    color:#fff;
+    font-weight:bold;
+    font-size:16px;
+}
+
+
+
+#cartab{
+    border-collapse:collapse;
+    width:774px;
+    margin:0 auto;
+    border:1px #cbcbcb solid;
+    border-top:none;
+    margin-top:10px
+}
+
+.mallproTab th{
+    border:1px solid #ddd;
+    border-right:1px solid #fff;
+    padding:7px 0px;
+    color:#333;
+    text-align:center;
+    background:#f5f5f5 repeat-x 50% top;
+}
+.mallproTab .widthpic{
+    width:90px;
+}
+.mallproTab .width02{
+    border-right:1px solid #ddd;
+}
+
+.mallproTab td{
+    padding:10px;
+    vertical-align:top;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.proprice{
+    color:#ff3300;
+    font-weight:bold;
+    font-size:13px;
+}
+.proprice2{
+    color:#00a651;
+    font-weight:bold;
+    font-size:13px;
+    text-align:center;
+}
+
+#cartab tbody .dongtai .del{
+    cursor:pointer;
+}
+
+
+
+.order1{
+    text-indent:0em;
+    width:774px;
+    height:50px;
+    line-height:50px;
+    float:left;
+    font-size:18px;
+    font-weight:bold;
+    display:block;
+}
+.order1 p{
+    float:inherit;
+    margin-left:8px;
+    display:inline;
+    line-height:50px;
+}
+.order1 p a{margin-top:13px;}
+#webBankButton{
+    float:left;
+    margin-left:20px;
+    display:inline;
+}
+#cancelOrderButton{
+    float:left;
+    margin-left:10px;
+    display:inline;
+}
+
+
+.order2{
+    float:left;
+    margin-left:8px;
+    display:inline;
+    clear: both;
+    width:774px;
+    height:30px;
+    line-height:30px;
+    margin-bottom:3px;
+    margin:0 auto;
+}
+.order2 p{
+    float:left;
+    margin-right:40px;
+
+}
+.order2 p span{
+    color:red;
+    font-size:16px;
+    font-weight:bold;
+}
+
+
+.order3{
+    clear:both;
+    width:774px;
+    height:30px;
+    display:block;
+    margin-bottom:10px;
+    background: #f3f3f3;
+}
+.order3 p{
+    font-size:14px;
+    font-weight:bold;
+    margin-left:20px;
+    line-height:30px;
+}
+
+
+.order4{
+    width:774px;
+    height:300px;
+}
+.ordivImg1{
+    float:left;
+    width:350px;
+    height:300px;
+}
+.ordivImg1 p,.ordivImg2 p{
+    font-size:14px;
+    font-weight:bold;
+    padding:20px 15px;
+}
+.ordivImg1 img{
+    width:198px;
+    height:198px;
+    padding-left:50px;
+}
+.ordivImg2{
+    float:right;
+    width:350px;
+    height:300px;
+}
+.ordivImg2 img{
+    float:left;
+    width:152px;
+    height:32px;
+    margin-right:10px;
+    margin-bottom:20px;
+}

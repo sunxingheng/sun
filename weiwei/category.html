@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/category.css"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <script rel="stylesheet" src="js/Ajax.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/category.js"></script>
+    <script type="text/javascript" src="js/buy1.js"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.fly.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/requestAnimationFrame.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--头部-->
+<div id="head">
+    <div id="headtop">
+        <ul id="leftul">
+            <li><a href="index.html">返回为为网首页</a></li>
+            <li><a href="javascript:void(0);"><img src="images/phone.jpg" style="display:inline-block;"/>手机客户端</a></li>
+            <li>欢迎光临为为网，<a href="login.html" style="color:#ffa500;" id="log"></a>&nbsp;<a href="register.html">免费注册</a></li>
+        </ul>
+        <ul id="rightul">
+            <li><a href="">我的订单</a></li>
+            <li><a href="login.html">我的为为</a>
+                <ul class="rightul-ul1">
+                    <li><a href="login.html">我的优惠券</a></li>
+                    <li><a href="login.html">我的收藏</a></li>
+                    <li><a href="login.html">我的为家宝</a></li>
+                    <li><a href="login.html">申请退货</a></li>
+                </ul>
+            </li>
+            <li><a href="help.html">帮助中心</a>
+                <ul class="rightul-ul2">
+                    <li><a href="help.html">购买流程</a></li>
+                    <li><a href="help.html">在线服务</a></li>
+                </ul>
+            </li>
+            <li><a href="#">收藏本站</a></li>
+            <li><a href="login.html">签到送送积分</a></li>
+        </ul>
+    </div>
+</div>
+<!--搜索框-->
+<div id="search">
+    <div class="margin clear">
+        <img src="images/logo.jpg" class="left" style="margin:0 105px 5px 5px"/>
+        <div class="search left">
+            <input type="text" class="int"/>
+            <input type="button" value="搜索" class="btn">
+            <p>
+                <a href="" style="color:#ff6600">活动报名</a>
+                <a href="">家居家纺</a>
+                <a href="">建材</a>
+                <a href="" style="color:#ff6600">开关</a>
+                <a href="">灯饰</a>
+                <a href="">五金</a>
+                <a href="" style="color:#ff6600">英皇</a>
+                <a href="">方饰</a>
+                <a href="">代金券</a>
+            </p>
+        </div>
+        <!--购物车-->
+        <p class="right shopcar">
+            <img src="images/shopcar.png" style="display: inline ;margin-left:-15px;"/>
+            <span class="che" id="buy"><a href="buy.html"> 购物车(0)</a></span>
+            <span id="goshop"><a href="index.html"> 购物车里什么也没有哦 快去选购吧</a></span>
+        </p>
+    </div>
+
+</div>
+
+<!--导航栏-->
+<div id="nav">
+    <div class="margin">
+        <!--json导入数据-->
+        <a href="" id="fenlei">全部商品分类
+            <div id="proNone"><!--一级菜单-->
+                <div class="main"> <span class="arrow-right"></span>
+                    <div class="nodes" class="clear">  <!--二级菜单-->
+                        <ul class="nodes1">
+                        </ul>
+                    </div>
+                </div>
+                <div class="main"> <span class="arrow-right"></span>
+                    <div class="nodes" class="clear">  <!--二级菜单-->
+                        <ul class="nodes1">
+                        </ul>
+                    </div>
+                </div>
+                <div class="main"> <span class="arrow-right"></span>
+                    <div class="nodes" class="clear">  <!--二级菜单-->
+                        <ul class="nodes1">
+                        </ul>
+                    </div>
+                </div>
+                <div class="main"> <span class="arrow-right"></span>
+                    <div class="nodes" class="clear">  <!--二级菜单-->
+                        <ul class="nodes1">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="" style="margin-left:50px; ">首页</a>
+        <a href="">建材</a>
+        <a href="">家具</a>
+        <a href="">云超市</a>
+        <a href="">旅游</a>
+        <a href="" class="hotnav">为家宝<span><img src="images/hot%20.gif" class="hotimg"/> </span></a>
+        <img src="images/cheap.jpg"/>
+    </div>
+</div>
+<!--头部公共部分一 结束-->
+<!--主体部分-->
+<div id="main" class="margin clear">
+    <p class="list">
+        <a href="index.html">商城首页</a> >
+        <a href="#">商品列表</a> >
+        <a href="#">建材</a> >
+        <a href="#">基础建材</a> >
+        <a href="#">开关插座</a>
+    </p>
+    <div class="bo_l left ">
+        <ul id="ulx">
+            <li>基础建材
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>瓷砖/大理石
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>卫浴
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>集成吊顶
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>橱柜
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>水槽
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>淋浴房
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>厨卫电器
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>地板/榻榻米
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>移门衣柜
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>墙纸
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>窗帘
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>门窗
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>灯饰
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+            <li>智能家居
+                <ul class="ulx_1">
+                    <span>电线</span>
+                    <span>开关插座</span>
+                    <span>水管</span>
+                    <span>五金工具</span>
+                    <span>板材</span>
+                    <span>油漆涂料</span>
+                    <span>艺术玻璃</span>
+                    <span>其他辅料</span>
+                </ul>
+            </li>
+        </ul>
+        <div id="build-down">
+            <div class="hot-top">热卖商品</div>
+            <div class="hot-down">
+                <ul>
+                    <li>
+                        <a href="#"><img src="images/12351.jpg"/></a>
+                        <p>￥16.47</p>
+                        <p><a href="#">西门子 远景 一位双控开关（带荧光指示）雅白色</a></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/12352.jpg"/></a>
+                        <p>￥22.00</p>
+                        <p><a href="#">西门子 远景 三位双控开关（带荧光指示）雅白色</a></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/12353.jpg"/></a>
+                        <p>￥11.00</p>
+                        <p><a href="#">西门子 品宜 单开单控带荧光开关 雅白色 5TA06113NC01</a></p>
+                    </li>
+                    <li style="margin-top: 25px">
+                        <a href="#"><img src="images/12354.jpg"/></a>
+                        <p>￥58.00</p>
+                        <p><a href="#">西门子 远景 二位电话插座 彩银色 5TG01221CC122</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="main2" class="left">
+        <div id="hot">
+            <p><b>热卖推荐</b></p>
+            <div class="hotdiv">
+                <ul>
+                    <li>
+                        <a class="a1" href="detail.html"><img src="images/12351816.jpg"/></a>
+                        <a class="a2" href="detail.html">西门子 远景 一位双控开关(带荧光指示) 雅白色 5TA01141CC1</a>
+                        <a class="a3" href="detail.html">价格：<b>￥16.47</b></a>
+                    </li>
+                    <li>
+                        <a class="a1" href="detail.html"><img src="images/12351994.jpg"/></a>
+                        <a class="a2" href="detail.html">西门子 远景 三位双控开关(带荧光指示) 雅白色 5TA01191CC1</a>
+                        <a class="a3" href="detail.html">价格：<b>￥22.00</b></a>
+                    </li>
+                    <li>
+                        <a class="a1" href="detail.html"><img src="images/12351770.jpg"/></a>
+                        <a class="a2" href="detail.html">西门子 远景 二位电话插座 彩银色5TG01221CC122</a>
+                        <a class="a3" href="detail.html">价格：<b>￥58.00</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--**********选择下拉菜单**********-->
+        <div id="dropDown">
+            <div class="select">
+                <div class="lot1">
+                    <p class="viner">您已选择的：</p>
+                </div>
+                <div style="width:780px;float:left;margin-bottom:10px;"></div>
+                <div class="lot2">
+                    <a href="#">全部清除</a>
+                </div>
+                <div class="clear" style="clear:both;"></div>
+            </div>
+            <div class="brand">
+                <div class="brand_list">品牌：</div>
+                <div class="brand_name">
+                    <div class="brand_name_list">
+                        <ul class="moreBrandList">
+                            <li><span><a href="#" title="兰卡">兰卡</a></span></li>
+                            <li><span><a href="#" title="西门子开关">西门子开关</a></span></li>
+                            <li><span><a href="#" title="ABB">ABB</a></span></li>
+                            <li><span><a href="#" title="公牛">公牛</a></span></li>
+                            <li><span><a href="#" title="松下（Panasonic）">松下（Panasonic）</a></span></li>
+                            <li><span><a href="#" title="奇胜开关/秋叶原断路器">奇胜开关/秋叶原断路器</a></span></li>
+                            <li><span><a href="#" title="西门子">西门子</a></span></li>
+                        </ul>
+                        <ul class="moreBrandList" style="display:none;height:40px;">
+                            <li><a href="#" title="楷巩"><span>楷巩</span></a></li>
+                            <li><a href="#" title="施耐德断路器"><span>施耐德断路器</span></a></li>
+                            <li><a href="#" title="西门子(Siemens)"><span>西门子(Siemens)</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <h3 class="intee">
+                            <a class="showMore" onclick="showMore(this,'#moreSelectBrand');return false;">多选</a>
+                        </h3>
+                        <h4 class="entee">
+                            <a class="showMore" onclick="showBrand(this, '#moreBrandList', '.entee', '.entee1'); return false;">更多</a>
+                        </h4>
+                        <h4 class="entee1" style="display:none;">
+                            <a class="showMore" onclick="showBrand(this, '#moreBrandList', '.entee', '.entee1'); return false;">收起</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="brand_name" id="moreSelectBrand">
+                    <div class="brand_name_list_sat">
+                        <ul>
+                            <li><input type="checkbox" name="brandIds" value="12357719" class="mine_wa"/><span>兰卡</span></li>
+                            <li><input type="checkbox" name="brandIds" value="5755" class="mine_wa" /><span>西门子开关</span></li>
+                            <li><input type="checkbox" name="brandIds" value="12357063" class="mine_wa" /><span>ABB</span></li>
+                            <li><input type="checkbox" name="brandIds" value="3327" class="mine_wa" /><span>公牛</span></li>
+                            <li><input type="checkbox" name="brandIds" value="1069" class="mine_wa" /><span>松下（Panasonic）</span></li>
+                            <li><input type="checkbox" name="brandIds" value="12345909" class="mine_wa" /><span>奇胜开关/秋叶原断路器</span></li>
+                            <li><input type="checkbox" name="brandIds" value="4505" class="mine_wa" /><span>西门子</span></li>
+                            <li><input type="checkbox" name="brandIds" value="12357998" class="mine_wa" /><span>楷巩</span></li>
+                            <li><input type="checkbox" name="brandIds" value="12345999" class="mine_wa" /><span>施耐德断路器</span></li>
+                            <li><input type="checkbox" name="brandIds" value="1124" class="mine_wa" /><span>西门子(Siemens)</span></li>
+                        </ul>
+                    </div>
+                    <div class="more_cg">
+                        <h3 class="intee_click">
+                            <a style="cursor: pointer" id="submit">提交</a>
+                        </h3>
+                        <h4 class="entee_clock">
+                            <a href="javascript:showMore(this,'#moreSelectBrand');">取消</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="clear" style="clear:both;"></div>
+            </div>
+            <div id="hidediv" style="display:block;">
+                <div class="brand">
+                    <div class="brand_list">价格：</div>
+                    <div class="brand_name">
+                        <div class="brand_name_list">
+                            <ul>
+                                <li><span><a href="#">0-200</a></span></li>
+                                <li><span><a href="#">200-500</a></span></li>
+                                <li><span><a href="#">500-1000</a></span></li>
+                                <li><span><a href="#">1000-2000</a></span></li>
+                                <li><span><a href="#">2000-3000</a></span></li>
+                                <li><span><a href="#">3000-5000</a></span></li>
+                                <li><span><a href="#">5000以上</a></span></li>
+                            </ul>
+                        </div>
+                        <div class="more_cg">
+                            <h3 class="intee">&nbsp;</h3>
+                        </div>
+                    </div>
+                    <div class="clear" style="clear:both;"></div>
+                </div>
+                <div class="brand">
+                    <div class="brand_list">
+                        <font title="5011" class="title3">类型：</font>
+                    </div>
+                    <div class="brand_name">
+                        <div class="brand_name_list">
+                            <ul>
+                                <li><span><a id="12357638" href="#" title="开关">开关</a></span></li>
+                                <li><span><a id="12357639" href="#" title="插座">插座</a></span></li>
+                                <li><span><a id="12357640" href="#" title="配线箱">配线箱</a></span></li>
+                                <li><span><a id="12357641" href="#" title="断路器">断路器</a></span></li>
+                                <li><span><a id="12357642" href="#" title="接线板">接线板</a></span></li>
+                            </ul>
+                        </div>
+                        <div class="more_cg">
+                            <h3 class="intee">&nbsp;</h3>
+                        </div>
+                    </div>
+                    <div class="clear" style="clear:both;"></div>
+                </div>
+            </div>
+            <div class="Collapse">
+						<span class="coll">
+							<a href="#" onclick="showLess(this,'#hidediv','.coll','.expan'); return false;">收起</a>
+						</span>
+                <span class="expan">
+							<a href="#" class="close" onclick="showLess(this,'#hidediv','.coll','.expan'); return false;">更多</a>
+						</span>
+            </div>
+        </div>
+        <div id="product" class="clear">
+            <div class="somering">
+                <div class="somering_left">
+                    <ul>
+                        <li id="defaultorder">
+                            <a href="#">相关度</a>
+                        </li>
+                        <li id="numberorder">
+                            <a href="#">销量<i></i></a>
+                        </li>
+                        <li id="priceorder">
+                            <a href="#">价格<i></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="somering_right">
+                    <ul>
+                        <li>商品类型</li>
+                        <li><input type="radio" name="ral" />全部商品</li>
+                        <li><input type="radio" name="ral" />为为自营</li>
+                        <li><input type="radio" name="ral" />入驻商家</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list_prot">
+                <ul>
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp2">
+                            <div class="shop_appearance">
+                                <img src="images/103147.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">22.50</span>
+                                <span class="seletion">54.00</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html"  title="西门子（SIEMENS）灵动带单控开关16A三极插座（雅白色) ">西门子（SIEMENS）灵动带单控开关16A三极插座（雅白色）</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">6条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                       </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp3">
+                            <div class="shop_appearance">
+                                <img src="images/13384376.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">35.00</span>
+                                <span class="seletion" >55.00</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="" title="BULL 公牛基础系列双排6联1.8米总控电源转换器">BULL 公牛基础系列双排6联1.8米总控电源转换器</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">140条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp4">
+                            <div class="shop_appearance">
+                                <img src="images/103183.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">5.90</span>
+                                <span class="seletion">13.40</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="西门子（SIEMENS）远景空白面板 5TG05001CC1 （雅白色）">西门子（SIEMENS）远景空白面板 5TG05001CC1 （雅白色）</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">11条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp5">
+                            <div class="shop_appearance">
+                                <img src="images/13375009.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">34.65</span>
+                                <span class="seletion">42.96</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="ABB开关德逸三位单控开关AE103">ABB开关德逸三位单控开关AE103</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">3条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp6">
+                            <div class="shop_appearance">
+                                <img src="images/13374954.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">110.00</span>
+                                <span class="seletion">188.00</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="ABB开关德逸三位单控开关AE103">ABB开关—ABB德逸二位电话/电脑插座</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">3条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+-->
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp7">
+                            <div class="shop_appearance">
+                               <img src="images/103121.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">29.40</span>
+                                <span class="seletion">73.80</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="西门子开关远景四联双控开关 5TA02461CC1 （雅白色）">西门子开关远景四联双控开关 5TA02461CC1 （雅白色）</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">1条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp8">
+                            <div class="shop_appearance">
+                                <img src="images/163599.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">31.80</span>
+                                <span class="seletion">40.80</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="ABB开关面板16A三孔带开关插座德逸雅白AE228">ABB开关面板16A三孔带开关插座德逸雅白AE228</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">2条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp9">
+                            <div class="shop_appearance">
+                                <img src="images/13387416.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">15.80</span>
+                                <span class="seletion">28.80</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="西门子 远景 一开单控（荧光） 5TA01131CC122（银色）">西门子 远景 一开单控（荧光） 5TA01131CC122（银色）</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">4条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp10">
+                            <div class="shop_appearance">
+                                <img src="images/12352122.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">46.50</span>
+                                <span class="seletion">95.50</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="西门子 远景 四接线柱音响插座 雅白色 5TG01181CC1">西门子 远景 四接线柱音响插座 雅白色 5TG01181CC1</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">1条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp11">
+                            <div class="shop_appearance">
+                                <img src="images/12351417.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">16.58</span>
+                                <span class="seletion">30.10</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="西门子 远景 双联10A二极扁圆两用插座 彩银色5UB03011CC122">西门子 远景 双联10A二极扁圆两用插座 彩银色5UB03011CC122</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">10条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp12">
+                            <div class="shop_appearance">
+                                <img src="images/12351243.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">63.14</span>
+                                <span class="seletion">114.60</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="西门子 远景 四接线柱音响插座 彩银色 5TG01181CC122">西门子 远景 四接线柱音响插座 彩银色 5TG01181CC122</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">2条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp13">
+                            <div class="shop_appearance">
+                                <img src="images/12379795.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">15.00</span>
+                                <span class="seletion">24.00</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="松下 10A三孔插座 WMS102">松下 10A三孔插座 WMS102</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">4条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp14">
+                            <div class="shop_appearance">
+                               <img src="images/12351994 (1).jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">25.32</span>
+                                <span class="seletion">50.00</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="西门子 远景 三位双控开关(带荧光指示) 雅白色 5TA01191CC1">西门子 远景 三位双控开关(带荧光指示) 雅白色 5TA01191CC1</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">7条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp15">
+                            <div class="shop_appearance">
+                                <img src="images/12364893.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">37.80</span>
+                                <span class="seletion">40.44</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="梅兰日兰EA9AN小型断路器1P/C20A">梅兰日兰EA9AN小型断路器1P/C20A</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">1条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp16">
+                            <div class="shop_appearance">
+                                <img src="images/12351779.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">31.87</span>
+                                <span class="seletion">59.40</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="西门子远景二位电视插座 彩银色  5TG01121CC122">西门子远景二位电视插座 彩银色  5TG01121CC122</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">1条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+
+                    <li>
+                        <div class="hover_1 goodInfo" data-good-id="sp17">
+                            <div class="shop_appearance">
+                                <img src="images/12365439.jpg" style="width:220px;height:220px;"/>
+                            </div>
+                            <div style="width:220px;height:22px;line-height:22px;text-align:center;"></div>
+                            <div class="shop_price">
+                                <span class="mo_b">184.60</span>
+                                <span class="seletion">194.60</span>
+                            </div>
+                            <div class="introduction">
+                                <a href="detail.html" title="奇胜开关—奇胜蓝韵带保护门双联超五类信息插座">奇胜开关—奇胜蓝韵带保护门双联超五类信息插座</a>
+                            </div>
+                            <div class="operating">
+                                <a class="join_car">加入购物车</a>
+                                <a href="detail.html" class="collect_a">加入收藏</a>
+                                <div class="clear" style="clear:both;"></div>
+                            </div>
+                            <div class="comment-con">
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="kell_at"></span>
+                                <span class="nuber"><a href="detail.html">0条评论</a></span>
+                            </div>
+                            <div class="clear" style="clear:both;"></div>
+                            <div class="gogo">为为自营</div>
+                        </div>
+                        <span class="spanImg"><img src="images/ico_item1.gif" style="width:41px;height:42px;"/></span>
+                    </li>
+                    </ul>
+            </div>
+            <div id="paging">
+                <div class="trun_page">
+                    <span class="page_cur">1</span>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <span class="page_break">...</span>
+                    <a href="#" class="next">32</a>
+                    <a href="#" class="page_next">下一页</a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--公共尾部-->
+<div id="bottom">
+    <div style="width:100%;height:147px;border-top: 1px solid #ffa500;">
+        <img src="images/bottom.jpg" style="width:1200px;height:147px;margin:auto;" />
+    </div>
+    <div style="width:100%;height:175px;">
+        <div style="width:1200px;height:145px;margin:auto;">
+            <div class="diva1">
+                <p style="height:36px;font-size:12px;color:#4d4d4d;"><b>7x12H客服在线</b></p>
+                <div style="width:260px;height:70px;">
+                    <img src="images/phone1.jpg" style="float:left;width:70px;height:70px;"/>
+                    <div id="" style="float:left;margin-left:10px;width:160px;height:70px;">
+                        <p style="font-size:17px;font-weight:bold;color:#ff1a17;height:23px;line-height:23px">4006-698-698</p>
+                        <p style="font-size:11px;font-weight:bold;color:#888;height:11px;margin-top:12px;">周一至周日&nbsp;8:00-21:00</p>
+                        <p style="font-size:9px;color:#888;height:9px;margin-top:15px;">E-mail:kefu@homevv.cn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="diva2">
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">会员指南</li>
+                    <li><a href="">会员注册</a></li>
+                    <li><a href="">购物和订单</a></li>
+                    <li><a href="">会员制度</a></li>
+                    <li><a href="">积分规则</a></li>
+                    <li><a href="">评论规则</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">支付方式</li>
+                    <li><a href="">货到付款</a></li>
+                    <li><a href="">网上支付</a></li>
+                    <li><a href="">邮局汇款</a></li>
+                    <li><a href="">发票制度</a></li>
+                    <li><a href="">礼品券使用</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">配送方式</li>
+                    <li><a href="">快递运送</a></li>
+                    <li><a href="">邮政普包</a></li>
+                    <li><a href="">特快专递</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">售后服务</li>
+                    <li><a href="">退换货政策</a></li>
+                    <li><a href="">退换货流程</a></li>
+                    <li><a href="">退款说明</a></li>
+                </ul>
+                <ul>
+                    <li style="height:35px;line-height:35px;color:#4d4d4d;font-size:13px;font-weight:bold;">购物帮助</li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">找回密码</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">投诉建议</a></li>
+                </ul>
+            </div>
+            <div class="diva3">
+                <p class="p1"><span>为为网APP</span><span>为为网微信</span></p>
+                <div style="height:84px;width:265px;">
+                    <img src="images/weiwei.jpg"/><img src="images/weiwei.jpg"/>
+                </div>
+                <p class="p2"><span>下载移动客户端</span><span>为为网官方微信</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="da"></div>
+    <div style="width:822px;height:156px;margin:auto;margin-top:27px;">
+        <ul class="diul1">
+            <li><a href="">关于我们</a></li>
+            <li><a href="">招商合作</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">诚聘英才</a></li>
+            <li><a href="">友情链接</a></li>
+            <li><a href="">网站地图</a></li>
+            <li><a href="">品牌大全</a></li>
+        </ul>
+        <ul class="diul2">
+            <li style="width:118px;"><a href="#" style="color:#4d4d4d;">沪ICP备08001311号</a></li>
+            <li style="width:63px;"><p>营业执照</p></li>
+            <li style="width:191px;border-right:0px;">
+                <span><img src="images/16.jpg" style="margin-left:13px;width:16px;height:16px;float:left;"/></span>
+                <p style="float:left;margin-left:6px;">沪公网安备31011302002015</p>
+            </li>
+        </ul>
+        <div id="" style="margin:15px 0px 0px 251px;width:312px;height:33px;font-size:12px;">
+            <a href="#" style="color:#4d4d4d;">Copyright &copy; 2008-2016    homevv.com All Rights Reserved</a>
+        </div>
+        <div class="divimg">
+            <a href="#"><img src="images/idx_23.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_25.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_27.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_29.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_31.jpg" alt="" /></a>
+            <a href="#"><img src="images/idx_33.jpg" alt="" /></a>
+            <a href="#" style="margin-right:0;"><img src="images/idx_34.png" /></a>
+        </div>
+    </div>
+</div>
+
+<!--绝对定位 回到顶部-->
+<div id="abs">
+    <p>投诉建议</p>
+    <p>问卷调查</p>
+
+    <div id="abs2">
+        <img src="images/weiwei.jpg" style="margin-left: 16px;"/>
+        <span>扫描二维码<br/>下载手机App</span>
+    </div>
+    <p id="abs1"><img src="images/erweima.jpg" style="margin: 7px;"/></p>
+
+    <p id="gotop">回到顶部</p>
+
+</div>
+</body>
+</html>

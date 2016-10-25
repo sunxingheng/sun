@@ -1,0 +1,26 @@
+.width{width:984px;margin:0 auto;}
+
+
+#login .top{margin-top:38px;}
+#login .t{width:426px;height:30px;overflow:hidden;margin-top:20px;
+          background:url("images/loginmain.png") no-repeat 0 -187px;}
+#login .cent{float:left;margin-left:-100px;}
+#login .centl{width:277px;float:left;margin:100px 0 0 130px;}
+#login .centl .sex{margin-top:20px;}
+#login .centl .fu{width:270px;height:32px;border:1px solid #eee;margin-top:20px;}
+#login .centl .fu input{width:250px;margin:7px 0 0 10px;border:0;}
+#login .centl .pd1{margin:25px 0;}
+#login .centl .yan{width:130px;display:inline-block;}
+#login .centl .yan input{width:110px;}
+#login .centl .yanx{display:inline-block;margin-left:10px;}
+#login .centl .yu{margin-right:10px;}
+#login .centl .btn{width:120px;height:30px;background:#fff5ed;border:1px solid #9f9;border-radius:3px;}
+#login .centl .reg{width:145px;height:45px;margin:30px 0 10px 0;}
+#login .centl .register{width:140px;height:40px;font:16px/30px "";color:#fff;background:#e13f90;border:1px solid #f99;border-radius:6px;}
+
+/*底部*/
+#login .bottom{text-align: center;}
+#login .bottom .p1{margin:100px 0 5px 0;}
+#login .bottom .p1 a,span{margin-right:10px;}
+#login .bottom .yahei{color:#666;}
+
