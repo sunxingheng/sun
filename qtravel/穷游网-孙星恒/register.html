@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>【穷游网】登陆</title>
+		<link rel="shortcut icon" href="img/imdex.ico" />
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+	</head>
+
+	<body>
+		<div id="login-top">
+			<div class="">
+				<div class="login-box">
+					<div class="login-logo">
+						<img src="img/register/login_logo2.png" alt="穷游">
+						<span class="">注册</span>
+					</div>
+					<div class="login-box-top">
+						<div class="login-margin">
+							<div class="login-box-top-head">
+								<a class="login-active2" href="javascript:;" data-action="register" data-type="phone">手机注册</a>
+							</div>
+							<div class="login-section">
+								<form id="" action="/" autocomplete="off">
+									<div class="login-select login2">
+										<div id="">
+											<span class="title-text">86</span>
+										</div>
+										<input type="text" id="username" class="login-phone" name="phone_input" title="手机号" placeholder="手机号" autocomplete="off">
+										<input type="hidden" name="area_code" value="86">
+										<input type="hidden" name="type" value="phone">
+										<div class="message-box"></div>
+									</div>
+
+									<div class="login-name login3">
+										<input type="text" id="onlyname" name="username" maxlength="15" title="用户名" tabindex="3" placeholder="起一个具有辨识度的用户名">
+										<div>
+											<span>注：用户名暂不支持更改</span>
+										</div>
+									</div>
+									<div class="login-name login3">
+										<input type="password" id="password" name="password" maxlength="16" title="密码" tabindex="4" placeholder="输入8-16位密码，需包含字母及数字">
+										<div></div>
+									</div>
+									<div class="login-sunbmit" style="height:70px ; ">
+										<input type="button" id="register" value="注册" data-value="注册">
+										<div>
+											<span>
+                                已有穷游账号？ <a class=""  id="goLogin" href="login.html" >登录</a>
+                            </span>
+											<span class="">
+                                同意<a href="javascript:;" target="_blank" >会员条款</a>和<a href="javascript:;" target="_blank" >免责声明</a>
+                            </span>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class=""></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="foot">
+			<div class="margin3 ">
+				<img src="img/bigcut/271.png " />
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		$(function() {
+			$("#goLogin").click(function() {
+				location.href = "login.html";
+
+			});
+			$("#register").click(function() {
+				// 获取到用户输入的用户名和密码
+				var usn = $('#username').val();
+				var pwd = $("#password").val();
+				var oln = $("#onlyname").val();
+
+				// 用户名不能为空
+				if(!usn) {
+					alert("用户名不能为空");
+					return;
+				}
+				if(!pwd) {
+					alert("用户名不能为空");
+					return;
+				}
+				if(!oln) {
+					alert("用户名不能为空");
+					return;
+				}
+
+				// 检测一下用户是否已经存在
+				// "test1,123:test2,abc:test3,888"
+				/* {
+				 * 	 test1 : 123,
+				 * 	 test2 : abc,
+				 *   test3 : 888,
+				 * 	 test4 : 444
+				 * }
+				 */
+				var users = $.cookie("registerUsers") ? $.cookie("registerUsers") : "";
+				users = convertStrToObj(users);
+
+				if(usn in users) {
+					alert("用户名已经被注册");
+					return;
+				} else {
+					// 注册成功, 设置用户信息的cookie
+					// test1 123  test2 abc  test3 888
+					// "test1,123:test2,abc:test3,888"
+					// name value expires
+					// registerUsers 
+					// 将用户添加到已注册用户对象中
+					users[usn] = pwd;
+					// 将用户信息对象转化回字符串，以便于设置cookie
+					usersStr = convertObjToStr(users);
+					// 设置用户信息的cookie
+					$.cookie("registerUsers", usersStr, {
+						expires: 7,
+						path: "/"
+					});
+					alert("注册成功");
+					window.location.href = "login.html";
+
+				}
+
+			});
+
+			function convertObjToStr(obj) {
+				/* {
+				 * 	 test1 : 123,
+				 * 	 test2 : abc,
+				 *   test3 : 888,
+				 * 	 test4 : 444
+				 * }
+				 */
+				// "test1,123:test2,abc:test3,888"
+				var res = "";
+				for(var usn in obj) {
+					var pwd = obj[usn];
+					// 看是否是第一组用户名和密码信息
+					// 如果不是，先在前面添加一个:
+					if(res) {
+						res += ":";
+					}
+					res += usn + "," + pwd;
+				}
+				return res;
+			}
+
+			function convertStrToObj(str) {
+				if(!str) {
+					return {};
+				}
+				// "test1,123:test2,abc:test3,888"
+				var users = str.split(":");
+				var res = {};
+				for(var i = 0; i < users.length; i++) {
+					//["test1", "123"]
+					var userData = users[i].split(",");
+					res[userData[0]] = userData[1];
+				}
+
+				return res;
+			}
+
+		});
+	</script>
+
+</html>

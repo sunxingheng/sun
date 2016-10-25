@@ -1,0 +1,282 @@
+body {
+	background: #F5F5F5;
+}
+
+#best-nav {
+	height: 30px;
+	background: #323232;
+	min-width: 1160px;
+	position: relative;
+}
+
+#best-nav .best-logo {
+	margin: 6px 5px 0 30px
+}
+
+#best-nav .best-ul {
+	padding-left: 20px
+}
+
+#best-nav .best-ul .best-li {
+	float: left;
+}
+
+#best-nav .best-ul .best-li .best-li-title {
+	float: left;
+	font: 700 14px/30px "";
+	padding: 0 10px;
+	color: silver;
+	margin-right: 10px;
+}
+
+#best-nav .best-ul .best-li .best-li-title:hover {
+	color: #008000;
+}
+
+#best-nav .best-ul .best-li .best-nav-list1 {
+	width: 185px;
+	height: 99px;
+	background: #fff;
+	border-radius: 8px;
+	position: absolute;
+	top: 30px;
+	padding: 8px 0;
+}
+
+#best-nav .best-ul .best-li .best-nav-list2 {
+	width: 125px;
+	height: 163px;
+	background: #fff;
+	border-radius: 8px;
+	position: absolute;
+	top: 30px;
+	padding: 8px 0;
+}
+
+.best-nav-list1-li1-list {
+	width: 570px;
+	height: 352px;
+	padding: 0 20px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 190px
+}
+
+.best-nav-list1-li1-list-top {
+	height: 30px;
+	padding: 8px 0;
+	width: 570px;
+}
+
+.best-nav-list1-li1-list dt {
+	font: 16px/30px ""
+}
+
+#best-nav .best-ul .best-li .best-nav-list1 .best-nav-list1-li {
+	width: 145px;
+	heigt: 30px;
+	padding: 0 20px
+}
+
+#best-nav .best-ul .best-li .best-nav-list2 li {
+	width: 125px;
+	heigt: 30px;
+	padding: 0 20px
+}
+
+#best-nav .best-ul .best-li .best-nav-list2 a,
+#best-nav .best-ul .best-li .best-nav-list1 a {
+	font: 16px/30px "";
+	color: #636363
+}
+
+#best-nav .best-nav_r {
+	margin-right: 20px;
+}
+
+#best-nav .best-nav_r li {
+	float: left
+}
+
+#best-nav .best-nav_r li .search {
+	width: 188px;
+	height: 20px;
+	padding: 4px 6px;
+	color: #c0c0c0
+}
+
+#best-nav .best-nav_r li .search .fa-search {
+	float: right;
+	font: 18px/26px ""
+}
+
+
+/*#best-nav .best-nav_r .second {
+	width: 150px
+}*/
+
+#best-nav .best-nav_r .second .fa {
+	width: 16;
+	height: 16px;
+	padding: 8px 10px 0 15px;
+	float: left;
+	color: #c0c0c0;
+}
+
+#best-nav .best-nav_r .second .fa:hover {
+	color: #008000
+}
+
+#best-nav .best-nav_r .third a,
+#best-nav .best-nav_r .third span {
+	font: 16px/30px "";
+	color: #c0c0c0;
+	padding-left: 10px
+}
+
+.ban {
+	height: 142px;
+	background: #fff;
+	border-bottom: 2px solid #10B041;
+}
+
+.contain {
+	background: #f5f5f5;
+}
+
+.contain1 .num {
+	width: 509px;
+	margin-right:-3px ;
+	float: right;
+	border-right: 3px solid #ddd ;
+	border-left: 3px solid #ddd ;
+	background: #fff;
+	-moz-box-shadow: -3px 0px 3px #DDDDDD;
+	-webkit-box-shadow: -3px 0px 3px #DDDDDD;
+	box-shadow: -3px 0px 3px #DDDDDD;
+	padding-left: 20px;
+}
+
+.num .num-num {
+	margin-bottom: 80px;
+}
+
+	
+
+.num .num-num span{
+	text-align: center;
+	display: inline-block;
+	width:50px;
+	height: 30px;
+	font:12px/30px "";
+	float: left;
+	border: 1px solid #ddd;
+	
+}
+
+.insert{
+	height: 60px;
+	background: #000;
+	margin-left: -20px;
+}
+
+.insert .input{
+	border: 0;
+	height:60px;
+	color: #fff;
+	font:24px/60px "";
+	width:160px;
+	background: red;
+	float: right;
+}
+
+.insert span{
+	color: red;
+	font:24px/60px "";
+	float: left;
+}
+
+
+/*<!--底部1开始--> */
+
+#foot {
+	height: 220px;
+	background: #F5F5F5;
+}
+
+#foot .back {
+	height: 220px;
+	background: url(../img/jipiao/big1.jpg) no-repeat;
+}
+
+
+/*<!--底部1结束-->*/
+
+
+/* <!--底部2开始-->*/
+
+#foot2 {
+	margin-left: -10px;
+	height: 265px;
+	background: #333333;
+	border-top: 3px solid #10B041;
+}
+
+#foot2 .back {
+	height: 265px;
+	background: url(../img/jipiao/big2.jpg) no-repeat;
+}
+
+
+#body-goup {
+	position: fixed;
+	right: 0;
+	top: 40%;
+	width: 50px;
+	height: 155px;
+	display: none;
+}
+
+#body-goup a {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #fff;
+	color: #999;
+	font: 14px/24px "";
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #eee;
+}
+
+#body-goup input {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #fff;
+	color: #999;
+	font: 14px/24px "";
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #eee;
+}
+
+#body-goup #goup {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #fff;
+	color: #999;
+	font: 14px/48px "";
+	text-align: center;
+	margin-top: 4px;
+	cursor: pointer;
+	border: 1px solid #eee;
+}
+
+
+/* <!--地步2结束-->*/
+
+
+/*<!--底部结束-->*/
