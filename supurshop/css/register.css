@@ -1,0 +1,240 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+#login_header{
+	height:104px;
+	width:100%;
+	background-color:#F2F2F2;
+}
+#login_header img{margin-left:82px;margin-top:20px ;float: left;}
+#login_header div{
+	width:170px;
+	height:51px;
+	border-left:1px solid #DBDBDB;
+	float: left;
+	margin-left:34px;
+	margin-top:25px;
+	font-size: 27px;
+	font-family: "微软雅黑";
+	text-align: center;
+	line-height: 51px;
+	}
+#login_content{
+	width:100%;
+	height:480px;
+	background-color: #E4004B;
+}
+#login_content img{float:left;}
+.login_fr{
+	width:342px;
+	height:400px;
+	background-color: #fff;
+	float:left;
+	margin-top:42px ;
+}
+.login_fr_header{
+	width:296px;
+	height:26px;
+	margin: 25px 22px 5px 22px;
+}
+.login_fr_header span{
+	width:72px;
+	height:44px;
+	display:inline-block;
+	font-size: 18px;
+	color: #333;
+	font-family: "微软雅黑";
+}
+.login_fr_header p{
+	display: inline-block;
+	width:132px;
+	height:24px;
+	font-size: 12px;
+	float:right;
+	font-family: "微软雅黑";
+}
+.registerForm{
+	width:340px;
+	height:262px;
+	
+}
+.Form_icon{
+	width:40px;
+	height:38px;
+	float: left;
+	background: url(../img/login_icon.png) no-repeat;
+	background-position: 14px -113px;
+	/*background: #f9f9f9;*/
+}
+.Form_icon1{
+	width:40px;
+	height:38px;
+	float: left;
+	background: url(../img/login_icon.png) no-repeat;
+	background-position: 14px -169px;
+}
+.registerForm_user{
+	width: 278px;
+	height:41px;
+	background: #f9f9f9;
+	margin: 38px auto 10px auto;
+}
+.registerForm_pwsd{
+	width: 278px;
+	height:41px;
+	background: #f9f9f9;
+	margin: 0 auto 10px auto;
+}
+.registerForm_yz{
+	width: 150px;
+	height:41px;
+	background: #f9f9f9;
+	margin: 0 auto 10px 33px;
+	float:left;
+}
+.Form_icon2{
+	width:40px;
+	height:38px;
+	float: left;
+	background: url(../img/login_icon.png) no-repeat;
+	background-position: 14px -396px;
+}
+.Form_icon3{
+	width:40px;
+	height:38px;
+	float: left;
+	background: url(../img/login_icon.png) no-repeat;
+	background-position: 14px -290px;
+}
+.yzm{
+	float:left;
+	margin-left:22px ;
+	width:101px;
+	height:42px;
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 42px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	letter-spacing: 10px;
+	font-weight: 900;
+	cursor: pointer;
+}
+.yzmBtn{
+	width:100px;
+	height:38px;
+	border:0;
+	background-color:#E4004B ;
+	margin-left:22px ;
+	margin-top:10px ;
+	cursor:pointer;
+	color:#fff;
+}
+.registerForm_input_size1{
+	width: 90px;
+	background: #f9f9f9;
+	height: 40px;
+	border:0;
+	font-size: 13px;
+	color:#999;
+	margin-left:5px ;
+}
+.registerForm_input_size{
+	width: 231px;
+	background: #f9f9f9;
+	height: 40px;
+	border:0;
+	font-size: 13px;
+	color:#999;
+	margin-left:5px ;
+}
+.hoverBtn{
+	width:288px;
+	height:40px;
+	position:relative;
+	margin: 10px 22px 0 22px;
+}
+.hoverBtn .Slider_tip{
+	width:140px;
+	height:40px;
+	font-size: 14px;
+	color: #fff;
+	position:absolute;
+	left:95px;
+	top:0;
+	line-height:40px;
+}
+.hoverBtn .bgSlider{
+	width:291px;
+	height:34px;
+	float:left;
+	background-color: #f29dba;
+	padding:3px;
+}
+.hoverBtn .bgSlider .bgSlider1{
+	width:52px;
+	height:34px;
+	background:url(../img/bg_draggable_qaptcha_1.png) no-repeat;
+	cursor: pointer;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.login_checkBox{
+	margin: 10px 24px 10px 24px;
+	line-height: 22px;
+	height: 22px;
+}
+.login_checkBox .checkStyle{color:#777;font-size: 11px;float:left;}
+.login_checkBox .checkStyle2{font-size: 12px;color: #9F9F9F;}
+.login_submit{
+	display: block;
+	width: 295px;
+	height:44px;
+	background: #e5004b;
+	border: none;
+	cursor: pointer;
+	margin: 0 22px 0 22px;
+	/*text-align: center;*/
+}
+.login_submit span{
+	display:block;
+	width:61px;
+	height:26px;
+	font-family: "微软雅黑";
+	color:#fff;
+	margin-left:110px ;
+	font-size: 20px;
+}
+.works{
+	width:344px;
+	height:24px;
+	line-height: 24px;
+}
+.works div{
+	font-size: 13px;
+	color:#777;
+	margin-left:25px ;
+	float:left;
+}
+.works img{
+	display: inline-block;
+	margin-left:10px ;
+	float:left;
+}
+.login_footer{
+	width:100%;
+	height:132px;
+}
+.login_footer1{
+	width:450px;
+	height:124px;
+	margin: 20px auto;
+}
+.login_footer1 p{
+	font-size: 13px;
+	color:#777;
+}
+.login_footer1 img{
+	margin:21px 0 0 152px;
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/confirmOrder.css"/>
+	</head>
+	<body>
+		<div id="nav">
+			<div class="nav_content">
+				<div class="welcom">
+					欢迎来到速普商城！[<a href="index.html">退出</a>]
+				</div>
+				<ul class="navList">
+					<li>
+						<a href="#">我的速普▽</a>
+						<div class="mySuPu">
+							<ul>
+								<li><a href="#">我的优惠券</a></li>
+								<li><a href="#">我的收藏</a></li>
+								<li><a href="#">我的积分</a></li>
+								<li><a href="#">现金账户</a></li>
+								<li><a href="#">待评价</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">手机端▽</a>
+						<div class="app">
+							<img src="../img/weixin.jpg" />
+							<img src="../img/app.jpg" />
+						</div>
+					</li>
+					<li>
+						<a href="#">客户服务▽</a>
+						<div class="client_server">
+							<ul>
+								<li><a href="#">在线客服</a></li>
+								<li><a href="#">帮助中心</a></li>
+								<li><a href="#">400-618-0055</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="five"><a href="#">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="logo">
+			<div class="logo_content">
+				<img src="../img/logo.jpg" />
+				<ul class="buyStep">
+					<li class="buyStep1">1.我的购物车</li>
+					<div class="pic"></div>
+					<li class="buyStep2">2.确认订单信息</li>
+					<div class="pic1"></div>
+					<li class="buyStep3">3.成功提交订单</li>
+					<div class="pic2"></div>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div class="content_all">
+				<div class="content_title"><span></span><p>确认订单信息</p></div>
+				<div class="choose">
+					<p class="infor">填写并核对订单信息</p>
+				</div>
+				<!--收货地址-->
+				<div class="cart_d_cfbox">
+					<div class="cart_d_cftbox">
+						<span class="infor">收货地址</span>
+						<a hef="" class="a_blue">[修改]</a>
+					</div>
+					<div class="cart_d_cfinfo">
+						<div id="address_box">
+							<div class="addBtn">+</div>
+						</div>
+						<div id="address_box3"></div>
+						<div id="address_box4"></div>
+					</div>						
+					<div class="cart_d_fixbox">
+						<div class="cart_d_fixtitle">
+							<span class="">收货人信息</span>
+						</div>
+						<div class="cart_d_fixChoose">
+							<input class="chooseFix" type="radio" />
+							<span>使用新地址</span>
+						</div>						
+						<div class="cart_d_fixinfo">
+							<!--收货人-->
+							<div class="item">
+								<dl>
+									<dt>
+										<span>*</span>
+										收货人姓名：
+									</dt>
+									<dd>
+										<input class="input" id="consignee" type="text">
+									</dd>
+										<div class="clear"></div>
+								</dl>
+							</div>
+							<!--选择国家、地区-->
+							<div class="item">
+								<dl>
+									<dt>
+										<span>*</span>
+										省份：												
+									</dt>
+									<dd id="deliver_addr">												
+										<select class="select" id="addr_lv2" style="color: rgb(153, 153, 153);">
+											<option value="0">请选择</option>
+											<option value="11">北京市</option>
+											<option value="12">天津市</option>
+											<option value="13">河北省</option>
+											<option value="14">山西省</option>
+											<option value="15">内蒙古自治区</option>
+											<option value="21">辽宁省</option>
+											<option value="22">吉林省</option>
+											<option value="23">黑龙江省</option>
+											<option value="31">上海市</option>
+											<option value="32">江苏省</option>
+											<option value="33">浙江省</option>
+											<option value="34">安徽省</option>
+											<option value="35">福建省</option>
+											<option value="36">江西省</option>
+											<option value="37">山东省</option>
+											<option value="41">河南省</option>
+											<option value="42">湖北省</option>
+											<option value="43">湖南省</option>
+											<option value="44">广东省</option>
+											<option value="45">广西壮族自治区</option>
+											<option value="46">海南省</option>
+											<option value="50">重庆市</option>
+											<option value="51">四川省</option>
+											<option value="52">贵州省</option>
+											<option value="53">云南省</option>
+											<option value="54">西藏自治区</option>
+											<option value="61">陕西省</option>
+											<option value="62">甘肃省</option>
+											<option value="63">青海省</option>
+											<option value="64">宁夏回族自治区</option>
+											<option value="65">新疆维吾尔自治区</option>
+											<option value="71">台湾省</option>
+											<option value="81">香港特别行政区</option>
+											<option value="82">澳门特别行政区</option>
+										</select>
+										<select class="select" id="addr_lv3" style="color: rgb(153, 153, 153);">
+											<option value="0">城市</option>
+											<option value="3101">市辖区</option>
+											<option value="3102">县</option>
+										</select>
+										<select class="select" id="addr_lv4" style="color: rgb(153, 153, 153);">
+											<option value="0">区/县</option>
+											<option value="310101">黄浦区</option>
+											<option value="310103">卢湾区</option>
+											<option value="310104">徐汇区</option>
+											<option value="310105">长宁区</option>
+											<option value="310106">静安区</option>
+											<option value="310107">普陀区</option>
+											<option value="310108">闸北区</option>
+											<option value="310109">虹口区</option>
+											<option value="310110">杨浦区</option>
+											<option value="310112">闵行区</option>
+											<option value="310113">宝山区</option>
+											<option value="310114">嘉定区</option>
+											<option value="310115">浦东新区</option>
+											<option value="310116">金山区</option>
+											<option value="310117">松江区</option>
+											<option value="310118">青浦区</option>
+											<option value="310119">南汇区</option>
+											<option value="310120">奉贤区</option>
+										</select>
+									</dd>
+									<div class="clear"></div>
+								</dl>
+							</div>
+							<!--详细地址-->
+							<div class="item">
+								<dl>
+									<dt>
+										<span>*</span>
+										详细地址：
+									</dt>
+									<dd>
+										<input class="xxidz" id="address_detail" type="text" placeholder="请填写详细收货地址">
+									</dd>
+									<div class="clear"></div>
+								</dl>
+							</div>
+							<!--邮编-->
+							<div class="item">
+								<dl>
+									<dt>												
+										<span></span>
+										邮编：
+									</dt>
+									<dd>
+										<input class="input" id="zip_code" type="text">
+									</dd>
+									<div class="clear"></div>
+								</dl>
+							</div>
+							<!--电话号码-->
+							<div class="item">
+								<dl>
+									<dt>
+										<span></span>
+										手机号：
+									</dt>
+									<dd>
+										<input class="inputPhone" id="phone" type="text"><span>*</span>
+									</dd>手机号和固定号码必填一个
+									<div class="clear"></div>
+								</dl>
+							</div>
+							<!--固定电话-->
+							<div class="item">
+								<dl>
+									<dt>
+										<span></span>
+										固定电话：
+									</dt>
+									<dd>
+										<input class="input" id="reserve_num" type="text">
+									</dd>
+									<div class="clear"></div>
+								</dl>
+							</div>
+							<!--电子邮箱-->
+							<div class="item">
+								<dl>
+									<dt>
+										<span></span>
+										电子邮箱：
+									</dt>
+									<dd>
+										<input class="input" id="reserve_num" type="text">
+									</dd>
+									<div class="clear"></div>
+								</dl>
+							</div>																																
+						</div>
+						<!--保存收货信息-->
+						<div class="item1">
+							<button class="saveBtn" type="button">保存收货人信息</button>										
+							<div class="clear"></div>
+						</div>		
+					</div>
+				</div>
+				<!--支付方式-->
+				<div class="fp_box1">
+					<div class="fp_box_title">支付方式</div>
+					<div class="fp_box_infor">
+						<div class="no_Fp2 active">
+							在线支付
+							<i class="bg"></i>
+						</div>
+						<div class="no_Fp3">
+							货到付款
+							<i></i>
+						</div>
+					</div>
+				</div>
+				<!--支付方式结束-->
+				<!--发票信息-->
+				<div class="fp_box">
+					<div class="fp_box_title">发票信息</div>
+					<div class="fp_box_infor">
+						<div class="no_Fp active">
+							不需要发票
+							<i class="bg"></i>
+						</div>
+						<div class="no_Fp1">
+							电子发票
+							<i></i>
+						</div>
+						<div class="fp_name">
+							<span>发票抬头：</span>
+							<input placeholder="个人" type="text" />
+						</div>
+						<div class="clear"></div>
+						<p><span>推进发票无纸化，低碳环保，节约资源。</span>电子发票是经过国家税务局机关认可的有效凭证，符合国家税务总局统一标准，可作为财务报销凭证。 </p>
+						<p>温馨提示：保税区及海外直邮商品下单属于境外购买行为，因此无法为您开具发票。</p>
+					</div>
+				</div>
+				<!--商品清单-->
+				<div class="choose">
+					<p class="infor">商品清单</p>
+				</div>
+				<!--速普自营-->
+				<div id="shoopingCar"></div>
+				<div class="subBox">
+						<div class="zongji">应付总额：<span class="sumSpan">￥</span><span id="totalPrice"></span></div>
+						<a href="javascript:void(0)" class="jiesuan">提交订单</a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footer_content">
+				<ul class="footerNav">
+					<li><a href="#">常见问题</a></li>
+					<li><a href="#">支付方式</a></li>
+					<li><a href="#">配送服务</a></li>
+					<li><a href="#">发票制度</a></li>
+				</ul><br />
+				<p>Copyright © 速普商城 2010-2016 All Right Reseved 鲁 ICP 证 09059644 号</p>
+				<img src="../img/zhizhao.png" />
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/confirmOrder.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div class="time_item" id="l4">
+			<span class="day_show">0</span>天
+			<strong class="hour_show">0</strong>时
+			<strong class="minute_show">0</strong>分
+			<strong class="second_show">0</strong>秒
+		</div>
+	</body>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.countdown.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	var time = new Date()
+	var time2 = (new Date('2016/03/07 08:00:00')).getTime()
+	var time3 =( new Date('2016/03/07 09:58:00').getTime())-(new Date().getTime())
+	var time4 = new Date(time2)
+	console.log(time)
+	console.log(time2)
+	console.log(time4)
+	var countList = ["l4"];
+	var countTime = ["2016/03/08 12:00:00"];
+	var total = countTime.length;
+	for(var i = 0;i<total;i++){
+		var count = new CountDownTime(countList[i],countTime[i]);
+		count.show();
+	}
+	</script>
+</html>

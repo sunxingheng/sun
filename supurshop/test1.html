@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.hoverBtn{
+	width:288px;
+	height:40px;
+	position:relative;
+	margin: 10px 22px 0 22px;
+}
+.hoverBtn .Slider_tip{
+	width:140px;
+	height:40px;
+	font-size: 14px;
+	color: #fff;
+	position:absolute;
+	left:95px;
+	top:0;
+	line-height:40px;
+}
+.hoverBtn .bgSlider{
+	width:291px;
+	height:34px;
+	float:left;
+	background-color: #f29dba;
+	padding:3px;
+}
+.hoverBtn .bgSlider .bgSlider1{
+	width:52px;
+	height:34px;
+	background:url(img/bg_draggable_qaptcha_1.png) no-repeat;
+	cursor: pointer;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+		</style>
+	</head>
+	<body>
+		<div class="hoverBtn">
+		</div>
+	</body>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/drag.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.hoverBtn').drag();
+	</script>
+</html>

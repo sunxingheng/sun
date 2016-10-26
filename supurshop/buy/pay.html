@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>支付页面</title>
+		<link rel="stylesheet" type="text/css" href="../css/pay.css"/>
+	</head>
+	<body>
+		<div id="content">
+			<div class="header">
+				<span class="header_icon"></span>
+				<span class="header_title">在线支付</span>
+			</div>
+			<div class="pay_table">
+				<div class="counter">
+					<span class="counter1">收银台</span>
+					<div class="fr">
+						<span class="counter3">应付总额：</span>
+						<span class="counter2">￥</span>
+						<span class="counter2 pirce"></span>
+					</div>					
+				</div>
+				<div class="account_title">
+					<span class="account_title1">使用现金账户支付</span>
+					<span class="account_title2">请输入金额直接支付：</span>
+				</div>
+				<div class="account_content">
+					<input class="moneyInput" type="text" placeholder="￥" />
+					<span class="account_title2">您的现金账户余额</span>
+					<span class="fuhao">￥</span>
+					<span class="moneyNum">0</span>
+					<div class="reminder">
+						<span class="account_title1">温馨提示：</span>
+						<span class="account_title2">现金账户可支付</span>
+						<span class="fuhao">￥</span>
+						<span class="moneyNum">0</span>
+						<span class="account_title2">请填写金额时注意。</span>
+					</div>
+					<div class="account_title3">
+						<span class="account_title1">平台支付</span>
+						<span class="account_title2">请点击以下平台支付：</span>
+					</div>
+					<div class="onlinePay hoverChange">
+						<a href="#">银联支付</a>
+					</div>
+					<div class="zhifubaoPay hoverChange">
+						<a href="#">支付宝支付</a>
+					</div>
+					<div class="account_title3">
+						<span class="account_title1">合作银行支付</span>
+						<span class="account_title2">请点击以下银行支付：</span>
+					</div>
+					<div class="hezuoPay hoverChange">
+						<a href="#">合作银行支付</a>
+					</div>
+				</div>
+			</div>
+			<div class="modal">
+				<div class="modalDialog">
+					<div class="modalHead">
+						<h1>银联支付</h1>
+						<span class="close">×</span>
+					</div>			
+					<div class="modalContent">
+						<input type="text" name="userName" id="userName" value="" placeholder="银行卡号" />
+						<input type="password" name="pwd" id="pwd" value="" placeholder="密码" />
+						<input type="button" value="确认付款" id="login"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/pay.js" type="text/javascript" charset="utf-8"></script>
+</html>

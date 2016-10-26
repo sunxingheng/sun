@@ -1,0 +1,362 @@
+@charset "utf-8";
+*{margin:0;padding:0;font-family: "微软雅黑";}
+ul,li{list-style:none;}
+a{text-decoration: none;}
+.clear{
+	clear:both;
+}
+#commonTop,#header,#search,#banner,#content,#footer{width:100%;}
+.welcom,.search_cont,.f_top1,.f_bottom1{margin:0 auto;}
+/*header开始*/
+#header{	
+	height:29px;
+	background-color: #333333;
+}
+#header .welcom{
+	width:1200px;
+	height:28px;
+}
+#header .welcom p{
+	font-size: 12px;
+	color: #fff;
+	line-height: 28px;
+	float:left;
+}
+#header .welcom p a{
+	/*display: block;*/
+	color: red;
+}
+#header .welcom>p>a:hover{
+	/*display: block;*/
+	color: #fff;
+}
+.sNav{
+	float:right;
+	margin-top:3px;
+}
+.sNav li{
+	float:left;
+	position:relative;
+}
+.sNav li a{
+	direction: block;
+	font-size: 12px;
+	margin:10px;
+	color: #fff;
+}
+.sNav1{
+	position:absolute;
+	top:26px;
+	left:0;
+	width:88px;
+	height:146px;
+	z-index:9999;
+	background-color: #333333;
+	display: none;
+	z-index: 99999;
+}
+.sNav2{
+	width:130px;
+	height:270px;
+	display: none;
+}
+.sNav2 img{margin:5px 5px;}
+.sNav3{
+	width:120px;
+	height:150px;
+	display: none;
+}
+.sNav3>ul>li>a{
+	display: block;
+	width:120px;
+	height:20px;
+	margin-left:0 ;
+}
+.sNav1 ul li{line-height: 27px;width:88px;text-align: center;}
+/*header结束*/
+
+/*search开始*/
+#search{
+	height:160px;
+	
+	border-bottom: 2px solid #E5004A;
+}
+.search_cont{
+	width:1200px;
+	height:161px;
+	position:relative;
+}
+.search_cont>a{
+	display: block;
+	margin-top:35px;
+	float:left;
+}
+.search_cont .sc{
+	background: url(../img/sc-pic.png) no-repeat;
+	width:579px;
+	height:40px;
+	background-color: #E5004A;
+	float:left;
+	margin-left: 116px;
+	margin-top:35px;
+}
+.search_cont .sc input{
+	width:441px;
+	height:31px;
+	margin-left:35px;
+	margin-top:3px;
+}
+.search_cont .sc a{
+	font-size: 16px;
+	color: #fff;
+	margin-left: 35px;
+}
+.search_cont .sc_shopCar{
+	width:145px;
+	height:40px;
+	float: left;
+	margin: 35px 0 0 131px;
+	background: url(../img/sc_shopcar.png) no-repeat;
+	background-color: #E5004A;	
+}
+.search_cont .sc_shopCar span{
+	display: block;
+	font-size: 16px;
+	color:#fff;
+	margin-top:10px;
+	margin-left:55px;
+}
+.nav{
+	position:absolute;left:0;top:123px;
+}
+.nav>li{
+	float:left;
+}
+.nav li a{
+	display: block;
+	margin:12px 40px;
+	font-size: 15px;
+	color:#000;
+	font-family: "微软雅黑";
+	font-weight: 900;
+}
+.nav li.nav-1{
+	background-color:#E5004A;
+	position: relative;
+}
+.nav li.nav-1 a{
+	font-family: "微软雅黑";
+	font-weight: 500;
+	display: block;
+	margin:10px 100px 10px 15px;
+	color:#fff;
+}
+.nav>img{
+	position:absolute;
+	top:7px;
+	right:10px;
+}
+
+/*全部商品菜单开始*/
+.banner_left{
+	position:absolute;
+	top:39px;
+	left:0px;
+	width:205px;
+	height:447px;
+	background-color:#E5004A;
+	z-index: 99999;
+	/*display: none;*/
+	
+}
+.banner_lefttest{
+	position:absolute;
+	top:39px;
+	left:0px;
+	width:205px;
+	height:447px;
+	background-color:#E5004A;
+	z-index: 99999;
+	display: none;
+}
+/*.banner_left>img{margin-top:445px;margin-left:50px;}*/
+.banner_left1{float:left;}
+.banner_left1 li{
+	width: 28px;
+	height:30px;
+	border:1px solid #E5004A;
+	margin-left:20px;
+	margin-top:8px;
+}
+.banner_left1 .banner_leftPic{
+	background:url(../img/index.png) no-repeat 0 -150px;
+}
+.banner_left1 .banner_leftPic1{
+	background:url(../img/index.png) no-repeat 0 -175px;
+}
+.banner_left1 .banner_leftPic2{
+	background:url(../img/index.png) no-repeat 0 -210px;
+}
+.banner_left1 .banner_leftPic3{
+	background:url(../img/index.png) no-repeat 0 -239px;
+}
+.banner_left1 .banner_leftPic4{
+	background:url(../img/index.png) no-repeat 0 -266px;
+}
+.banner_left1 .banner_leftPic5{
+	background:url(../img/index.png) no-repeat 0 -295px;
+}
+.banner_left1 .banner_leftPic6{
+	background:url(../img/index.png) no-repeat 0 -325px;
+}
+.banner_left1 .banner_leftPic7{
+	background:url(../img/index.png) no-repeat 0 -355px;
+}
+.banner_left1 .banner_leftPic8{
+	background:url(../img/index.png) no-repeat 0 -385px;
+}
+.banner_left1 .banner_leftPic9{
+	background:url(../img/index.png) no-repeat 0 -415px;
+}
+.banner_left2{float:left;}
+.banner_left2>li{
+	/*position: relative;*/
+	width: 150px;
+	height:30px;
+	border: 1px solid #E5004A;
+/*	line-height: 30px;*/
+	margin-top:8px;
+}
+.banner_left2>li>a{
+	color:#fff;
+	display: block;
+	width: 180px;
+	height:30px;
+}
+/*.displayMenu{display:block;}*/
+/*全部商品菜单结束*/
+
+/*二级菜单*/
+.momMenu{
+	position: absolute;
+	left:206px;
+	top:0;
+	width:800px;
+	height:445px;
+	background-color:#fff;
+	display: none;
+	border-right:2px solid #E5004A;
+	border-bottom:2px solid #E5004A;
+}
+.momMenu ul{
+	margin-top:5px;
+	margin-left:10px ;
+}
+.banner_left2 .momMenu li{
+	border-right:1px solid #ccc;
+	height: 12px;
+	float:left;
+	text-align: center;
+	line-height: 12px;
+}
+.banner_left2 .momMenu li a{
+	color:#666;
+	font-size: 12px;
+	display: block;
+	margin:0 10px;
+	font-family: "微软雅黑";
+}
+.banner_left2 .momMenu li a span{
+	color:#000;
+	font-size: 12px;
+	display: block;
+	font-weight: 900;
+	font-family: "微软雅黑";
+	/*margin:0 10px;*/
+	
+}
+.momMenu .momMenu1{margin-top:20px ;}
+/*二级菜单结束*/
+/*search结束*/
+
+#content{height:100%;}
+
+/*footer开始*/
+#footer{
+	height:403px;
+	background-color: #D24156;
+}
+#footer .f_top{
+	width:100%;
+	height:105px;
+	background-color: #E5004B;
+}
+#footer .f_top1{
+	width:1200px;
+	height:105px;
+}
+#footer .f_top1 .f_top-pic{
+	margin-left:110px;
+	margin-top: 25px;
+}
+#footer .f_bottom{
+	width:100%;
+	height:398px;
+	background-color:#333333;
+}
+#footer .f_bottom .f_bottom1{
+	width:1200px;
+	height:160px;
+}
+.f_bottom1 ul{
+	float:left;
+	border-right:1px solid #444444;
+	margin-left:18px;
+	margin-top: 29px;
+}
+.f_bottom1 ul li{
+	height:35px;
+	width:140px;
+	font-size: 12px;
+
+	line-height: 40px;
+	text-align: center;
+}
+.f_bottom1 ul li a{
+	color: #444444;
+}
+.f_bottom1 ul li.f-fz{
+	font-size: 13px;
+	color:#fff;
+}
+.f_bottom1 img{margin:35px 0 0 30px;}
+hr{
+	border:0;
+	border-bottom:1px solid #444444;
+}
+.f_bottom2{
+	width:429px;
+	height:135px;
+	margin:0 auto;
+}
+.footNav{
+	margin-top:16px;
+	margin-left:60px;
+}
+.footNav li{
+	float:left;
+	font-size: 12px;
+	width:70px;
+	height:18px;
+	border-right:1px solid #444444;
+	text-align: center;
+}
+.footNav li.f_b2{border:0;}
+.footNav li a{color:#444444;}
+.f_bottom2 p{font-size: 12px;color:#444444;margin-left:5px;margin-top:15px;}
+.f_bottom2 img{margin-left:130px;margin-top:10px;}
+/*footer结束*/
+.clearDiv{
+	width:206px;
+	height:400px;	
+}

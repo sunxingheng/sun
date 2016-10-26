@@ -1,0 +1,392 @@
+@charset "utf-8";
+*{padding:0;margin:0;}
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;height:0;}
+a{text-decoration: none;}
+#content{
+	width:100%;
+	height: 100%;
+	background-color: #f6f6f6;
+}
+.content_all{
+	width:1200px;
+	min-height:600px;
+	height:auto !important;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.content_nav{
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color:#666;
+	line-height: 57px;
+	width:1200px;
+	height:57px;
+	border-bottom: 1px solid #f3f3f3;
+}
+.content_nav>span{
+	margin-left:10px ;
+	display: inline-block;
+}
+.userCenter_list{
+	width:204px;
+	height:827px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.userCenter_cont{
+	margin-top: 5px;
+	margin-left: 5px;
+	width:983px;
+	height:1098px;
+}
+.leftmenu_zone{
+	width:204px;
+	height:auto;
+	border: 1px solid #e5e5e5;
+	margin-bottom:5px ;
+}
+.leftmenu{
+	text-align: center;
+	line-height: 41px;
+	font-size: 15px;
+	font-family: "微软雅黑";
+	font-weight: 900;
+	color:#666;
+	background-color: #f8f8f8;
+	width:204px;
+	height:41px;
+	border-bottom:1px solid #E4004B;
+}
+.leftcate_list{
+	width:202px;
+	height:auto;
+}
+.leftcate_list>ul{
+	width:202px;
+	height:auto;
+	margin-bottom:3px ;
+}
+.leftcate_list>ul>li{
+	line-height: 36px;	
+	text-align: center;
+	width:194px;
+	height:36px;
+	border-bottom: 1px dashed #dedede;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.leftcate_list>ul>li>a{
+	font-size: 12px;
+	color:#666;
+}
+.user_center_top{
+	width:990px;
+	height:140px;
+}
+.user_info{
+	width:402px;
+	height:138px;
+	border:1px solid #f3f3f3;
+	padding-top:10px;
+}
+.user_remind{
+	margin-left: 10px;	
+	width:560px;
+	height:148px;
+	border:1px solid #f3f3f3;
+}
+.user_round_mask{
+	margin-left: 20px;
+	display: inline-block;
+	width:110px;
+	height:110px;
+	border:1px solid #f3f3f3;
+	border-radius: 100px;
+	overflow: hidden;
+}
+.user_round_mask>img{
+	width:100%;
+	height:100%;
+}
+.userName{
+	text-align: center;
+	line-height: 50px;
+	margin-left:50px ;
+	color:#ff800;
+	display: inline-block;
+	border:1px solid #ccc;
+	width:200px;
+	height:50px;
+}
+.user_remind div.boxLeft{
+	margin-left:50px ;
+}
+.user_remindbox{
+	text-align: center;
+	margin-top: 20px;
+	width:85px;
+	height:91px;
+	margin-left:30px ;
+}
+.payOrder{
+	line-height: 42px;
+	text-align: center;
+	margin-left: 20px;
+	border:1px solid #ccc;
+	width:42px;
+	height:42px;
+	border-radius: 100px;
+	overflow: hidden;
+}
+.payOrder>img{
+	display: block;
+	margin-top: 11px;
+	margin-left: 4px;
+}
+.user_remindbox>a>p{
+	display: block;
+	/*margin-left: 8px;*/
+	margin-top: 5px;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color:#666;
+}
+.user_remindbox>a>span{
+	margin-top: 5px;
+	color:#FF8400;
+	font-size: 12px;
+	display: block;
+	/*margin-left: 40px;*/
+}
+.payOrder .cheapImg{
+	margin-top:8px ;
+}
+.user_center_bottom{
+	margin-top:10px;
+	width:974px;
+	height:484px;
+	border:1px solid #f3f3f3;
+}
+.myOrderList{
+	line-height: 36px;
+	width:974px;
+	height:36px;
+	border-bottom:1px solid #E4004B;
+	background-color: #fff4d3;
+}
+.myOrderList_title{
+	display: inline-block;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	font-weight: 900;
+	color:#666;
+	margin-left:20px ;
+}
+.myOrderList>span{
+	display: inline-block;
+}
+.order_words{
+	font-size: 12px;
+	color:#E4004B;
+	font-family: "微软雅黑";
+}
+.words1{
+	width:121px;
+	height:33px;
+	margin-left:265px ;
+}
+.words2{
+	width:90px;
+	height:33px;
+}
+.words3{
+	width:135px;
+	height:33px;
+}
+.words4{
+	width:131px;
+	height:33px;
+}
+.words5{
+	width:120px;
+	height:33px;
+}
+.newOrder{
+	width:974px;
+	height:129px;
+	border-bottom:1px solid #f3f3f3;
+}
+.newOrder_title{
+	text-indent: 10px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color:#666;
+	line-height: 37px;
+	width:974px;
+	height:37px;
+	border-bottom:1px solid #f3f3f3;
+	background-color: #f8f8f8;
+}
+.newOrder_title>span{
+	display: inline-block;
+}
+.orderID{
+	color:blue;
+}
+.newOrder_content{
+	width:100%;
+	height:86px;
+	background-color: #fff;
+}
+.productImg{
+	float: left;
+	display: inline-block;
+	width:64px;
+	height:64px;
+	margin-top:10px ;
+	margin-left:30px ;
+}
+.productName{
+	margin-top:30px ;
+	margin-left:10px ;
+	float: left;
+	font-size: 12px;
+	color:#666;
+	font-family: "微软雅黑";
+	display: inline-block;
+	width:169px;
+	height:16px;	
+}
+.money{
+	margin-top:30px ;
+	margin-left:70px ;
+	float: left;
+	font-size: 12px;
+	color:#666;
+	font-family: "微软雅黑";
+	display: inline-block;
+	width:14px;
+	height:16px;
+}
+.productPirce{
+	margin-top:30px ;
+	float: left;
+	font-size: 12px;
+	color:#666;
+	font-family: "微软雅黑";
+	display: inline-block;
+	width:50px;
+	height:16px;
+}
+.productNum{
+	margin-top:30px ;
+	margin-left:80px ;
+	float: left;
+	font-size: 12px;
+	color:#666;
+	font-family: "微软雅黑";
+	display: inline-block;
+	width:50px;
+	height:50px;
+}
+.totalPirce{
+	margin-top:30px ;
+	margin-left:50px ;
+	float: left;
+	font-size: 12px;
+	color:#666;
+	font-family: "微软雅黑";
+	display: inline-block;
+	width:50px;
+	height:50px;
+}
+.orderTime{
+	margin-top:30px ;
+	margin-left:70px ;
+	float: left;
+	font-size: 12px;
+	color:#666;
+	font-family: "微软雅黑";
+	display: inline-block;
+	width:100px;
+	height:50px;
+}
+.orderState{
+	margin-top:30px ;
+	margin-left:50px ;
+	float: left;
+	font-size: 12px;
+	color:blue;
+	font-family: "微软雅黑";
+	display: inline-block;
+	width:50px;
+	height:50px;
+}
+/*--------安全中心-----------*/
+.user_safebox{
+	width:974px;
+	height:443px;
+	border:1px solid #f3f3f3;
+	margin-top:10px ;
+}
+.user_safebox_title{
+	background-color: #f8f8f8;
+	border-bottom:1px solid #E4004B;
+	text-indent: 10px;
+	font-family: "微软雅黑";
+	width:974px;
+	height:36px;
+	font-size: 14px;
+	font-weight: 900;
+	color:#666;
+	line-height: 36px;
+}
+.ps{
+	text-align: center;
+	line-height: 150px;
+	color:#666;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	height:150px;
+	border-bottom:1px dashed #ccc;
+}
+.pws_form{
+	height:284px;
+	margin-left: 250px;
+	margin-top:20px;
+}
+.pws_form>span{
+	margin-top:20px ;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color:#666;
+	display: inline-block;
+	width:100px;
+	text-align: right;
+}
+.pws_form>p{
+	margin-top:20px ;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color:#666;
+	display: inline-block;
+}
+.pws_form>input{
+	width:204px;
+	height:28px;
+}
+.pws_form>a{
+	text-align: center;
+	line-height: 28px;
+	background-color: #E4004B;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color:#fff;
+	margin-top:10px ;
+	margin-left:160px ;
+	display: inline-block;
+	width:100px;
+	height:28px;
+}
