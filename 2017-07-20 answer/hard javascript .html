@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <!--
 补全 juxt 函数。实现功能：
 给定一个函数的list，比如[fa, fb, fc]，返回一个新函数，
@@ -24,15 +24,14 @@ Tips:
     <script>
       function juxt(fns) {
         // TODO
-        let arr = [];
+        let arr = [...fns];
         let result = [];
-        for (let fn of fns) {
-            arr.push(fn);
-         }
+       
         function save (str) {
                for (let fn of arr) {
                     result.push(fn(str))
                }
+               return result;
         }
         return save
        
