@@ -1,0 +1,141 @@
+@charset "utf-8";
+body {
+    color: #555;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 22px;
+    background: #cecccf;
+}
+.margin{
+    width: 1020px;
+    margin:0 auto;
+}
+#head a{
+    display: block;
+    background: url(../img/head.jpg) no-repeat center;
+    width: 100%;
+    height: 105px;
+    margin: 0 auto;
+}
+#main .margin{
+    background: #fff;
+    padding:30px 80px;
+    width: 856px;
+}
+#main #left_logo{
+    width:420px;
+    height: 490px;
+}
+#main #login{
+    position: relative;
+}
+#main p#loginGeneral,#main p#loginNoPassword{
+    display: inline-block;
+    color: #9f9f9f;
+    font: 16px/36px "宋体";
+    margin: 1px 70px;
+    cursor: pointer;
+}
+#main p#loginGeneral:hover,#main p#loginNoPassword:hover{
+    color:#000;
+    border-bottom: 1px black solid;
+    margin-bottom: 0;
+}
+#main .loginGeneral{
+    position: absolute;
+    top:0px;
+}
+#main .loginGeneral span{
+    position: absolute;
+    right: 45px;
+    top:105px;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    background: url("../img/eye.png") no-repeat center;
+}
+#main .loginNoPassword{
+    position: absolute;
+    display: none;
+}
+#main #logincontainer{
+    position: relative;
+    padding-top:150px;
+    width: 400px;
+    height: 250px;
+    border: 1px solid #cdcdcd;
+}
+#main #logincontainer div.loginGeneral,#main #logincontainer div.loginNoPassword{
+    padding: 15px 35px;
+}
+#main input{
+    color: #000;
+    width: 290px;
+    height: 40px;
+    font:16px/40px "";
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+    margin:10px 0;
+    padding-left: 30px;
+}
+#main input#text{
+    background: url(../img/login_user.jpg) no-repeat 10px center;
+}
+#main input#pas{
+    background: url(../img/login_pas.jpg) no-repeat 10px center;
+}
+#main #verify p .left{
+    color: #b3b3b3;
+    font: 12px/30px "宋体";
+}
+#main #verify p .right{
+    color: #888;
+    cursor: pointer;
+    font: 12px/30px "宋体";
+}
+#main #verify{
+    padding:0px 40px;
+}
+#main #verifyImg img{
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#main #checkverifyImg{
+    height: 20px;
+    font: 12px/20px "";
+    color: #ff0065;
+    text-align: center;
+}
+#main #forgetuser{
+    padding: 0 40px;
+    color: #666;
+    font: 12px/24px "宋体";
+}
+#main #forgetuser .right{
+    color: #e30165;
+}
+#main #register{
+    width: 320px;
+    height: 40px;
+    background: #e30165;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 40px;
+    font:12px/40px "";
+    color: #fff;
+}
+#foot{
+    background: #cecccf;
+    padding-top: 60px;
+}
+#foot .margin{
+    text-align: center;
+    font: 12px/20px '';
+    color: #989898;
+}
+#foot .margin a{
+    color: #888;
+}

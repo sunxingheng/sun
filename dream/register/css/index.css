@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+body {
+    color: #555;
+    font-size: 12px;
+    font-family: "宋体";
+    line-height: 22px;
+    background: #cecccf;
+}
+#head a{
+    display: block;
+    background: url(../img/head.jpg) no-repeat center;
+    width: 100%;
+    height: 105px;
+    margin: 0 auto;
+}
+#main .margin{
+    width: 856px;
+    margin:0 auto;
+    background: #fff;
+    padding: 30px 80px;
+}
+#main #login a{
+    display: block;
+    width: 55px;
+    font:16px/36px "";
+    margin:0 70px;
+    text-align: center;
+}
+#main #login a.loginhref{
+    color:#9f9f9f;
+}
+#main #login a.loginhref:hover{
+    color:#000;
+    border-bottom: 1px solid #000;
+}
+#main #login a.register{
+    color:#000;
+    border-bottom: 1px solid #000;
+}
+#main #login div.register{
+    padding: 30px 40px;
+    border: 1px solid #dcdcdc;
+    position: relative;
+}
+#main #login div.register .registerContainer span.a{
+    position: absolute;
+    right: 45px;
+    top:175px;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    background: url("../img/eye.png") no-repeat center;
+}
+#main #login div.register .registerContainer span.b{
+    position: absolute;
+    right: 45px;
+    top:240px;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    background: url("../img/eye.png") no-repeat center;
+}
+#main #login div.register .registerContainer input{
+    width: 290px;
+    height: 40px;
+    padding-left: 30px;
+    border: 1px solid #cdcdcd;
+}
+#main #login div.register .registerContainer input#registerMail,#main #login div.register .registerContainer input#registerPhone{
+    background:url("../img/user.jpg") no-repeat 10px center;
+    border-radius: 5px;
+    font:16px/40px "";
+}
+#main #login div.register .registerContainer input#registerPassword,#main #login div.register .registerContainer input#registerReaPassword{
+    background:url("../img/pas.jpg") no-repeat 10px center;
+    border-radius: 5px;
+    font:16px/40px "";
+}
+#main #login div.register .registerContainer p{
+    height: 20px;
+    font:12px/20px "";
+    color: #bb1362;
+}
+#main #verify p .left{
+    color: #b3b3b3;
+    font: 12px/30px "宋体";
+}
+#main #verify p .right{
+    color: #888;
+    cursor: pointer;
+    font: 12px/30px "宋体";
+}
+#main #verifyImg img{
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#main #checkverifyImg{
+    height: 20px;
+    font: 12px/20px "";
+    color: #ff0065;
+    text-align: center;
+}
+#main #registerOk{
+    width: 320px;
+    height: 44px;
+    background: #e30165;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font: 14px/44px '';
+    cursor: pointer;
+}
+#main #registerAgree{
+    font: 12px/60px '';
+    color: #666;
+}
+#main #registerAgree input{
+    margin-top:24px;
+}
+#main #registerAgree span{
+    color:#e30164;
+}
+#foot{
+    background: #cecccf;
+    padding-top: 60px;
+}
+#foot .margin{
+    text-align: center;
+    font: 12px/20px '';
+    color: #989898;
+}
+#foot .margin a{
+    color: #888;
+}

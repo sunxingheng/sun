@@ -1,0 +1,339 @@
+@charset "utf-8";
+#logo{
+    background: #fff;
+}
+#detailsnav{
+    background: #fff;
+    border-bottom: 1px solid #9b9d9a;
+}
+#detailsnav a{
+    display: block;
+    font-size: 16px;
+    font-family: microsoft yahei;
+    color: #484946;
+    text-decoration: none;
+    float: left;
+    line-height: 50px;
+    width: 106px;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+    margin-right: 5px;
+}
+#detailsnav a:hover{
+    border-bottom: 3px solid #000;
+}
+/*以下是主题部分*/
+#detailmain{
+    padding-top: 22px;
+}
+#detailmain .margin{
+    background: #fff;
+}
+#detailmain .Left{
+    position: relative;
+    width: 434px;
+    padding: 22px 0 25px 41px;
+    border-right: 1px solid #eee;
+}
+#detailmain .Left img{
+    width:350px;
+    height: 474px;
+}
+#detailmain .GoodContainer{
+    width: 350px;
+    height: 470px;
+    position: relative;
+}
+#detailmain .Left p{
+    width: 351px;
+    padding-bottom: 5px;
+    font:12px/22px "";
+    color:#9a9a9a;
+}
+#detailmain .Left .Littleimg{
+    width: 335px;
+    margin-left: 20px;
+    padding:10px 0 10px 8px;
+}
+#detailmain .Left .Littleimg div{
+    float: left;
+    width: 24px;
+    height: 79px;
+    cursor: pointer;
+}
+#detailmain .Left .Littleimg .LittleimgLeft{
+    background: url("../img/left.png") no-repeat 0 26px;
+}
+#detailmain .Left .Littleimg .LittleimgRight{
+    background: url("../img/right.png") no-repeat 0 26px;
+}
+#detailmain .Left .Littleimg img{
+    float:left;
+    width: 50px;
+    height: 68px;
+    cursor: pointer;
+    margin: 0 13px 10px 0;
+    border:1px solid #fff;
+}
+#detailmain .Left .Littleimg img.on{
+    border:1px solid #6e6e6e;
+}
+#detailmain .Left .goodid{
+    color: #484747;
+    font:12px/22px "";
+    background: url("../img/try.png") no-repeat 225px center;
+}
+#detailmain .Left .Littlemirror{
+    top: 50px;
+    left: 50px;
+    width: 81px;
+    height: 110px;
+    position: absolute;
+    border: 1px solid #999;
+    background: rgba(255,255,255,0.5);
+    display: none;
+    z-index: 110;
+}
+#detailmain .Left .Bigmirror{
+    width: 350px;
+    height: 476px;
+    top:50px;
+    left:474px;
+    position: absolute;
+    border: 1px solid #999;
+    display: none;
+    z-index: 110;
+    overflow: hidden;
+}
+#detailmain .Left .Bigmirror img{
+    position: absolute;
+    width: 1476px;
+    height: 2006px;
+}
+#detailmain .Center{
+    width: 520px;
+    padding: 42px 30px 15px;
+    min-height: 625px;
+    position: relative;
+    border-right: 1px solid #E8E8E8;
+}
+#detailmain .Center h2{
+    font:600 20px/30px '';
+    color: #111;
+}
+#detailmain .Center .CenterTop{
+    margin-top: 15px;
+    padding-left: 16px;
+    padding-top: 10px;
+    width: 504px;
+    background: #f4f4f4;
+}
+#detailmain .Center .CenterTop h3{
+    color: #e50065;
+    font: 48px/58px '';
+}
+#detailmain .Center .CenterTop .shop{
+    font: 12px/22px '';
+    color:#6a6a6a;
+}
+#detailmain .Center .CenterTop .red{
+    font:12px/46px '';
+}
+#detailmain .Center .erwei{
+    position: absolute;
+    width: 95px;
+    border-top: 1px dashed #D58E64;
+    float: right;
+    padding-left: 50px;
+    font: 14px/36px '';
+    color: #745555;;
+    top:100px;
+    left:385px;
+    text-align: right;
+    background: url("../img/2wei.gif") no-repeat;
+}
+#detailmain .Center .Choose{
+    font:16px/42px '';
+    color: #666;
+}
+#detailmain .Center .Choose .Color{
+    display: inline-block;
+    height: 38px;
+    width: 95px;
+    padding: 2px;
+    margin: 20px 10px;
+    background: url("../img/on.jpg") no-repeat;
+}
+#detailmain .Center .Choose .Color a{
+    display: inline-block;
+    height: 38px;
+    width: 42px;
+    padding-right: 20px;
+    text-align: right;
+}
+#detailmain .Center .Choose .Color img{
+    display: inline-block;
+    width: 30px;
+    height: 38px;
+    margin-top:-8px;
+}
+#detailmain .Center .Choose .size{
+    width: 43px;
+    height: 28px;
+    margin: 0 9px 5px 0;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    float: left;
+    font-family: arial;
+    cursor: pointer;
+}
+#detailmain .Center .Choose .size.first{
+    border: none;
+    text-align: left;
+}
+#detailmain .Center .Choose .size.on{
+    border: 1px solid #f00;
+}
+#detailmain .Center .Choose .NUM{
+    position: relative;
+}
+#detailmain .Center .Choose .NUM span{
+    display: inline-block;
+    width: 43px;
+    height: 28px;
+    margin: 0 9px 5px 0;
+    line-height: 28px;
+    text-align: left;
+    font-size: 16px;
+    float: left;
+    font-family: arial;
+    cursor: pointer;
+}
+#detailmain .Center .Choose .NUM span.num{
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: #000;
+}
+#detailmain .Center .Choose .NUM span.jia{
+    height: 14px;
+    width: 30px;
+    background: url("../img/jia.png") no-repeat center;
+    border: 1px solid #ccc;
+    position: absolute;
+    top:0px;
+    left: 104px;
+}
+#detailmain .Center .Choose .NUM span.jian{
+    width: 30px;
+    background: url("../img/jian.png") no-repeat center;
+    height: 14px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top:16px;
+    left: 104px;
+    border-top: none;
+}
+#detailmain .Center .Choose .buy{
+    cursor: pointer;
+    color: #e70164;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    font-size: 18px;
+    border: 1px solid #e70164;
+    width: 204px;
+    height: 50px;
+    display: inline-block;
+    margin:30px 30px 20px 0;
+}
+#detailmain .Center .Choose .cart{
+    cursor: pointer;
+    color: #FFF;
+    background: #e70164;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    font-size: 18px;
+    border: 1px solid #e70164;
+    width: 204px;
+    height: 50px;
+    display: inline-block;
+    margin:30px 30px 20px 0;
+}
+#detailmain .Right{
+    padding-top: 30px;
+    padding-left: 10px;
+    font:600 16px/26px '';
+    text-align: center;
+    color: #333;
+}
+#detailmain .Right img{
+    width: 144px;
+    height: 168px;
+}
+#detailmain .Right .shang{
+    cursor: pointer;
+    display: inline-block;
+    width:15px;
+    height: 20px;
+    margin: 10px;
+    background: url("../img/shang.png") no-repeat center;
+}
+#detailmain .Right .xia{
+    cursor: pointer;
+    display: inline-block;
+    width:15px;
+    height: 20px;
+    margin: 10px;
+    background: url("../img/xia.png") no-repeat center;
+}
+#detailmain .Right .loadmorecontainer{
+    width: 144px;
+    height: 582px;
+    overflow: hidden;
+    position: relative;
+}
+#detailmain .Right .innerloadmorecontainer{
+    position: absolute;
+    top:-582px;
+}
+#Detail{
+    padding: 30px 0;
+}
+#Detail .Left{
+    margin-right: 30px;
+}
+#Detail .Right{
+    position: relative;
+}
+#Detail .tabBottonContainer{
+    position: absolute;
+    background: #e8e8e8;
+    color: #545454;
+    height: 42px;
+    font: 14px/40px '';
+    width: 990px;
+}
+#Detail .tabBottonContainer .tabBotton{
+    float: left;
+    width: 150px;
+    height: 40px;
+    border-top: 2px solid #e8e8e8;
+    text-align: center;
+    cursor: pointer;
+}
+#Detail .tabBottonContainer .tabBotton.on{
+    border-top: 2px solid #E60060;
+    background: #fff;
+    color: #000;
+}
+#Detail .tabBottonContainer.scroll{
+    position: fixed;
+    top: 0;
+}
+#Detail .Right .tabMain{
+    padding-top: 40px;
+}

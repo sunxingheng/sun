@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【梦芭莎官网】梦芭莎女性购物网站女装、内衣、文胸、鞋包_网购衣服商城</title>
+    <link rel="stylesheet" href="common/css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="css/public.css" type="text/css"/>
+    <link rel="stylesheet" href="list/css/list.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="js/jquery.fly.js"></script>
+</head>
+<body>
+<!------以下是右边固定侧边栏，包括购物车、用户中心、等（公共）---->
+<div id="sidebarcontainer"></div>
+<script type="text/javascript">$("#sidebarcontainer").load("common/sidebar.htm")</script>
+<!---下是头部(不可以公共部分导入)（公共）------------->
+<div id="topcontainer"></div>
+<script type="text/javascript">$("#topcontainer").load("common/top.htm")</script>
+
+<!--*************以下是head****包括logo和搜索栏（公共）*************-->
+<div id="headcontainer"></div>
+<script type="text/javascript">$("#headcontainer").load("common/head.htm")</script>
+<div id="headbotton"><div class="margin"><img src="list/img/head.jpg" alt=""></div></div>
+<!--**********************以下是选项栏********************-->
+<div id="choice">
+    <div class="margin">
+        <dl class="clear first">
+            <dt>品牌</dt>
+            <dd>
+                <span>名品馆</span>
+                <span>美国馆</span>
+                <span>梦芭莎官方旗舰店</span>
+                <span>原创设计</span>
+                <span>潮流前线</span>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>类型</dt>
+            <dd>
+                <a href="#">男装</a>
+                <a href="#">女装</a>
+                <a href="#">文胸</a>
+                <a href="#">潮流设计</a>
+                <a href="#">套装</a>
+                <a href="#">鞋包</a>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>版型</dt>
+            <dd>
+                <a href="#">宽松型</a>
+                <a href="#">常规型</a>
+                <a href="#">修身型</a>
+                <a href="#">合身型</a>
+                <a href="#">标准型</a>
+                <a href="#">直筒型</a>
+                <a href="#">标准版</a>
+                <a href="#">蝙蝠型</a>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>花型</dt>
+            <dd>
+                <a href="#">净色</a>
+                <a href="#">印花</a>
+                <a href="#">其他</a>
+                <a href="#">条纹花案</a>
+                <a href="#">绣花</a>
+                <a href="#">提花</a>
+                <a href="#">标准版</a>
+                <a href="#">间条格子</a>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="margin" style="padding: 10px 0;cursor: pointer"><img src="list/img/list-top.png" alt=""></div>
+
+<!--*****************以下是列表详情（json导入）******-->
+<div id="main">
+    <div class="margin">
+        <div id="listContainer" class="clear">
+        </div>
+    </div>
+</div>
+
+<!--********************网站底部（公共）***********-->
+<div id="footercontainer"></div>
+<script type="text/javascript">$("#footercontainer").load("common/footer.htm")</script>
+<script type="text/javascript" src="list/js/list.js"></script>
+</body>
+<script type="text/javascript">
+    var Timer=0;
+    var TIMER=setInterval(function(){
+        if(!document.getElementById('footer')){
+            alert('服务器正在响应..........');
+        }else {
+            clearInterval(TIMER);
+        }
+        if(Timer==1){
+            alert('算了不逗你了，服务器根本没开  ^_^');
+            clearInterval(TIMER);
+        }
+        Timer++;
+    },4000)
+</script>
+</html>

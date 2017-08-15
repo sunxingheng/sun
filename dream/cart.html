@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="common/css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="css/public.css" type="text/css"/>
+    <link rel="stylesheet" href="cart/css/cart.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fly.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="cart/js/cart.js"></script>
+</head>
+<body style="background: #fff;">
+<!---下是头部(不可以公共部分导入)（公共）------------->
+<div id="topcontainer"></div>
+<script type="text/javascript">$("#topcontainer").load("common/top.htm")</script>
+<div id="show">
+    <div class="margin clear">
+        <a href="index.html" class="left"><img src="cart/img/logo.jpg" alt=""></a>
+        <div class="get"></div>
+    </div>
+</div>
+<!--*************以下是主体部分***********-->
+<div id="main">
+    <div class="margin">
+        <div class="mainhead clear">
+            <div class="check left"><input type="checkbox" checked>全部</div>
+            <div class="name left">商品</div>
+            <div class="parise left">单价</div>
+            <div class="num left">数量</div>
+            <div class="sum left">小计</div>
+            <div class="delate left">操作</div>
+        </div>
+        <div class="ifNo" style="height: 70px;padding: 0 50px;font:600 20px/70px '';text-align:center;color: #666;border-bottom: 1px solid #dedede;" >
+            您的购物车空空如也！！您可以去 <a href="index.html" style="font-weight: 100;color: red;">首页</a>去看看...
+        </div>
+        <div class="shopContainer">
+            <!--从cookie中调用商品信息并结合json数据加载-->
+        </div>
+        <div class="mainBottom clear">
+            <img class="left" src="cart/img/2wei.png" alt="">
+            <div class="right submit">
+                <h2>
+                    商品总计: <span class="sum">0件</span>
+                    <span class="prise">折后商品总金额: <span class="totalprise"></span></span>
+                </h2>
+                <div class="goToShop">去结算</div>
+            </div>
+        </div>
+        <img src="cart/img/other.png" alt="" style="margin:20px auto">
+    </div>
+    <img src="cart/img/other2.png" alt="" style="margin:20px auto;width: 1225px;">
+</div>
+<!--********************网站底部（公共）***********-->
+<div id="footercontainer"></div>
+<script type="text/javascript">$("#footercontainer").load("common/footer.htm")</script>
+</body>
+<script type="text/javascript">
+    var Timer=0;
+    var TIMER=setInterval(function(){
+        if(!document.getElementById('footer')){
+            alert('服务器正在响应..........');
+        }else {
+            clearInterval(TIMER);
+        }
+        if(Timer==1){
+            alert('算了不逗你了，服务器根本没开  ^_^');
+            clearInterval(TIMER);
+        }
+        Timer++;
+    },4000)
+</script>
+</html>

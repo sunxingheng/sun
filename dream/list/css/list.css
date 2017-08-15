@@ -1,0 +1,132 @@
+﻿@charset "utf-8";
+.margin{
+    width: 1200px;
+    margin: 0 auto;
+}
+#headbotton{
+    padding: 20px 0;
+}
+#choice dl{
+    border:1px solid #d6d6d6;
+}
+#choice dl dt{
+    font-weight: bold;
+    float: left;
+    line-height: 56px;
+    font-size: 14px;
+    background: #f8f8f8;
+    color: #4a4a4a;
+    width: 100px;
+    text-align: center;
+}
+#choice dl dd{
+    padding: 5px;
+    float: left;
+}
+#choice dl dd span{
+    display: inline-block;
+    font: 14px/44px '';
+    width: 161px;
+    height: 44px;
+    color: #666;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #d6d6d6;
+}
+#choice dl dd a{
+    padding:0 10px;
+    font: 14px/44px '';
+    color: #666;
+}
+#choice dl dd a:hover{
+    color: #e30164;
+    text-decoration: underline;
+}
+/**************以下是list样式********/
+#listContainer{
+    overflow: hidden;
+    width: 1300px;
+    padding-top: 10px;
+}
+#listContainer .container{
+    float: left;
+    position: relative;
+    border: 1px solid #eee;
+    width: 230px;
+    margin: 5px 5px 0 0;
+}
+#listContainer .container:hover{
+    border: 1px solid #ff0065;
+}
+#listContainer .container img{
+    width: 230px;
+    height: 310px;
+}
+#listContainer .container h2{
+    color: #f0006a;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#listContainer .container h2 .oldpirse{
+    padding-left: 10px;
+    color: #666;
+    text-decoration: line-through;
+}
+#listContainer .container h3{
+    width: 215px;
+    padding-left: 10px;
+    white-space: nowrap;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    font: 12px/22px '';
+}
+#listContainer .container h4{
+    width: 215px;
+    font: 12px/22px '';
+    color: #666;
+    text-decoration: underline;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+#listContainer .container .buy{
+    position: absolute;
+    top: 270px;
+    width: 210px;
+    height: 40px;
+    background: rgba(0,0,0,0.9);
+    font: 12px/40px '';
+    color: #FFF;
+    padding-left: 20px;
+    display: none;
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+#listContainer .container .buy span.cart{
+    cursor: pointer;
+    display: block;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    background: url("../img/buy.png") no-repeat;
+}
+#listContainer .container .buy span{
+    text-align: center;
+    font: 12px/20px '';
+    margin:0 5px;
+    cursor: pointer;
+}
+#listContainer .container .buy span.on{
+    color: #ff0065;
+}

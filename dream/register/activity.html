@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动专题</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="common/css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="css/public.css" type="text/css"/>
+    <link rel="stylesheet" href="details/css/details.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fly.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="details/js/details.js"></script>
+</head>
+<body style="background: #f6f6f6;">
+<!------以下是右边固定侧边栏，包括购物车、用户中心、等（公共）---->
+<div id="sidebarcontainer"></div>
+<script type="text/javascript">$("#sidebarcontainer").load("common/sidebar.htm")</script>
+<!---下是头部(不可以公共部分导入)（公共）------------->
+<div id="topcontainer"></div>
+<script type="text/javascript">$("#topcontainer").load("common/top.htm")</script>
+<!--*************以下是head****包括logo和搜索栏（公共）*************-->
+<div id="headcontainer"></div>
+<script type="text/javascript">$("#headcontainer").load("common/head.htm")</script>
+<div id="logo"><div class="margin"><img src="details/img/detaillogo.jpg" alt=""></div></div>
+<a href="list.html"><img src="img/activity1.png" alt="" style="margin:0 auto"></a>
+<a href="list.html"><img src="img/activity2.png" alt="" style="margin:0 auto"></a>
+<!--********************网站底部（公共）***********-->
+<div id="footercontainer"></div>
+<script type="text/javascript">$("#footercontainer").load("common/footer.htm")</script>
+<script type="text/javascript" src="list/js/list.js"></script>
+</body>
+<script type="text/javascript">
+    var Timer=0;
+    var TIMER=setInterval(function(){
+        if(!document.getElementById('footer')){
+            alert('服务器正在响应..........');
+        }else {
+            clearInterval(TIMER);
+        }
+        if(Timer==1){
+            alert('算了不逗你了，服务器根本没开  ^_^');
+            clearInterval(TIMER);
+        }
+        Timer++;
+    },4000)
+</script>
+</html>

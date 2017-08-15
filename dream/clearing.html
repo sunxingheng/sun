@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确认提交订单</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="common/css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="css/public.css" type="text/css"/>
+    <link rel="stylesheet" href="clearing/css/clearing.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fly.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="clearing/js/clearing.js"></script>
+</head>
+<body style="background: #fff;">
+<!---下是头部(不可以公共部分导入)（公共）------------->
+<div id="topcontainer"></div>
+<script type="text/javascript">$("#topcontainer").load("common/top.htm")</script>
+<div id="show">
+    <div class="margin clear">
+        <a href="index.html" class="left"><img src="cart/img/logo.jpg" alt=""></a>
+        <div class="get"></div>
+    </div>
+</div>
+<!--****************主体部分*************-->
+<div id="main">
+    <div class="margin">
+        <div class="address">
+            <div class="addressHead">
+                收货信息
+            </div>
+            <div class="addressMain">
+                <select name="" id="province">
+                    <option value="" class="fis">请选择省份</option>
+                </select>
+                <select name="" id="city">
+                    <option value="" class="fis">请选择城市</option>
+                </select>
+                <select name="" id="county">
+                    <option value="" class="fis">请选择县/区</option>
+                </select>
+            </div>
+        </div>
+        <img src="clearing/img/submit.png" alt="" style="margin:20px auto">
+    </div>
+</div>
+<!--********************网站底部（公共）***********-->
+<div id="footercontainer"></div>
+<script type="text/javascript">$("#footercontainer").load("common/footer.htm")</script>
+</body>
+<script type="text/javascript">
+    var Timer=0;
+    var TIMER=setInterval(function(){
+        if(!document.getElementById('footer')){
+            alert('服务器正在响应..........');
+        }else {
+            clearInterval(TIMER);
+        }
+        if(Timer==1){
+            alert('算了不逗你了，服务器根本没开  ^_^');
+            clearInterval(TIMER);
+        }
+        Timer++;
+    },4000)
+</script>
+</html>

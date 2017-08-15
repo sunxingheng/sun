@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【梦芭莎官网】梦芭莎女性购物网站女装、内衣、文胸、鞋包_网购衣服商城</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="common/css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="css/public.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+</head>
+<body>
+<a class="Fixed" href="activity.html"  style="position: fixed;z-index:900;"><img class="Fixed" src="img/activity.png" alt=""></a>
+<div class="Fixed" style="position: fixed;z-index:800;width: 100%;height: 100%;opacity: 0.5;filter: alpha(opacity=50);background: #000;"></div>
+<img class="FixedClose" src="img/close.png" style="position: fixed;z-index:950;width: 50px;height:50px;cursor: pointer">
+<script type="text/javascript">
+    $("a.Fixed").css({
+        top:window.innerHeight/2-200,
+        left:window.innerWidth/2-350
+    })
+    $('.FixedClose').css({
+        top:window.innerHeight/2-180,
+        left:window.innerWidth/2+310
+    })
+    $('.FixedClose').click(function(){
+        $('.FixedClose').css('display','none');
+        $("a.Fixed").css('display','none');
+        $("div.Fixed").css('display','none');
+    })
+</script>
+<!------以下是右边固定侧边栏，包括购物车、用户中心、等（公共）---->
+<div id="sidebarcontainer"></div>
+<script type="text/javascript">$("#sidebarcontainer").load("common/sidebar.htm")</script>
+
+<!---下是头部(不可以公共部分导入)（公共）------------>
+<div id="topcontainer"></div>
+<script type="text/javascript">$("#topcontainer").load("common/top.htm")</script>
+<!--*******************以下是导航栏***************-->
+
+<div id="nav" >
+    <div class="margin">
+        <ul class="clear">
+            <li><a href="#"><img src="img/nav%20(1).jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/nav%20(2).jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/nav%20(3).jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/nav%20(4).jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/nav%20(5).jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/nav%20(6).jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/nav%20(7).jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/nav%20(8).jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/nav%20(8).jpg" alt=""></a></li>
+        </ul>
+    </div>
+</div>
+
+<!--*************以下是head****包括logo和搜索栏（公共）*************-->
+<div id="headcontainer"></div>
+<script type="text/javascript">$("#headcontainer").load("common/head.htm")</script>
+<!--*****************以下是banner上面的nav**************-->
+<div id="bannernav">
+    <div class="margin">
+        <div class="left">
+            <a href="list.html" class="first">首页</a>
+            <a href="list.html">美国馆</a>
+            <a href="list.html">名品馆</a>
+            <a href="list.html">原创汇</a>
+            <a href="list.html">女装馆</a>
+            <a href="list.html">男装馆</a>
+            <a href="list.html">美妆馆</a>
+        </div>
+        <div class="right">
+            <a href="list.html">经典热卖</a>
+            <a href="list.html">潮流风向</a>
+            <a href="list.html">特价精选</a>
+        </div>
+        <ul id="menu">         <!-------JSON   Ajax 导入----------->
+            <li><h2></h2><h3></h3></li><li><h2></h2><h3></h3></li>         <!-------JSON   Ajax 导入----------->
+            <li><h2></h2><h3></h3></li><li><h2></h2><h3></h3></li>         <!-------JSON   Ajax 导入----------->
+            <li><h2></h2><h3></h3></li>
+        </ul>
+        <ul id="goodsContainer">
+            <li><h2></h2><h3></h3></li><li><h2></h2><h3></h3></li>
+            <li><h2></h2><h3></h3></li><li><h2></h2><h3></h3></li>
+        </ul>
+    </div>
+</div>
+
+<!--*************以下是banner*****************-->
+<div id="banner">
+    <div class="margin">
+    <ul class="banList">
+        <li class="active"><a href="list.html"><img src="img/banner1.jpg"/></a></li>
+        <li><a href="list.html"><img src="img/banner2.jpg"/></a></li>
+        <li><a href="list.html"><img src="img/banner3.jpg"/></a></li>
+        <li><a href="list.html"><img src="img/banner4.jpg"/></a></li>
+    </ul>
+    <div class="fomW">
+        <div class="jsNav">
+            <a href="javascript:;" class="trigger current"></a>
+            <a href="javascript:;" class="trigger"></a>
+            <a href="javascript:;" class="trigger"></a>
+            <a href="javascript:;" class="trigger"></a>
+        </div>
+    </div></div>
+</div>
+
+<!--*************以下是tab切换*****************-->
+
+<div id="tab">
+    <div class="margin clear">
+        <div class="left _left">
+            <a href="list.html"><img src="img/Coupon.jpg" alt=""></a>
+        </div>
+        <div class="left">
+            <div id="tabTop">
+                <span class="on">品牌推荐</span>
+                <span>美国品牌</span>
+                <span>名品馆</span>
+                <span>韩国馆</span>
+            </div>
+            <div id="tabbutton">
+                <div class="tab1 on">
+                    <img src="img/tab1-1.jpg" alt="">
+                    <img src="img/tab1-2.png" alt="">
+                </div>
+                <div class="tab2"><img src="img/tab2.png" alt=""></div>
+                <div class="tab3"><img src="img/tab3.png" alt=""></div>
+                <div class="tab4"><img src="img/tab4.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--*****************以下是区域活动*************-->
+<div id="America">
+    <div class="margin">
+        <a href="list.html"><img src="img/America.jpg" alt=""></a>
+        <a href="list.html"><img src="img/America-map.jpg" alt=""></a>
+    </div>
+</div>
+<!--******************以下是每日新品****************-->
+<div id="DataNew">
+    <div class="margin">
+        <div class="top">
+            <img src="img/aroundTitle.jpg" alt="">
+        </div>
+        <div class="container">
+            <span class="Left"><img src="img/aroundleft.png" alt=""></span>
+            <span class="Right"><img src="img/aroundRight%20.png" alt=""></span>
+            <div class="Icon">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="ImgMap">
+                <img src="img/around1.jpg" alt="">
+                <img src="img/around2.jpg" alt="">
+                <img src="img/around3.jpg" alt="">
+                <img src="img/around4.png" alt="">
+                <img src="img/around9.jpg" alt="">
+                <img src="img/around6.jpg" alt="">
+                <img src="img/around7.jpg" alt="">
+                <img src="img/around8.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--********************以下是潮流风向标*************-->
+<div id="Fashion">
+    <div class="margin">
+        <img src="img/Fashion.jpg" alt="">
+        <div class="clear">
+            <img src="img/Fashion1.jpg" alt="">
+            <img src="img/Fashion2.jpg" alt="">
+            <img src="img/Fashion3.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<!--********************以下商品分类（动态导入）***************-->
+<div id="goods">
+    <div class="margin">
+        <div id="title"><img src="img/goods/good.jpg" alt=""></div>
+        <div id="good1" class="good" title="neiyi">
+            <span class="icon"><img src="img/goods/good1-1.png" alt=""></span>
+            <img src="img/goods/good1.jpg" alt="">
+            <div class="container clear"></div>
+        </div>
+        <div id="good2" class="good" title="nvzhuang">
+            <span class="icon"><img src="img/goods/good2-1.png" alt=""></span>
+            <img src="img/goods/good2.jpg" alt="">
+            <div class="container clear"></div>
+        </div>
+        <div id="good3" class="good" title="nanzhang">
+            <span class="icon"><img src="img/goods/good3-1.png" alt=""></span>
+            <img src="img/goods/good3.jpg" alt="">
+            <div class="container clear"></div>
+        </div>
+        <div id="good4" class="good" title="xiebao">
+            <span class="icon"><img src="img/goods/good4-1.png" alt=""></span>
+            <img src="img/goods/good4.jpg" alt="">
+            <div class="container clear"></div>
+        </div>
+    </div>
+</div>
+
+<!--********************网站底部（公共）***********-->
+<div id="footercontainer"></div>
+<script type="text/javascript">$("#footercontainer").load("common/footer.htm")</script>
+
+</body>
+<script type="text/javascript">
+    var Timer=0;
+    var TIMER=setInterval(function(){
+        if(!document.getElementById('footer')){
+            alert('服务器正在响应..........');
+        }else {
+            clearInterval(TIMER);
+        }
+        if(Timer==1){
+            alert('算了不逗你了，服务器根本没开  ^_^');
+            clearInterval(TIMER);
+        }
+        Timer++;
+    },4000)
+</script>
+</html>

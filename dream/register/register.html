@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梦芭莎注册</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/public.css" type="text/css"/>
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+
+<!----------------头部图片--------背景链接至首页--------->
+<div id="head">
+    <div class="margin">
+        <a href="../index.html" target="_blank">
+        </a>
+    </div>
+</div>
+
+<!--------------以下是登录主页面----------------------->
+
+<div id="main">
+    <div class="margin clear">
+        <div class="left" id="left_logo">
+            <img src="img/logo.jpg" alt="">
+        </div>
+        <div class="right clear" id="login">
+            <div class="clear">
+                <a href="../login/login.html" class="loginhref left">登录</a>
+                <a class="register right">注册</a>
+            </div>
+            <div class="register">
+                <div class="registerContainer">
+                    <input type="text" placeholder="邮箱" id="registerMail" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"><br>
+                    <p id="checkMail"></p>
+                    <input type="text" placeholder="手机号" id="registerPhone" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"><br>
+                    <p id="checkPhone"></p>
+                    <input type="password" placeholder="密码" id="registerPassword" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"><br>
+                    <p id="checkPassword"></p><span class="a"></span>
+                    <input type="password" placeholder="确认密码" id="registerReaPassword">
+                    <p id="checkReaPassword"></p><span class="b"></span>
+                </div>
+                <div id="verify">
+                    <p class="clear">
+                        <span class="left">点击下方图片，转到正确方向</span>
+                        <span class="right">换一组</span>
+                    </p>
+                    <div id="verifyImg" class="clear"></div>
+                    <div id="checkverifyImg"></div>
+                </div>
+                <div id="registerOk">同意以下协议,提交</div>
+                <div id="registerAgree">
+                    <input type="checkbox" class="left" id="registerAgreecheck"/>同意<span >梦芭莎注册条款</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="foot">
+    <div class="margin">
+        <a href="#" rel="nofollow" title="女性内衣专家梦芭莎首页">首页</a>
+        <a href="#" rel="nofollow">公司简介</a>
+        <a href="#" title="梦芭莎">旗下品牌</a>
+        <a href="#" rel="nofollow">零售店址</a>
+        <a href="#" title="梦芭莎网站联盟">梦芭莎网盟</a>
+        <a href="#">网店代理</a>
+        <a href="#" target="_blank" title="梦芭莎网店代理">网站地图</a>
+        <a href="#">友情链接</a>
+        <a href="#" title="梦芭莎评论">加入我们</a>
+        <br />
+        Copyright © 2010-2019 梦芭莎官方网站，广州摩拉网络科技有限公司 All Rights Reserved 粤B2-20080069号
+    </div>
+</div>
+
+
+
+</body>
+</html>

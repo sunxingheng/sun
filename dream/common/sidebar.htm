@@ -1,0 +1,218 @@
+<div id="sidebar">
+    <div id="sidebarMy" class="on"></div>
+    <div id="sidebarCart" class="on">
+        <p id="sidebarCartLogo"></p>
+        <p>购<br/>物<br/>车</p>
+        <p id="sidebarCartNumber">0</p>
+    </div>
+    <div id="Cart">
+        <p class="title clear"><span class="left">购物车</span><span class="right">×</span></p>
+        <div class="ifNo">空空如也</div>
+        <div class="container">
+            <!--<div class="goodcontainer clear">
+                <h2 class="over clear"><a class="left">商店</a><span class="right">删除</span></h2>
+                <div class="left _left"><img src="list/img/list1 (1).jpg"></div>
+                <div class="left _right">
+                    <p class="name over"><a href="#">商品名</a></p>
+                    <p class="number">
+                        <span class="size">XL</span>
+                        <span class="jia">－</span>
+                        <span class="num">1</span>
+                        <span class="jian">＋</span>
+                        <span class="pirse">单价:￥2323</span>
+                        <span class="sum">￥5550</span>
+                    </p>
+                </div>
+            </div>-->
+        </div>
+        <div class="Cartfoot">
+            <p class="clear">
+                <span class="left">共<span class="num">0</span>件商品</span>
+                <span class="right">￥<span class="sum">0</span></span>
+            </p>
+            <div class="Clearing">去购物车结算</div>
+        </div>
+    </div>
+    <div id="sidebarLike" class="on"></div>
+    <div id="sidebarPhone" class="on"></div>
+    <div id="sidebarWeChat" class="on"></div>
+    <div id="sidebarService" class="on"></div>
+    <div id="sidebarScrollTop" class="on"></div>
+</div>
+<!--//***********侧边栏script标签-->
+<script type="text/javascript">
+    console.log( $.cookie("registerUsers"))
+    console.log( $.cookie("loginUser"))
+    $(function(){
+        if(document.getElementById('Cart')){
+            $('#Cart .title .right').click(function(){
+                $("#Cart").stop().animate({right:-270},300);
+            });
+            $("#Cart .container").height($("#Cart").outerHeight()-162);
+            $(window).resize(function(){
+                $("#Cart .container").height($("#Cart").outerHeight()-162);
+            });
+            $("#sidebarCart").click(function(){
+                if(parseInt($("#Cart").css('right'))>-270){
+                    $("#Cart").stop().animate({right:-270},300);
+                }else{
+                    $("#Cart").stop().animate({right:36},300);
+                }
+            });
+            $("#sidebarScrollTop").click(function(){
+                var i=$(window).scrollTop();
+                var TImer=setInterval(function(){
+                    if(i<=0){clearInterval(TImer)}
+                    $(window).scrollTop(i);
+                    i-=100;
+                },10);
+            });
+            $("#Cart .Clearing").click(function(){
+                if($.cookie("loginUser")){
+                    window.location.href='cart.html'
+                }else {
+                    alert('亲！请登录。')
+                }
+            })
+            $("*").not("body,html,#sidebarcontainer,#sidebar,#sidebar div,#sidebar span,#sidebar p").click(function(e){
+                var e=e||window.event;
+                e.stopPropagation();
+                $("#Cart").stop().animate({right:-270},300);
+            });
+            LoadCart();
+        }
+    });
+    //刷新页面时调用函数更新购物车
+    /*
+     <div class="goodcontainer clear">
+     <h2 class="over clear"><a class="left">商店</a><span class="right">删除</span></h2>
+     <div class="left _left"><img src="list/img/list1 (1).jpg"></div>
+     <div class="left _right">
+     <p class="name over"><a href="#">商品名</a></p>
+     <p class="number">
+     <span class="size">XL</span>
+     <span class="jia">－</span>
+     <span class="num">1</span>
+     <span class="jian">＋</span>
+     <span class="sum">￥0</span>
+     </p>
+     </div>
+     </div>
+     */
+        //以下从cookie中导入至购物车
+    function LoadCart(){
+        if($.cookie("loginUser")){
+            $.getJSON("list/js/list.json",function(data){
+                var GoodInformation=data;
+                var ALLusers= $.cookie("registerUsers");
+                var NOWuser= $.cookie("loginUser");
+                var LoginCookie=/@/.test(NOWuser)?StrToObj3Arr(ALLusers)[0][NOWuser]:StrToObj3Arr(ALLusers)[1][NOWuser];
+                var Logingoods=LoginCookie.split("+");
+                if(/[A-Z]\*\d+/.test(LoginCookie)) {
+                    $('#Cart .ifNo').css('display','none');
+                    var TotalPrices = 0;
+                    var TotalNum = 0;
+                    var _list = "";
+                    for (var i = 0; i < Logingoods.length - 1; i++) {
+                        var GoodID = Logingoods[i].match(/\d+/);
+                        var GoodSize = Logingoods[i].match(/[A-Z]+/);
+                        var GoodNum = Logingoods[i].split("*")[1];
+                        _list += '<div class="goodcontainer clear" data-id="' + GoodID + '" data-size="' + GoodSize + '">' +
+                                '<h2 class="over clear"><a class="left">' + GoodInformation[GoodID]["shop"] + '</a><span class="right delate">删除</span></h2>' +
+                                '<div class="left _left"><img src="list/' + GoodInformation[GoodID]["src"] + '"></div>' +
+                                '<div class="left _right">' +
+                                '<p class="name over"><a  href="details.html?' + GoodID + '">' + GoodInformation[GoodID]["name"] + '</a></p>' +
+                                '<p class="number">' +
+                                '<span class="size">' + GoodSize + '</span>' +
+                                '<span class="jian">－</span>' +
+                                '<span class="num">' + GoodNum + '</span>' +
+                                '<span class="jia">＋</span>' +
+                                '<span class="prise">单:' + GoodInformation[GoodID]["prise"] + '</span>' +
+                                '<span class="sum">￥' + GoodInformation[GoodID]["prise"].match(/\d+/) * GoodNum + '</span>' +
+                                '</p>' +
+                                '</div>' +
+                                '</div>';
+                        TotalNum += GoodNum * 1;
+                        TotalPrices += GoodInformation[GoodID]["prise"].match(/\d+/) * GoodNum;
+                    }
+                    $("#Cart .container").html(_list);
+                    $("#Cart .Cartfoot .clear .num").text(TotalNum);
+                    $("#sidebarCart #sidebarCartNumber").text(TotalNum);
+                    $("#Cart .Cartfoot .clear .sum").text(TotalPrices);
+                    AddEvent();
+                }else{
+                    $('#Cart .ifNo').css('display','block');
+                    $('#Cart .ifNo').text('空空如也');
+                }
+            });
+        }else{
+            $('#Cart .ifNo').css('display','block');
+            $('#Cart .ifNo').text('亲、请登录。');
+            $("#Cart .Cartfoot .clear .num").text(0);
+            $("#sidebarCart #sidebarCartNumber").text(0);
+            $("#Cart .Cartfoot .clear .sum").text(0);
+        }
+    }
+    function AddEvent(){//给购物车中添加点击事件
+        function SETCookie(ClickDataid,ClickSize,Clicknum){
+            var GoodInformationRrg=new RegExp($.cookie("loginUser")+".*?"+ClickDataid+ClickSize+"\\*\\d+\\+");
+            var GoodInformation=$.cookie("registerUsers").match(GoodInformationRrg);
+            var NewInformation=GoodInformation[0].split(ClickDataid+ClickSize+"*")[0]+ClickDataid+ClickSize+"*"+Clicknum+"+";
+            var NewregisterUsers=$.cookie("registerUsers").replace(GoodInformationRrg,NewInformation);
+            $.cookie("registerUsers",NewregisterUsers,{expires:7, path:"/"})
+        }
+        $("#Cart .container .goodcontainer").each(function(){
+            $(this).find(".jia").mousedown(function(){
+                $(this).css("background","red");
+            });
+            $(this).find(".jia").mouseup(function(){
+                $(this).css("background","#FFF");
+                var VAL=$(this).siblings(".num").text();
+                $(this).siblings(".num").text(VAL*1+1);
+                VAL=$(this).siblings(".num").text();
+                var PRISE=$(this).siblings(".prise").text().match(/\d+/);
+                $(this).siblings(".sum").text("￥"+VAL*PRISE);
+                $("#Cart .Cartfoot .clear .num").text($("#Cart .Cartfoot .clear .num").text()*1+1);
+                $("#sidebarCart #sidebarCartNumber").text($("#Cart .Cartfoot .clear .num").text());
+                $("#Cart .Cartfoot .clear .sum").text($("#Cart .Cartfoot .clear .sum").text()*1+PRISE*1);
+                SETCookie($(this).parents(".goodcontainer").attr("data-id"),$(this).siblings(".size").text(),VAL);
+            });
+            $(this).find(".jian").mousedown(function(){
+                $(this).css("background","red");
+            });
+            $(this).find(".jian").mouseup(function(){
+                $(this).css("background","#FFF");
+                var VAL=$(this).siblings(".num").text();
+                $(this).siblings(".num").text(VAL*1-1);
+                if($(this).siblings(".num").text()*1<=0){
+                    $(this).siblings(".num").text(1);
+                }else{
+                    VAL=$(this).siblings(".num").text();
+                    var PRISE=$(this).siblings(".prise").text().match(/\d+/);
+                    $(this).siblings(".sum").text("￥"+VAL*PRISE);
+                    $("#Cart .Cartfoot .clear .num").text($("#Cart .Cartfoot .clear .num").text()*1-1);
+                    $("#sidebarCart #sidebarCartNumber").text($("#Cart .Cartfoot .clear .num").text());
+                    $("#Cart .Cartfoot .clear .sum").text($("#Cart .Cartfoot .clear .sum").text()*1-PRISE*1);
+                    SETCookie($(this).parents(".goodcontainer").attr("data-id"),$(this).siblings(".size").text(),VAL);
+                }
+            });
+            $(this).find(".delate").click(function(){
+                if(confirm("确定要删除吗？")){
+                    var DelateNum=$(this).parents(".goodcontainer").find(".num").text()*1;
+                    var DelateSum=$(this).parents(".goodcontainer").find(".sum").text().split("￥")[1]*1;
+                    $("#Cart .Cartfoot .clear .num").text($("#Cart .Cartfoot .clear .num").text()*1-DelateNum);
+                    $("#Cart .Cartfoot .clear .sum").text($("#Cart .Cartfoot .clear .sum").text()*1-DelateSum);
+                    $("#sidebarCart #sidebarCartNumber").text($("#Cart .Cartfoot .clear .num").text());
+                    var GoodInformationRrg=new RegExp($.cookie("loginUser")+".*?"+$(this).parents(".goodcontainer").attr("data-id")+$(this).parents(".goodcontainer").attr("data-size")+"\\*\\d+\\+");
+                    var GoodInformation=$.cookie("registerUsers").match(GoodInformationRrg);
+                    var NewInformation=GoodInformation[0].split($(this).parents(".goodcontainer").attr("data-id")+$(this).parents(".goodcontainer").attr("data-size")+"*")[0];
+                    var NewregisterUsers=$.cookie("registerUsers").replace(GoodInformationRrg,NewInformation);
+                    $.cookie("registerUsers",NewregisterUsers,{expires:7, path:"/"});
+                    $(this).parents(".goodcontainer").animate({height:0},500,function(){
+                        $(this).remove();
+                    })
+                };
+            });
+        })
+    }
+</script>

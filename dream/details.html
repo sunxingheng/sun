@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="common/css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="css/public.css" type="text/css"/>
+    <link rel="stylesheet" href="details/css/details.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fly.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script type="text/javascript" src="details/js/details.js"></script>
+</head>
+<body style="background: #f6f6f6;">
+<!------以下是右边固定侧边栏，包括购物车、用户中心、等（公共）---->
+<div id="sidebarcontainer"></div>
+<script type="text/javascript">$("#sidebarcontainer").load("common/sidebar.htm")</script>
+<!---下是头部(不可以公共部分导入)（公共）------------->
+<div id="topcontainer"></div>
+<script type="text/javascript">$("#topcontainer").load("common/top.htm")</script>
+
+<!--*************以下是head****包括logo和搜索栏（公共）*************-->
+<div id="headcontainer"></div>
+<script type="text/javascript">$("#headcontainer").load("common/head.htm")</script>
+<div id="logo"><div class="margin"><img src="details/img/detaillogo.jpg" alt=""></div></div>
+<!--//导航栏-->
+<div id="detailsnav">
+    <div class="margin clear">
+        <a href="index.html">首页</a>
+        <a href="index.html">新品</a>
+        <a href="index.html">外套</a>
+        <a href="index.html">连衣裙</a>
+        <a href="index.html">小衬衫</a>
+        <a href="index.html">毛衫</a>
+        <a href="index.html">卫衣</a>
+        <a href="index.html">裤子</a>
+        <a href="index.html">半身裙</a>
+    </div>
+</div>
+<!--*************主体部分*************-->
+
+<div id="detailmain">
+    <div class="margin clear">
+        <div class="left Left">
+            <p>首页&gt;新品抢鲜&gt;女装</p>
+            <div class="GoodContainer">
+                <img class="LOADGOOD" src="" alt="">
+                <div class="Littlemirror"></div>
+            </div>
+            <div class="Littleimg clear">
+                <div class="LittleimgLeft"></div>
+                <img src="" alt="" class="on">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <div class="LittleimgRight"></div>
+            </div>
+            <div class="goodid">商品编号: <span></span></div>
+            <div class="Bigmirror"><img src="" alt=""></div>
+        </div>
+        <div class="left Center">
+            <div class="erwei">手机便捷购买</div>
+            <h2></h2>
+            <div class="CenterTop">
+                <h3></h3>
+                <p class="shop"></p>
+                <p class="red">参与优惠:满减指定款满200减50活动</p>
+            </div>
+            <div class="Choose">
+                颜色<div class="Color"><img src="" alt=""><a href="">白色</a></div>
+                <br>
+                <div class="size first">尺码</div>
+                <div class="size">S</div>
+                <div class="size">M</div>
+                <div class="size on">L</div>
+                <div class="size">XL</div>
+                <div class="size">XXL</div>
+                <br>
+                <div class="NUM clear">
+                    <span>数量</span>
+                    <span class="num">1</span>
+                    <span class="jia notChoose"></span>
+                    <span class="jian notChoose"></span>
+                </div>
+                <div class="buy">立即购买</div>
+                <div class="cart notChoose">加入购物车</div>
+                <img src="details/img/tian7.png" alt="">
+            </div>
+        </div>
+        <div class="left Right">
+            <h3>看了又看</h3>
+            <div class="loadmorecontainer">
+                <div class="innerloadmorecontainer">
+                    <div class="loadmore">
+                        <a href="details.html?1001"><img src="list/img/list1%20(1).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                    <div class="loadmore">
+                        <a href="details.html?1002"><img src="list/img/list1%20(2).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                    <div class="loadmore">
+                        <a href="details.html?1003"><img src="list/img/list1%20(3).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                    <div class="loadmore">
+                        <a href="details.html?1004"><img src="list/img/list1%20(4).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                    <div class="loadmore">
+                        <a href="details.html?1005"><img src="list/img/list1%20(5).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                    <div class="loadmore">
+                        <a href="details.html?1006"><img src="list/img/list1%20(6).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                    <div class="loadmore">
+                        <a href="details.html?1007"><img src="list/img/list1%20(7).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                    <div class="loadmore">
+                        <a href="details.html?1008"><img src="list/img/list1%20(8).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                    <div class="loadmore">
+                        <a href="details.html?1009"><img src="list/img/list1%20(9).jpg" alt=""></a>
+                        <p class="pirse">￥299</p>
+                    </div>
+                </div>
+            </div>
+            <span class="shang notChoose"></span>
+            <span class="xia notChoose"></span>
+        </div>
+    </div>
+</div>
+
+<!--***************详情部分*************-->
+<div id="Detail">
+    <div class="margin clear">
+        <div class="left Left"><img src="details/img/botton.jpg" alt=""></div>
+        <div class="left Right">
+            <div class="tabBottonContainer clear">
+                <div class="tabBotton on">商品详情</div>
+                <div class="tabBotton">评价</div>
+                <div class="tabBotton">如何支付</div>
+                <div class="tabBotton">7天无条件退货</div>
+            </div>
+            <div class="tabMain"><img src="details/img/tab1.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<!--********************网站底部（公共）***********-->
+<div id="footercontainer"></div>
+<script type="text/javascript">$("#footercontainer").load("common/footer.htm")</script>
+<script type="text/javascript" src="list/js/list.js"></script>
+</body>
+<script type="text/javascript">
+    var Timer=0;
+    var TIMER=setInterval(function(){
+        if(!document.getElementById('footer')){
+            alert('服务器正在响应..........');
+        }else {
+            clearInterval(TIMER);
+        }
+        if(Timer==1){
+            alert('算了不逗你了，服务器根本没开  ^_^');
+            clearInterval(TIMER);
+        }
+        Timer++;
+    },4000)
+</script>
+</html>
